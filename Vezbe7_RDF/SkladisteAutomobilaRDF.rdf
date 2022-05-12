@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:automobil="http://www.singidunum.ac.rs/automobil#"
+    xmlns:kontakt="http://www.singidunum.ac.rs/kontakt#">
+    
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/skladiste">
+        <automobil:adresa rdf:nodeID="adresa1"/>
+        <automobil:vozila rdf:resource="http://www.singidunum.ac.rs/vozila"/>
+        <automobil:vlasnik rdf:resource="http://www.singidunum.ac.rs/vlasnik"/>
+    </rdf:Description>
+    
+        <rdf:Description rdf:nodeID="adresa1">
+            <automobil:broj>12</automobil:broj>
+            <automobil:ulica>Vrsacka</automobil:ulica>
+            <automobil:grad>Vrsac</automobil:grad>
+        </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vozila">
+        <automobil:proizvodjac>Fiat</automobil:proizvodjac>
+        <automobil:motor rdf:resource="http://www.singidunum.ac.rs/motor"/>
+        <automobil:tockovi rdf:resource="http://www.singidunum.ac.rs/tockovi"/>
+        <automobil:vlasnik rdf:resource="http://www.singidunum.ac.rs/vlasnik"/>
+    </rdf:Description>
+        <rdf:Description rdf:about="http://www.singidunum.ac.rs/motor">
+            <automobil:snaga>1,9</automobil:snaga>
+            <automobil:obrtniMomenat>20000</automobil:obrtniMomenat>
+            <automobil:proizvodjacMotora>BMW</automobil:proizvodjacMotora>
+            <automobil:datumServisiranja>12.10.2020</automobil:datumServisiranja>
+        </rdf:Description>
+        <rdf:Description rdf:about="http://www.singidunum.ac.rs/tockovi">
+            <automobil:dijametar>20</automobil:dijametar>
+            <automobil:proizvodjacTockova>Michelin</automobil:proizvodjacTockova>
+        </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vlasnik">
+        <kontakt:ime>Darko</kontakt:ime>
+        <kontakt:prezime>Darkovic</kontakt:prezime>
+        <kontakt:jmbg>52442425</kontakt:jmbg>
+    </rdf:Description>
+    
+</rdf:RDF>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vehicles="http://www.singidunum.ac.rs/vehicles#">
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vehicles#auto1">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/vehicles#motornoVozilo"/>
+        <vehicles:boja>Crvena</vehicles:boja>
+        <vehicles:tipVozila rdf:resource="http://www.singidunum.ac.rs/vehicles#zemljaniPut"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vehicles#bus1">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/vehicles#bus"/>
+        <vehicles:brojSedista>25</vehicles:brojSedista>
+        <vehicles:boja>Plava</vehicles:boja>
+    </rdf:Description>
+    
+    
+</rdf:RDF>

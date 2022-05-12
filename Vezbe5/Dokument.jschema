@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Schema title",
+    "description": "Proizvoljan opis",
+    "type": "object",
+    "properties": {
+        "dokument": {
+            "description": "The propertyName description",
+            "type": "object",
+            "properties": {
+                "naslov": {"type": "string"},
+                "tekst": {"type": "string"}
+            },
+            "required": [
+                "naslov",
+                "tekst"
+            ],
+            "additionalProperties": false
+        },
+      "sadrzaj": {
+        "description": "Neki opisni sadrzaj",
+        "type": "object",
+        "properties": {
+            "zaglavlje": {"type" : "string"}
+            },
+            "required": ["zaglavlje"]
+        }
+     }
+    
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http//www.singidunum.ac.rs/uplatnica"
+    xmlns:upl="http//www.singidunum.ac.rs/uplatnica">
+    <xs:element name="uplatnica">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="podaciODuzniku" type="upl:TLice"/>
+                <xs:element name="podaciOPoveriocu" type="upl:TLice"/>
+                <xs:element name="svrhaPlacanja">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="200"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="podaciOUplati">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="iznos">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:decimal">
+                                        <xs:totalDigits value="15"/>
+                                        <xs:fractionDigits value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="valuta">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="RSD"/>
+                                        <xs:pattern value="\d{15}\d{2}"/>
+                                        <xs:pattern value=""/>
+                                        <xs:enumeration value="USD"/>
+                                        <xs:enumeration value="EUR"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="hitno" type="xs:boolean" use="optional"/>
+            <xs:attribute name="datumValute" type="xs:date" use="required"/>
+            <xs:attribute name="mesto" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType abstract="true" name="TLice">
+        <xs:sequence>
+            <xs:element ref="upl:adresa"/>
+            <xs:element name="podaciORacunu">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="brojRacuna" type="upl:TBrojRacuna"/>
+                        <xs:element maxOccurs="1" name="model" type="xs:int"/>
+                        <xs:element name="pozivNaBroj">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:maxLength value="20"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="TBrojRacuna">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{3}-\d{13}-\d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="adresa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mesto" type="xs:string"/>
+                <xs:element name="postanskiBroj">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:int">
+                            <xs:minInclusive value="11000"/>
+                            <xs:maxInclusive value="40000"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="ulica" type="xs:string"/>
+                <xs:element name="broj">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:int">
+                            <xs:minExclusive value="0"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="TFizickoLice">
+        <xs:complexContent>
+            <xs:extension base="upl:TLice">
+                <xs:sequence>
+                    <xs:element name="ime" type="xs:string"/>
+                    <xs:element name="prezime" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="TPravnoLice">
+        <xs:complexContent>
+            <xs:extension base="upl:TLice">
+                <xs:sequence>
+                    <xs:element name="naziv" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

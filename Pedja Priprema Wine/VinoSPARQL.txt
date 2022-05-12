@@ -1,0 +1,38 @@
+	----Dobavljanje svih sireva jeftinijih od 42
+PREFIX wine: <http://www.singidunum.ac.rs/wine#>  
+
+SELECT ?sir ?cena
+	 {
+	?sir a wine:Sir;
+	wine:imaCenu ?cena.
+	FILTER(?cena < 42)
+	}
+
+	----Dobavljanje prosecne cene svih proizvoda
+SELECT (avg(?cena) as ?prosecna_cena)
+	{
+	SELECT ?cena
+	{
+	?proizvod a wine:Proizvod.
+	?proizvod wine:imaCenu ?cena	
+	}
+}
+
+	---Dobavljanje cene vina koja sadrze riesling grozdja
+SELECT ?cena ?vino   
+	WHERE {?cena a wine:imaCenu. 
+	?cena wine:sastojiSeOd ?vino .
+	?vino a wine:riesling. 
+	}
+
+	---Dobavljanje sume svih plata, grupisane prema tipu zaposlenog (somelijer, tehnickaPodrska...)
+SELECT (sum(?plata) as ?ukupna_plata) ?tipZaposlenog
+	WHERE {
+	?zaposleni a ?osoblje;
+	wine:Somelijer ?somelijer;
+	wine:TehnickaPodrska ?tehnickaPodrska;
+	wine:Prodavac ?prodavac;	
+	wine:plata ?plata.
+	?osoblje rdfs:subClassOf wine:Osoblje
+	}
+	GROUP BY ?tipZaposlenog

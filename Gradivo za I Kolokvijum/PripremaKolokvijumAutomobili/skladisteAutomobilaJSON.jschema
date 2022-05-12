@@ -1,0 +1,118 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Skladiste Automobila",
+    "description": "Skladiste automobila",
+    "type": "object",
+    "properties": {
+        "skladista": {
+            "description": "Korenski objekat koji opisuje skladiste automobila\n",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "vlasnik": {
+                        "type": "object",
+                        "properties": {
+                            "ime": {"type": "string"},
+                            "prezime": {"type": "string"},
+                            "jmbg": {"type": "string"}
+                        }
+                    },
+                    "adresa": {
+                        "type": "object",
+                        "properties": {
+                            "broj": {"type": "string"},
+                            "ulica": {"type": "string"},
+                            "grad": {"type": "string"}
+                        }
+                    },
+                    "automobili": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "proizvodjac": {
+                                    "oneOf": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "fizickoLice": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "ime": {"type": "string"},
+                                                        "prezime": {"type": "string"},
+                                                        "jmbg": {
+                                                            "type": "string",
+                                                            "pattern": "d{13}"
+                                                        }
+                                                    }
+                                                },
+                                                "pravnoLice": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "naziv": {"type": "string"},
+                                                        "maticniBroj": {
+                                                            "type": "string",
+                                                            "pattern": "d{13}"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "motor": {
+                                    "type": "object",
+                                    "properties": {
+                                        "snaga": {"type": "string"},
+                                        "obrtniMomenat": {"type": "string"},
+                                        "tipGoriva": {
+                                            "type": "string",
+                                            "enum": [
+                                                "beznin",
+                                                "dizel",
+                                                "hibrid",
+                                                "elektricna energija"
+                                            ]
+                                        },
+                                        "proizvodjac": {"type": "string"},
+                                        "datumPoslednjegServisiranja": {"type": "string"}
+                                    }
+                                },
+                                "tocak": {
+                                    "type": "object",
+                                    "properties": {
+                                        "dijametar": {"type": "string"},
+                                        "guma": {
+                                            "type": "object",
+                                            "properties": {
+                                                "dubinaProfila": {"type": "string"},
+                                                "proizvodjac": {"type": "string"}
+                                            },
+                                            "enum": [
+                                                "zimske",
+                                                "letnje"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "vlasnik": {
+                                    "type": "object",
+                                    "properties": {
+                                        "ime": {"type": "string"},
+                                        "prezime": {"type": "string"},
+                                        "jmbg": {"type": "string"}
+                                    }
+                                }
+                            },
+                            "required": ["motor"],
+                            "additionalProperties": false
+                        },
+                        "minItems": 4
+                    }
+                }
+            },
+            "minItems": 3
+        }
+    }
+}

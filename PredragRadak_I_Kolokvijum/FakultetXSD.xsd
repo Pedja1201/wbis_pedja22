@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://www.singidunum.ac.rs" xmlns:fax="http://www.singidunum.ac.rs">
+    <xs:element name="fakulteti">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" ref="fax:fakultet"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="fakultet">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="naziv" type="xs:string"/>
+                <xs:element name="adresa" type="xs:string"/>
+                <xs:element ref="fax:nastavnici"/>
+                <xs:element ref="fax:predmeti"/>
+            </xs:sequence>
+            <xs:attribute name="datumOsnivanja" type="xs:date"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="nastavnici">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="nastavnik"
+                    type="fax:TNastavnik"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType abstract="true" name="TNastavnik">
+        <xs:sequence>
+            <xs:element name="ime" type="xs:string"/>
+            <xs:element name="prezime" type="xs:string"/>
+            <xs:element name="plata">
+                <xs:simpleType>
+                    <xs:restriction base="xs:double">
+                        <xs:maxExclusive value="2"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="katedra">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="informatika"/>
+                    <xs:enumeration value="ekonomija"/>
+                    <xs:enumeration value="turizam"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="TAsistent">
+        <xs:complexContent>
+            <xs:extension base="fax:TNastavnik">
+                <xs:choice>
+                    <xs:element name="doktroskeStudije" type="xs:boolean"/>
+                </xs:choice>
+                <xs:attribute name="zvanje">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="bachelor"/>
+                            <xs:enumeration value="master"/>
+                            <xs:enumeration value="doktor"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="TProfesor">
+        <xs:complexContent>
+            <xs:extension base="fax:TNastavnik">
+                <xs:sequence>
+                    <xs:element ref="fax:radovi"/>
+                </xs:sequence>
+                <xs:attribute name="datumDoktoriranja" type="xs:date"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="radovi">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="objavljeniRad">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="naslov" type="xs:string"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="kljucneReci"
+                                type="xs:string"/>
+                            <xs:element maxOccurs="1" name="datumObjavljivanja" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="predmeti">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" ref="fax:predmet"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="predmet">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="naziv" type="xs:string"/>
+                <xs:element name="brojCasova" type="xs:integer"/>
+                <xs:element ref="fax:angazovaniNastavnici"/>
+            </xs:all>
+            <xs:attribute name="sifraPredmeta" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="angazovaniNastavnici">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="fax:nastavnici"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

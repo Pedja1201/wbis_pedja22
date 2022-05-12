@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT skladista (skladiste*)>
+<!ELEMENT skladiste ((vlasnik, automobil*, adresa)|(vlasnik,adresa, automobil*)|(adresa, automobil*, vlasnik)|(adresa, vlasnik, automobil*)|(automobil*, vlasnik, adresa)|(automobil*, adresa, vlasnik))>
+<!ELEMENT adresa (broj?, ulica, grad)>
+<!ELEMENT broj (#PCDATA)>
+<!ELEMENT ulica (#PCDATA)>
+<!ELEMENT grad (#PCDATA)>
+<!ELEMENT automobil (proizvodjac+, motor, tocak*, vlasnik)>
+<!ATTLIST automobil
+sifraSasije CDATA #REQUIRED
+godinaProizvodnje CDATA #REQUIRED
+>
+<!ELEMENT motor (snaga, obrtniMomenat, proizvodjac, datumPosljednjegServisiranja?)>
+<!ATTLIST motor
+tipGoriva (benzin|dizel|hibrid|elektricnaEnergija) #REQUIRED
+>
+<!ELEMENT snaga (#PCDATA)>
+<!ELEMENT obrtniMomenat (#PCDATA)>
+<!ELEMENT datumPosljednjegServisiranja (#PCDATA)>
+<!ELEMENT tocak (dijametar, guma*, proizvodjac)>
+<!ELEMENT dijametar (#PCDATA)>
+<!ELEMENT guma (dubinaProfila, proizvodjac)>
+<!ATTLIST  guma 
+tip (zimska|letnja) #REQUIRED
+>
+<!ELEMENT dubinaProfila (#PCDATA)>
+<!ELEMENT proizvodjac (fizickoLice | pravnoLice)>
+<!ELEMENT fizickoLice (ime, prezime, jmbg) >
+<!ELEMENT ime (#PCDATA) >
+<!ELEMENT prezime (#PCDATA) >
+<!ELEMENT jmbg (#PCDATA) >
+<!ELEMENT pravnoLice (naziv, maticniBroj) >
+<!ELEMENT naziv (#PCDATA) >
+<!ELEMENT maticniBroj (#PCDATA) >
+
+<!ELEMENT vlasnik (ime, prezime, jmbg) >
+
+
+
+
+
+
+
+
+

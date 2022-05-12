@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Proveri sa asistentom da li je validno resenje!!! -->
+<nalogZaUplatu>
+    <tekstualniTip> 
+        <uplatilac>
+            <ime>Petar</ime>
+            <prezime>Petrovic</prezime>
+            <adresa>Petar Petrovic bb</adresa>
+            <grad>12300 Petrovac</grad>
+            <pecat/>
+            <potpis/>
+        </uplatilac>
+        <svrhaUplate>
+            <naziv>Taksa za ugradnju automobilskog pogona na petroleum</naziv>
+        </svrhaUplate>
+        <primalac>
+            <naziv>MUP Petrovac</naziv>
+        </primalac>
+    </tekstualniTip>
+    
+    <numerickiTip>
+        <sifraPlacanja>121</sifraPlacanja>
+        <valuta>RSD</valuta>
+        <iznos>12000</iznos>
+        <tekuciRacunPrimaoca>210-12122321-56</tekuciRacunPrimaoca>
+        <model/>
+        <pozivNaBroj>123214234</pozivNaBroj>
+    </numerickiTip>
+    
+    <vremenskiPodaci>
+        <datumPrijema>12.01.2009</datumPrijema>
+        <mesto>Petrovac</mesto>
+        <datumValute/>
+    </vremenskiPodaci>
+</nalogZaUplatu>

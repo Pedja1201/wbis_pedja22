@@ -1,0 +1,140 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Uplatnica",
+    "description": "Description of the schema",
+    "type": "object",
+    "properties": {
+        "uplatnica": {
+            "description": "Korenski objekat Uplatnica",
+            "type": "object",
+            "properties": {
+                "podaciODuzniku": {
+                    "description": "Podaci od duzniku",
+                    "oneOf": [{
+                        "type": "object",
+                        "properties": {
+                            "fizickoLice": {
+                                "description": "Podaci fizickog lica",
+                                "type": "object",
+                                "properties": {
+                                    "adresa": {
+                                        "description": "Podaci o adresi",
+                                        "type": "object",
+                                        "properties": {
+                                            "ulica": {"type": "string"},
+                                            "broj": {"type": "integer"},
+                                            "grad": {"type": "string"},
+                                            "drzava": {"type": "string"}
+                                        }
+                                    }
+                                },
+                                "required": ["adresa"],
+                                "additionalProperties": false
+                            },
+                            "pravnoLice": {
+                                "description": "Podaci pravnog lica",
+                                "type": "object",
+                                "properties": {
+                                    "sediste": {
+                                        "description": "Podaci o adresi",
+                                        "type": "object",
+                                        "properties": {
+                                            "naziv": {"type": "string"},
+                                            "grad": {"type": "string"},
+                                            "drzava": {"type": "string"}
+                                        }
+                                    }
+                                },
+                                "required": ["naziv"],
+                                "additionalProperties": false
+                            }
+                        }
+                    }]
+                },
+                "podaciOPoveriocu": {
+                    "description": "Podaci o poveriocu",
+                    "type": "object",
+                    "properties": {
+                        "fizickoLice": {
+                            "description": "Podaci fizickog lica",
+                            "type": "object",
+                            "properties": {
+                                "adresa": {
+                                    "description": "Podaci o adresi",
+                                    "type": "object",
+                                    "properties": {
+                                        "ulica": {"type": "string"},
+                                        "broj": {"type": "integer"},
+                                        "grad": {"type": "string"},
+                                        "drzava": {"type": "string"}
+                                    }
+                                }
+                            },
+                            "required": ["adresa"],
+                            "additionalProperties": false
+                        },
+                        "pravnoLice": {
+                            "description": "Podaci pravnog lica",
+                            "type": "object",
+                            "properties": {
+                                "sediste": {
+                                    "description": "Podaci o adresi",
+                                    "type": "object",
+                                    "properties": {
+                                        "naziv": {"type": "string"},
+                                        "grad": {"type": "string"},
+                                        "drzava": {"type": "string"}
+                                    }
+                                }
+                            },
+                            "required": ["naziv"],
+                            "additionalProperties": false
+                        },
+                        "racunPoverioca": {
+                            "description": "Ziro racun poverioca",
+                            "type": "string",
+                            "properties": {
+                                "ziroRacun": {
+                                    "type": "string",
+                                    "pattern": "\\d{3}-\\d{13}-\\d{2}"
+                                }
+                            }
+                        }
+                    }
+                },
+                "svrhaPlacanja": {
+                    "description": "Svrha placanja",
+                    "type": "string",
+                    "properties": {
+                        "sadrzaj": {"type": "string"}
+                    },
+                    "required": ["tekst"],
+                    "additionalProperties": false,
+                    "maxLength": 200,
+                    "minLength": 1
+                },
+                "podaciOUplati": {
+                    "description": "Dodatni podaci o uplati",
+                    "type": "object",
+                    "properties": {
+                        "datum": {"type": "integer"},
+                        "iznos": {"type": "string"},
+                        "model": {"type": "integer"},
+                        "valuta": {
+                            "type": "string",
+                            "enum": [
+                                "RSD",
+                                "USD",
+                                "EUR"
+                            ]
+                        },
+                        "pozivNaBroj": {
+                            "type": "string",
+                            "maximum": 20
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+//prodavnice/prodavnica/vlasnik[pravnoLice/datumOsnivanja < xs:date("2020-01-01")]
+
+//prodavnice/prodavnica[vlasnik/fizickoLice]/inventar/stavka/muzika
+
+//prodavnice/prodavnica/inventar/stavka/igra[platforma = "PC"][izdavac/sediste = "nemacka"]/naslov

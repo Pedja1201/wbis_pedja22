@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:zoo = "http://www.singidunum.ac.rs/zoo#">
+    
+    <!-- Kreiranje klasa -->
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/zoo#Zivotinja"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/zoo#Sisar">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/zoo#Zivotinja"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/zoo#MorskiSisar">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/zoo#Sisar"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/zoo#Reptil">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/zoo#Zivotinja"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/zoo#Ptica">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/zoo#Zivotinja"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/zoo#NeletecaPtica">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/zoo#Ptica"/>
+    </rdfs:Class>
+    
+    
+    <!-- Kreiranje svojstva -->
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/zoo#kreceSe"/>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/zoo#tipIshrane">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/zoo#ziviUVodi">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/zoo#MorskiSisar"/>
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/zoo#Reptil"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/zoo#staniste"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/zoo#ziviNaKopnu">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/zoo#Reptil"/>
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/zoo#Ptica"/>
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/zoo#Sisar"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/zoo#staniste"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/zoo#leti">
+        <rdfs:subPropertyOf rdf:resource="http://www.singidunum.ac.rs/zoo#kreceSe"/>
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/zoo#Ptica"/>
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/zoo#Sisar"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/zoo#maxDuzinaLeta"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/zoo#hoda">
+        <rdfs:subPropertyOf rdf:resource="http://www.singidunum.ac.rs/zoo#kreceSe"/>
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/zoo#Zivotinja"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/zoo#maxBrzinaKretanja"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/zoo#pliva">
+        <rdfs:subPropertyOf rdf:resource="http://www.singidunum.ac.rs/zoo#kreceSe"/>
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/zoo#MorskiSisar"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/zoo#maxDubinaRonjenja"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/zoo#gmize">
+        <rdfs:subPropertyOf rdf:resource="http://www.singidunum.ac.rs/zoo#kreceSe"/>
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/zoo#Reptil"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/zoo#maxBrzinaKretanja"/>
+    </rdf:Property>
+    
+    
+    <!-- Kreiranje instance -->
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/zoo#covek">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/zoo#Sisar"/>
+        <zoo:ziviNaKopnu rdf:resource="http://www.singidunum.ac.rs/zoo#grad"/>
+        <zoo:hoda rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</zoo:hoda>
+        <zoo:tipIshrane>Svastojed</zoo:tipIshrane>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/zoo#delfin">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/zoo#MorskiSIsar"/>
+        <zoo:ziviUVodi rdf:resource="http://www.singidunum.ac.rs/zoo#okean"/>
+        <zoo:pliva rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130</zoo:pliva>
+        <zoo:tipIshrane>Mesojed</zoo:tipIshrane>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/zoo#beliKit">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/zoo#MorskiSIsar"/>
+        <zoo:ziviUVodi rdf:resource="http://www.singidunum.ac.rs/zoo#okean"/>
+        <zoo:pliva rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</zoo:pliva>
+        <zoo:tipIshrane>Mesojed</zoo:tipIshrane>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/zoo#kokoska">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/zoo#NeletecaPtica"/>
+        <zoo:ziviNaKopnu rdf:resource="http://www.singidunum.ac.rs/zoo#farma"/>
+        <zoo:hoda rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</zoo:hoda>
+        <zoo:tipIshrane>Svastojed</zoo:tipIshrane>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/zoo#slepiMis">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/zoo#Sisar"/>
+        <zoo:ziviNaKopnu rdf:resource="http://www.singidunum.ac.rs/zoo#grad"/>
+        <zoo:hoda rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</zoo:hoda>
+        <zoo:tipIshrane>Svastojed</zoo:tipIshrane>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/zoo#zmija">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/zoo#Zivotinja"/>
+        <zoo:ziviNaKopnu rdf:resource="http://www.singidunum.ac.rs/zoo#suma"/>
+        <zoo:gmize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</zoo:gmize>
+        <zoo:tipIshrane>Mesojed</zoo:tipIshrane>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/zoo#kopnenaKornjaca">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/zoo#Reptil"/>
+        <zoo:ziviNaKopnu rdf:resource="http://www.singidunum.ac.rs/zoo#suma"/>
+        <zoo:gmize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</zoo:gmize>
+        <zoo:tipIshrane>Biljojed</zoo:tipIshrane>
+    </rdf:Description>
+    
+    
+</rdf:RDF>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bookstore>
+    <book available="12" isbn="1">
+        <title lang="english">Silence of the lambs</title>
+        <title lang="german">Das Schweigen der Lämmer</title>
+        <author></author>
+        <price currency="EUR">25</price>
+        <price currency="USD">30</price>
+    </book>
+    <book available="22" isbn="2">
+        <title lang="english">Death or Glory</title>
+        <title lang="german">Tod oder Ruhm</title>
+        <author>
+            <name>Sandy Mitchell</name>
+        </author>
+        <price currency="EUR">19</price>
+        <price currency="USD">24</price>
+    </book>
+    <book available="1" isbn="3">
+        <title lang="english">Fight or Flight</title>
+        <title lang="german">Kampf oder Flucht</title>
+        <author>
+            <name>Sandy Mitchell</name>
+        </author>
+        <price>28</price>
+        <price currency="USD">28</price>
+        <price currency="EUR">24</price>
+    </book>
+    <book available="52" isbn="4">
+        <title lang="english">The Traitor's hand</title>
+        <author>
+            <name>Sandy Mitchell</name>
+        </author>
+        <price currency="USD">19</price>
+        <price currency="EUR">15</price>
+
+    </book>
+    <book available="14" isbn="5">
+        <title lang="english">Hunter, prey</title>
+        <author>
+            <name>Gav Thorpe</name>
+        </author>
+        <price currency="USD">35</price>
+        <price currency="EUR">29</price>
+    </book>
+    <book available="2" isbn="6">
+        <title lang="english">Straight Silver</title>
+        <author>
+            <name>Dan Abnett</name>
+        </author>
+        <price currency="USD">25</price>
+        <price currency="EUR">22</price>
+    </book>
+    <book available="121" isbn="7">
+        <title lang="english">Eisenhorn</title>
+        <author>
+            <name>Dan Abnett</name>
+        </author>
+        <price>40</price>
+    </book>
+    <book available="151" isbn="8">
+        <title lang="english">His Last Commands</title>
+        <author>
+            <name>Dan Abnett</name>
+        </author>
+        <price currency="USD">19</price>
+        <price currency="EUR">15</price>
+    </book>
+</bookstore>

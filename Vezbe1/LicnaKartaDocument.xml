@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<licnaKarta>
+    <podaciOOsobi>
+        <ime>Milica</ime>
+        <prezime>Milicic</prezime>
+        <datumRodjenja>29.02.2998</datumRodjenja>
+        <pol>Zenski</pol>
+        <slika lokacija="putanja"/>
+        <potpis lokacija="putanja"/>
+    </podaciOOsobi>
+    <podaciOKarti>
+        <brojLicneKarte>9654322</brojLicneKarte>
+        <datumizdavanja>29.07.2000</datumizdavanja>
+        <datumIsteka>19.09.2001</datumIsteka>
+        <dokumentIzdaje>PU za grad Beograd</dokumentIzdaje>
+        <grb/>
+    </podaciOKarti>
+</licnaKarta>

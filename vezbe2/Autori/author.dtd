@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT author (pen_name | real_name) >
+<!ELEMENT pen_name (#PCDATA) >
+<!ELEMENT real_name ((first_name, last_name) | (last_name, first_name))>
+<!ELEMENT first_name (#PCDATA)>
+<!ELEMENT last_name (#PCDATA)>

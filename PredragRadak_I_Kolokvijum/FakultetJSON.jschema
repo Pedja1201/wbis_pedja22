@@ -1,0 +1,152 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Schema title",
+    "description": "Dokument sema za fakultet",
+    "type": "object",
+    "properties": {
+        "fakulteti": {
+            "description": "Korenski elemnt za opis svih elemenata",
+            "type": "array",
+            "items": {
+                "description": "Opis niza fakultet",
+                "type": "object",
+                "properties": {
+                    "fakultet": {
+                        "type": "object",
+                        "properties": {
+                            "naziv": {"type": "string"},
+                            "adresa": {"type": "string"},
+                            "datumOsnivanja": {"type": "string"},
+                            "nastavnici": {
+                                "type": "array",
+                                "items": {
+                                    "description": "Niz koji opisuje nastavnike",
+                                    "type": "object",
+                                    "properties": {
+                                        "nastavnik": {
+                                            "oneOf": [
+                                                {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "asistent": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "ime": {"type": "string"},
+                                                                "prezime": {"type": "string"},
+                                                                "katedra": {
+                                                                    "type": "string",
+                                                                    "enum": [
+                                                                        "informatika",
+                                                                        "ekonomija",
+                                                                        "turizam"
+                                                                    ]
+                                                                },
+                                                                "plata": {
+                                                                    "type": "string",
+                                                                    "format": "2"
+                                                                }
+                                                            },
+                                                            "oneOf": [
+                                                                {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "doktroskeStudije": {"type": "string"},
+                                                                        "zvanjeDostignuca": {
+                                                                            "type": "string",
+                                                                            "enum": [
+                                                                                "bachelor",
+                                                                                "master",
+                                                                                "doktor"
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ]
+                                                        },
+                                                        "profesor": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "ime": {"type": "string"},
+                                                                "prezime": {"type": "string"},
+                                                                "katedra": {
+                                                                    "type": "string",
+                                                                    "enum": [
+                                                                        "informatika",
+                                                                        "ekonomija",
+                                                                        "turizam"
+                                                                    ]
+                                                                },
+                                                                "plata": {
+                                                                    "type": "string",
+                                                                    "format": "2"
+                                                                },
+                                                                "objavljeniRadovi": {
+                                                                    "type": "array",
+                                                                    "items": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                            "objavljeniRad": {
+                                                                                "type": "object",
+                                                                                "properties": {
+                                                                                    "naslov": {"type": "string"},
+                                                                                    "datumObjavljivanja": {"type": "string"},
+                                                                                    "kljucneReci":{
+                                                                                        "type": "array",
+                                                                                        "items": {
+                                                                                            "type": "object",
+                                                                                            "properties": {
+                                                                                                "kljucnaRec": {"type": "string"}
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "datumDoktoriranja": {"type": "string"}
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            "predmet":{
+                                "description": "Lista proizvoljnih predmeta",
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "predmet":{
+                                            "type": "object",
+                                            "properties": {
+                                                "naziv": {"type": "string"},
+                                                "sifraPredmeta": {"type": "string"},
+                                                "brojCasova": {"type": "number"},
+                                                "nastavnici":{
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "nastavnik":{"type":"string"}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                            
+                                    
+                            }
+                         
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

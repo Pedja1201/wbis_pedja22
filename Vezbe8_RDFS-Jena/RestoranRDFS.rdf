@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:restoran = "http://www.singidunum.ac.rs/restoran#">
+    
+    <!-- Kreiranje klasa -->
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/restoran#osoblje"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/restoran#konobar">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/restoran#osoblje"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/restoran#kuvar">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/restoran#osoblje"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/restoran#proizvod"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/restoran#hrana">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/restoran#proizvod"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/restoran#pice">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/restoran#proizvod"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/restoran#glavnoJelo">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/restoran#hrana"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/restoran#dezert">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/restoran#hrana"/>
+    </rdfs:Class>
+    
+    
+    
+   <!-- Kreiranje svojstva  --> 
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/restoran#ime">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/restoran#osoblje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/restoran#prezime">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/restoran#osoblje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/restoran#plata">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/restoran#osoblje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/restoran#cena">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/restoran#proizvod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/restoran#sastojiSeOd">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/restoran#hrana"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Hrana"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/restoran#posno">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/restoran#hrana"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </rdf:Property>
+    
+    
+    <!-- Kreiranje instance -->
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/restoran#radnik">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/restoran#osoblje"/>
+        <restoran:ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predrag</restoran:ime>
+        <restoran:prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radak</restoran:prezime>
+        <restoran:plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000</restoran:plata>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/restoran#porudzbina">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/restoran#proizvod"/>
+        <restoran:cena rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2700</restoran:cena>
+        <restoran:sastojiSeOd rdf:resource="http://www.singidunum.ac.rs/wine#meso"/>
+        <restoran:posno rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">DA</restoran:posno>
+    </rdf:Description>
+    
+    
+    
+    
+    
+   
+    
+</rdf:RDF>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://rs.singidunum.ac/restoran" xmlns:rst="http://rs.singidunum.ac/restoran">
+    <xs:element name="Restoran">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="rst:adresa"/>
+                <xs:element name="vlasnik" type="rst:TLice"/>
+                <xs:element name="osoblje">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="konobar">
+                                <xs:complexType>
+                                    <xs:complexContent>
+                                        <xs:extension base="rst:TLice">
+                                            <xs:sequence>
+                                                <xs:element name="plata" type="xs:double"/>
+                                            </xs:sequence>
+                                        </xs:extension>
+                                    </xs:complexContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="kuvar">
+                                <xs:complexType>
+                                    <xs:complexContent>
+                                        <xs:extension base="rst:TLice">
+                                            <xs:attribute name="specijalizacija">
+                                                <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="predjela"/>
+                                                  <xs:enumeration value="riba"/>
+                                                  <xs:enumeration value="rostilj"/>
+                                                  <xs:enumeration value="dezert"/>
+                                                  </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:attribute>
+                                        </xs:extension>
+                                    </xs:complexContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="sanker">
+                                <xs:complexType>
+                                    <xs:complexContent>
+                                        <xs:extension base="rst:TLice">
+                                            <xs:choice>
+                                                <xs:element ref="rst:kursSluzenjaPica"/>
+                                            </xs:choice>
+                                        </xs:extension>
+                                    </xs:complexContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="meni">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="hrana">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="rst:roba"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="posna">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="da"/>
+                                                <xs:enumeration value="ne"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="tipHrane">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="veganska"/>
+                                                <xs:enumeration value="vegetarijanska"/>
+                                                <xs:enumeration value="obicna"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="pice">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="rst:roba"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="alkoholno">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value=""/>
+                                                <xs:enumeration value="da"/>
+                                                <xs:pattern value=""/>
+                                                <xs:enumeration value="ne"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="gazirano">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="da"/>
+                                                <xs:enumeration value="ne"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="adresa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="broj">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="5"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="ulica" type="xs:string"/>
+                <xs:element name="grad" type="xs:string"/>
+                <xs:element name="drzava" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="TLice">
+        <xs:sequence>
+            <xs:element ref="rst:LicniPodaci"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="LicniPodaci">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ime" type="xs:string"/>
+                <xs:element name="prezime" type="xs:string"/>
+                <xs:element name="jmbg">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="\d{13}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="datumRodjenja" type="xs:date"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="kursSluzenjaPica">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="datum" type="xs:date"/>
+                <xs:element name="mesto" type="xs:string"/>
+                <xs:element name="trajanje" type="xs:date"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="roba">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cena" type="xs:double"/>
+                <xs:element name="naziv" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

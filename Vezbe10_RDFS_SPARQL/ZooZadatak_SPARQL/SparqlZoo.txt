@@ -1,0 +1,40 @@
+1.) Dobavljanje dubine ronjenja za sve morske sisare
+SELECT ?morskiSisar  ?pliva
+ 	{ 
+	?moriskiSisar  zoo:pliva ?pliva	
+
+ 	}
+
+2.) Dobavljanje svih zivotinja i njihovog nacina ishrane
+SELECT ?zivotinja ?nacin_ishrane
+ 	{ 
+	?zivotinja zoo:tipIshrane ?nacin_ishrane
+	 }
+
+3.) Dobavljanje brzine kretanja svih sisara
+SELECT ?sisar  ?brzina
+ 	{ 	
+	?sisar a zoo:Sisar.
+	?brzina rdf:type ?kretanje.
+	?kretanje rdfs:subPropertyOf zoo:kreceSe.
+ 	}
+
+4.) Dobavljanje prosecne dubine ronjenja za morske sisare
+SELECT (avg(?dubina) as ?avg_dubina) 
+ 	{ 	
+	SELECT ?dubina
+		{	
+		?morskiSisar a zoo:MorskiSisar.
+		?morskiSisar zoo:pliva ?dubina.
+		}
+	 }
+
+5.) Dobavljanje broja svih zivotinja, grupisano prema tipu ishrane
+SELECT (count(?zivotinja) as ?broj_zivotinja) ?ishrana
+
+ 	{ 	
+	?zivotinja rdf:type ?z.
+	?a zoo:tipIshrane ?ishrana.
+	?z rdfs:subClassOf zoo:Zivotinja.
+ 	}
+	GROUP BY ?ishrana

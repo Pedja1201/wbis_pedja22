@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://www.singidunum.ac.rs/uplata"
+    xmlns:upl="http://www.singidunum.ac.rs/uplata">
+    <xs:element name="Uplata">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tekstualniTip">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="uplatilac" type="upl:TLice"/>
+                            <xs:element name="svrhaUplate" type="xs:string"/>
+                            <xs:element name="primalac">
+                                <xs:complexType>
+                                    <xs:complexContent>
+                                        <xs:extension base="upl:TLice">
+                                            <xs:sequence>
+                                                <xs:element name="racunPrimaoca" type="xs:int"/>
+                                            </xs:sequence>
+                                        </xs:extension>
+                                    </xs:complexContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="numerickiTip">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="svrhaPlacanja" type="xs:string"/>
+                            <xs:element name="valuta">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:minLength value="2"/>
+                                        <xs:maxLength value="4"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="iznos" type="xs:int"/>
+                            <xs:element name="model" type="xs:int"/>
+                            <xs:element name="pozivNaBroj" type="xs:int"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="dodatniPodaciUplate">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="mestoUplate" type="xs:string"/>
+                            <xs:element name="datumUplate" type="xs:gYearMonth"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType abstract="true" name="TLice">
+        <xs:sequence>
+            <xs:element ref="upl:licniPodaci"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="licniPodaci">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mesto" type="xs:string"/>
+                <xs:element name="postanskiBroj">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:int">
+                            <xs:minInclusive value="11000"/>
+                            <xs:maxInclusive value="40000"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="ulica" type="xs:string"/>
+                <xs:element name="broj">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:int">
+                            <xs:minExclusive value="0"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="TFizickoLice">
+        <xs:complexContent>
+            <xs:extension base="upl:TLice"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="TPravnoLice">
+        <xs:complexContent>
+            <xs:extension base="upl:TLice"/>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

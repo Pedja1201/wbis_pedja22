@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT knjizara (vlasnik, knjige?) > <!-- ? znaci da je knjiga opciona(Moze i ne mora da se oznaci) -->
+<!ELEMENT vlasnik (ime, prezime) >
+<!ELEMENT ime (#PCDATA) >
+<!ELEMENT prezime (#PCDATA) >
+
+<!ELEMENT knjige (knjiga+) > <!-- + ponavlja se vise puta -->
+<!ELEMENT knjiga (naslov, ISBN, autor) >
+<!ATTLIST knjiga 
+language (en|de|es) #REQUIRED  
+pages CDATA #IMPLIED
+><!-- Postavljanje tributa -->
+
+<!ATTLIST naslov 
+jezik (en|fra|ita|ger|esp ) #REQUIRED  ><!-- Postavljanje tributa -->
+<!ELEMENT ISBN (#PCDATA) >
+<!ELEMENT autor ((imeAutora, prezimeAutora, datumRodjenja, datumSmrti?) | pen_name) > <!-- | znaci ili (nije bitan redosled ko ce prvi) ? znaci opciono nije obavezno-->
+<!ELEMENT imeAutora (#PCDATA) >
+<!ELEMENT prezimeAutora (#PCDATA) >
+<!ELEMENT datumRodjenja (#PCDATA) >
+<!ELEMENT datumSmrti (#PCDATA) >
+

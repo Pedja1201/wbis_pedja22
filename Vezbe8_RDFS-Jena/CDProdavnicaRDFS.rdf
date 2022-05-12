@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:cdShop = "http://www.singidunum.ac.rs/cdShop#">
+    
+    <!-- Kreiranje klasa -->
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/cdShop#osoblje"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/cdShop#menadzer">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/cdShop#osoblje"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/cdShop#prodavac">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/cdShop#osoblje"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/cdShop#tehnickaPodrska">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/cdShop#osoblje"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/cdShop#elektricar">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/cdShop#tehnickaPodrska"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/cdShop#mehanicar">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/cdShop#tehnickaPodrska"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/cdShop#proizvod"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/cdShop#igra">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/cdShop#proizvod"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/cdShop#film">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/cdShop#proizvod"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/cdShop#cena"/>
+    
+    
+    <!-- Kreiranje svojstva -->
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/cdShop#imaCenu">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/cdShop#proizvod"/>
+        <rdfs:range rdf:resource="ttp://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/cdShop#imaPlatu">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/cdShop#proizvod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/cdShop#imaGlumca">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/cdShop#film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Glumac"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/cdShop#imaGlumcaUGlavnojUlozi">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/cdShop#film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Glumac"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/cdShop#imaZanr">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/cdShop#prozivod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Zanr"/>
+    </rdf:Property>
+    
+    <!-- Kreiranje instance za klase i svojstva -->
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/cdShop#zaposleni">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/cdShop#prodavac"/>
+        <cdShop:imaCenu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2900</cdShop:imaCenu>
+        <cdShop:imaGlumca rdf:resource="http://www.singidunum.ac.rs/zoo#glumac"/>
+        <cdShop:imaGlumcaUGlavnojUlozi rdf:resource="http://www.singidunum.ac.rs/zoo#glumac"/>
+        <cdShop:imaZanr rdf:resource="http://www.singidunum.ac.rs/wine#akcija"/>
+    </rdf:Description>
+    
+    
+    
+    
+</rdf:RDF>

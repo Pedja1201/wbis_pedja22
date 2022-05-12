@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT uplata (tekstualniTip , numerickiTip, dodatni_podaci_o_uplati) >
+<!ELEMENT tekstualniTip (uplatilac, svrhaUplate, primalac) >
+<!ELEMENT uplatilac (ime, prezime, adresa, potpis)>
+<!ELEMENT ime (#PCDATA)>
+<!ELEMENT prezime (#PCDATA)>
+
+<!ELEMENT adresa (adrese+) >
+<!ELEMENT adrese (grad, ulica) >
+<!ELEMENT grad (#PCDATA)>
+<!ELEMENT ulica (#PCDATA)>
+<!ATTLIST adrese  
+postanski_broj CDATA #REQUIRED>   <!-- Dodat primer za atribute u adresi za broj i postBroj -->
+<!ELEMENT potpis (#PCDATA)>
+
+<!ELEMENT svrhaUplate (#PCDATA)>
+<!ELEMENT primalac (#PCDATA)>
+
+<!ELEMENT numerickiTip (sifraPlacanja, valuta, iznos, racunPrimaoca, model?, pozivNaBroj) >
+<!ELEMENT sifraPlacanja (#PCDATA) >
+<!ELEMENT valuta (#PCDATA) >
+<!ELEMENT iznos (#PCDATA) >
+<!ELEMENT racunPrimaoca (#PCDATA) >
+<!ELEMENT model (#PCDATA) >
+<!ELEMENT pozivNaBroj (#PCDATA) >
+
+<!ELEMENT dodatni_podaci_o_uplati (mestoUplate, datumUplate) >
+<!ELEMENT mestoUplate (#PCDATA) >
+<!ELEMENT datumUplate (#PCDATA) >

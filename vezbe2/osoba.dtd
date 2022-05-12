@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT osoba (ime?, prezime) >
+<!ELEMENT prezime (#PCDATA)>
+<!ELEMENT ime (#PCDATA)>
+
+<!ELEMENT adresa (grad, ulica)>
+<!ELEMENT grad (#PCDATA) >
+<!ELEMENT ulica (#PCDATA) >

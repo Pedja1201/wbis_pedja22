@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://rs.singidunum.ac/licnaKarta"
+    xmlns:lk="http://rs.singidunum.ac/licnaKarta">
+    <xs:element name="licnaKarta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="PodaciOsobe" type="lk:TLice"/>
+                <xs:element name="datumIzdavanja" type="xs:date"/>
+                <xs:element name="datumIsteka" type="xs:date"/>
+            </xs:sequence>
+            <xs:attribute name="regBroj" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="\d{9}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="TLice">
+        <xs:sequence>
+            <xs:element ref="lk:licniPodaci"/>
+            <xs:element name="JMBG">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="\d{13}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="licniPodaci">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ime" type="xs:string"/>
+                <xs:element name="prezime" type="xs:string"/>
+                <xs:element name="datumRodjenja" type="xs:date"/>
+                <xs:element name="pol">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="M"/>
+                            <xs:enumeration value="Ž"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://www.singidunum.ac.rs/skladiste"
+    xmlns:skl="http://www.singidunum.ac.rs/skladiste">
+
+    <xs:element name="automobili">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="skl:automobil"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="skladiste">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="skl:vlasnik"/>
+                <xs:element name="adresa">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="broj" type="xs:int"/>
+                            <xs:element name="ulica" type="xs:string"/>
+                            <xs:element name="grad" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="skl:automobili"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="automobil">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="skl:proizvodjac"/>
+                <xs:element ref="skl:vlasnik"/>
+                <xs:element name="tockove">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="dijametar" type="xs:decimal"/>
+                            <xs:element name="gume" type="xs:string"/>
+                            <xs:element ref="skl:proizvodjac"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="skl:motor"/>
+            </xs:sequence>
+            <xs:attribute default="" name="sifraSasije">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value=""/>
+                        <xs:enumeration value=""/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="godinaProizvodnje" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="motor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="snaga" type="xs:integer"/>
+                <xs:element name="obrtniMomenat" type="xs:integer"/>
+                <xs:element ref="skl:proizvodjac"/>
+                <xs:element name="datumServisiranja" type="xs:date"/>
+            </xs:sequence>
+            <xs:attribute form="unqualified" name="tipGoriva" type="xs:integer" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="proizvodjac">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="naziv" type="xs:string"/>
+                <xs:element name="adresa" type="xs:string"/>
+                <xs:element name="vlasnik" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="vlasnik">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ime" type="xs:string"/>
+                <xs:element name="prezime" type="xs:string"/>
+                <xs:element name="jmbg">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:maxExclusive value="13"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

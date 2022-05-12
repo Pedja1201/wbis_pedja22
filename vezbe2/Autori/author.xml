@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE author SYSTEM "author.dtd">  <!-- Uvodimo DTD preko associate schema -->
+<author>
+    <real_name> <!-- Sam izgenerise iz author.DTD -->
+        <first_name>Marko</first_name> 
+        <last_name>Markovic</last_name>
+    </real_name>
+    
+    
+    
+</author>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://rs.singidunum.ac/knjizara" xmlns:kzr="http://rs.singidunum.ac/knjizara">
+    <xs:element name="knjige">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="kzr:knjiga"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="knjizara">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vlasnik" type="kzr:TLice"/>
+                <xs:element ref="kzr:knjige"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="TLice">
+        <xs:sequence>
+            <xs:element ref="kzr:podaciOsobe"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="knjiga">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="naslov" type="xs:string"/>
+                <xs:element name="ISBN">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="\d{4}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="autor">
+                    <xs:complexType>
+                        <xs:complexContent>
+                            <xs:extension base="kzr:TLice">
+                                <xs:sequence>
+                                    <xs:element name="datumRodjenja" type="xs:date"/>
+                                    <xs:element name="datumSmrti" type="xs:date"/>
+                                </xs:sequence>
+                            </xs:extension>
+                        </xs:complexContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="languages">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="en"/>
+                        <xs:enumeration value="de"/>
+                        <xs:enumeration value="es"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="pages" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="podaciOsobe">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ime"/>
+                <xs:element name="prezime"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

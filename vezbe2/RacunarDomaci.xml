@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE racunar SYSTEM "RacunarDomaci.dtd">
+<racunar>
+    <monitor>
+        <model></model>
+        <frekvencijaOsvezivanja></frekvencijaOsvezivanja>
+        <proizvodjac></proizvodjac>
+        <rezolucija visina="2" sirina="2"></rezolucija>
+    </monitor>
+    
+    <kuciste>
+        <model></model>
+        <proizvodjac></proizvodjac>
+        <komponente tip="maticnaPloca"></komponente>
+    </kuciste>
+    <periferije>
+        <mis>
+            <model></model>
+            <DPI></DPI>
+            <proizvodjac></proizvodjac>
+        </mis>
+        <tastatura tipTastera="membranski">
+            <model></model>
+            <proizvodjac></proizvodjac>
+        </tastatura>
+    </periferije>
+</racunar>

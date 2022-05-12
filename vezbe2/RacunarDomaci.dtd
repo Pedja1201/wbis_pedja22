@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT racunar ((monitor, kuciste, periferije+) | (kuciste, periferije+, monitor)) >
+
+<!ELEMENT monitor (model+, frekvencijaOsvezivanja, proizvodjac+, rezolucija+) >
+<!ELEMENT model (#PCDATA) >
+<!ELEMENT frekvencijaOsvezivanja (#PCDATA) >
+<!ELEMENT proizvodjac (#PCDATA) >
+<!ELEMENT rezolucija (#PCDATA) >
+<!ATTLIST rezolucija 
+visina CDATA #REQUIRED 
+sirina CDATA #REQUIRED>
+
+<!ELEMENT kuciste (model, proizvodjac, komponente) >
+<!ATTLIST komponente 
+tip (maticnaPloca|memorija|procesor|grafickaKartica) #REQUIRED >
+<!ELEMENT komponente (#PCDATA) >
+
+<!ELEMENT periferije (mis, tastatura) >
+<!ELEMENT mis (model, DPI, proizvodjac) >
+<!ELEMENT DPI (#PCDATA) >
+<!ELEMENT tastatura (model, proizvodjac) >
+<!ATTLIST tastatura 
+tipTastera (membranski|mehanicki) #REQUIRED >
+

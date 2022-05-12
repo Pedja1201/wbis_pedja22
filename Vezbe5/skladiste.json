@@ -1,0 +1,29 @@
+{
+    "$schema": "file:/D:/Singidunum%20III/Letnji%20semestar%202021_22/Veb%20bazirani%20info%20sistemi/Vezbe5/SkladisteJSON.jschema",
+	"skladista":{
+	    "vlasnik": {
+	        "ime": "Predrag",
+	        "prezime": "Radak",
+	        "jmbg": "1123456667"
+	    },
+	    "vozila": {
+	        "motor": {
+	            "snaga": "2000cm",
+	            "datumServisiranja": "2020",
+	            "obrtniMomenat": "3000",
+	            "proizvodjacMotora": "Maserati"
+	        },
+	        "proizvodjac": "Suzuki",
+	        "tockovi": {
+	            "dijametar": "NN",
+	            "proizvodjacTockova": "Miselin"
+	        },
+	        "vlasnikAuta": "Nikola Kalinic"
+	    },
+	    "adresa": {
+	        "broj": "4A",
+	        "grad": "Vrsac",
+	        "ulica": "Prvomajska"
+	    }
+	}
+}

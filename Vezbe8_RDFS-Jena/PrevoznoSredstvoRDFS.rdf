@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vehicles="http://www.singidunum.ac.rs/vehicles#">
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vehicles#vozilo">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Description>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/vehicles#motornoVozilo">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/vehicles#vozilo"/>
+    </rdfs:Class>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vehicles#bus">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/vehicles#motornoVozilo"/>
+    </rdf:Description>
+    
+    
+</rdf:RDF>

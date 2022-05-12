@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Domaci zadataka-Vezbe1 -->
+<wikipediaPage>
+    <securityPodaci>
+        <diskusijaIPAdrese xmlns:xlink="https://en.wikipedia.org/wiki/Special:MyTalk">Talk</diskusijaIPAdrese>
+        <doprinosi xmlns:xlink="https://en.wikipedia.org/wiki/Special:MyContributions">Contributions</doprinosi>
+        <kreiranjeNaloga xmlns:xlink="/createAccount">Create account</kreiranjeNaloga>
+        <prijava xmlns:xlink="/login">Log in</prijava>
+    </securityPodaci>
+    
+    <navigacioniPodaci>
+        <oClanku xmlns:xlink="https://en.wikipedia.org/wiki/Ant">Article</oClanku>
+        <razgovorOCLanku xmlns:xlink="https://en.wikipedia.org/wiki/Talk:Ant">Talk</razgovorOCLanku>
+        <citanje xmlns:xlink="https://en.wikipedia.org/wiki/Ant">Read</citanje>
+        <pregledIzvora xmlns:xlink="https://en.wikipedia.org/w/index.php?title=Ant=edit">View source</pregledIzvora>
+        <pregledIStorije xmlns:xlink="https://en.wikipedia.org/w/index.php?title=Ant=history">View history</pregledIStorije>
+        <pretragaClanka/>
+    </navigacioniPodaci>
+    
+    <opstiPodaci>
+        <slikaStranice lokacija="putanja"/>
+        <naslovStranice>Wikipedia<text>The Free Encyclopedia</text></naslovStranice>
+        <glavniPodaci>
+            <mainPage xmlns:xlink="https://en.wikipedia.org/wiki/Main_Page"/>
+            <contents xmlns:xlink="https://en.wikipedia.org/wiki/Wikipedia:Contents"/>
+            <currentEvents xmlns:xlink="https://en.wikipedia.org/wiki/Portal:Current_events"/>
+            <randomArticle xmlns:xlink="https://en.wikipedia.org/wiki/Special:Random"/>
+            <aboutWikipedia xmlns:xlink="https://en.wikipedia.org/wiki/Wikipedia:About"/>
+            <contactUs xmlns:xlink="https://en.wikipedia.org/wiki/Wikipedia:Contact_us"/>
+            <donate xmlns:xlink="/donacijaNeRadi"/>
+        </glavniPodaci>
+        <doprinosi>
+            <help xmlns:xlink="https://en.wikipedia.org/wiki/Help:Contents"/>
+            <learnToEdit xmlns:xlink="https://en.wikipedia.org/wiki/Help:Introduction"/>
+            <communityPortal xmlns:xlink="https://en.wikipedia.org/wiki/Wikipedia:Community_portal"/>
+            <recentChanges xmlns:xlink="https://en.wikipedia.org/wiki/Special:RecentChanges"/>
+            <uploadFile xmlns:xlink="https://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard"/>
+        </doprinosi>
+        <alati>
+            <whatLinkHere xmlns:xlink="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Ant"/>
+            <relatedChanges xmlns:xlink="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Ant"/>
+            <specialPages xmlns:xlink="https://en.wikipedia.org/wiki/Special:SpecialPages"/>
+            <permanentLink xmlns:xlink="https://en.wikipedia.org/w/inphp?titl"/>
+            <pageInformation xmlns:xlink="/nekiLink"/>
+            <citeThisPage xmlns:xlink="/nekiLink"/>
+            <wikidataItem xmlns:xlink="https://www.wikidata.org/wiki/Special:EntityPage/Q7386"/>
+        </alati>
+        <stampanjeExportovanje>
+            <downloadPdf xmlns:xlink="https://wnload-screen"/>
+            <printableVersion xmlns:xlink="/nekiLink"/>
+        </stampanjeExportovanje>
+        <uDrugimProjektima>
+            <wikimediaCommons xmlns:xlink="https://commons.wikimedia.org/wiki/Ant"/>
+            <wikispecies xmlns:xlink="https://species.wikimedia.org/wiki/Formicidae"/>
+            <wikinews xmlns:xlink="https://en.wikinews.org/wiki/Category:Ants"/>
+            <wikiqoute xmlns:xlink="https://en.wikiquote.org/wiki/Ants"/>
+            <wikiveristy xmlns:xlink="https://en.wikiversity.org/wiki/Ants"/>
+        </uDrugimProjektima>
+        <jezici>
+            <english xmlns:xlink="https://ang.wikipedia.org/wiki/%C7%A2mette"/>
+            <bosnian xmlns:xlink="https://bs.wikipedia.org/wiki/Mravi"/>
+            <hevatski xmlns:xlink="https://hr.wikipedia.org/wiki/Mravi"/>
+            <magyar xmlns:xlink="https://hu.wikipedia.org/wiki/Hangy%C3%A1k"/>
+            <romania xmlns:xlink="https://ro.wikipedia.org/wiki/Formicide"/>
+            <shqip xmlns:xlink="https://sq.wikipedia.org/wiki/Milingona"/>
+            <slovenian xmlns:xlink="https://sk.wikipedia.org/wiki/Mravcovit%C3%A9"/>
+            <srpski xmlns:xlink="https://sr.wikipedia.org/wiki/%D0%9C%D1%80%D0%B0%D0%B2%D0%B8"/>
+            ...
+        </jezici>
+    </opstiPodaci>
+    
+    <razradaStranice>
+        <naslov>Ant<teks>From Wikipedia</teks></naslov>
+        <tekstualniSadrzaj>Ants are eusocial insects of the family Formicidae and, along with the related wasps and bees, belong to the order Hymenoptera. Ants appear in the fossil record across the globe in considerable diversity during the latest Early Cretaceous and early Late Cretaceous,
+            suggesting an earlier origin. Ants evolved from vespoid wasp ancestors in the Cretaceous period, and diversified after the rise of flowering plants. More than 13,800 
+            of an estimated total of 22,000 species have been classified. They are easily identified by their geniculate (elbowed) antennae and the distinctive node-like structure that forms their slender waists.
+            Ants form colonies that range in size from a few dozen predatory individuals living in small natural cavities to highly organised colonies that may occupy large territories and consist of millions of individuals. Larger colonies consist of various castes of sterile, wingless females, 
+            most of which are workers (ergates), as well as soldiers (dinergates) and other specialised groups. Nearly all ant colonies also have some fertile males called 
+            "drones" and one or more fertile females called "queens" (gynes). The colonies are described as superorganisms because the ants appear to operate as a unified entity, collectively working together to support the colo
+            File:Blackants-bredcrust-tokyo-may2015.web(video) Ants gathering food
+            Ants have colonised almost every landmass on Earth. The only places lacking indigenous ants are Antarctica and a few remote or inhospitable islands. Ants thrive in most ecosystems and may form 15–25% of the terrestrial animal biomass.
+            Their success in so many environments has been attributed to their social organisation and their ability to modify habitats, tap resources, and defend themselves. Their long co-evolution with other species has 
+            led to mimetic, commensal, parasitic, and mutualistic relationships.</tekstualniSadrzaj>
+        <slika lokacija="putanja"/>
+    </razradaStranice>
+</wikipediaPage>
+

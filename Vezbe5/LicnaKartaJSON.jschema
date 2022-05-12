@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Licna karta",
+    "description": "Primer koji opisuje licnu kartu",
+    "type": "object",
+    "properties": {
+        "licnaKarta": {
+            "description": "Korensko stablo licne karte",
+            "type": "object",
+            "properties": {
+                "podaciOsobe": {
+                    "description": "Podaci koji personalno opisuju osobu",
+                    "type": "object",
+                    "properties": {
+                        "ime": {"type": "string"},
+                        "prezime": {"type": "string"},
+                        "datumRodjenja": {"type": "integer"},
+                        "jmbg": {
+                            "type": "string",
+                            "pattern": "\\d{13}"
+                        },
+                        "pol": {
+                            "type": "string",
+                            "enum": [
+                                "M",
+                                "Ž"
+                            ]
+                        },
+                        "potpis": {"type": "string"}
+                    },
+                    "required": [
+                        "ime",
+                        "prezime",
+                        "datumRodjenja",
+                        "pol",
+                        "potpis"
+                    ],
+                    "additionalProperties": false
+                },
+                "podaciOKarti": {
+                    "description": "Podaci koji opisuju dodatne podatke licne karte",
+                    "type": "object",
+                    "properties": {
+                        "brojLicneKarte": {
+                            "type": "string",
+                            "maxLength": 9
+                        },
+                        "datumIzdavanja": {"type": "integer"},
+                        "datumIsteka": {"type": "integer"},
+                        "dokumentIzdaje": {"type": "string"}
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Skladista",
+    "description": "Description of the schema",
+    "type": "object",
+    "properties": {
+        "skladista": {
+            "description": "Korenski objekat koji opisuje skladiste",
+            "type": "object",
+            "properties": {
+                "vlasnik": {
+                    "description": "Objkeat opisuje vlasnika",
+                    "type": "object",
+                    "properties": {
+                        "ime": {"type": "string"},
+                        "prezime": {"type": "string"},
+                        "jmbg": {"type": "string"}
+                    }
+                },
+                "vozila": {
+                    "description": "Objekat koji opisuje vozila",
+                    "type": "object",
+                    "properties": {
+                        "proizvodjac": {"type": "string"},
+                        "motor": {
+                            "description": "Onjekat koji opisuje motor u vozilima",
+                            "type": "object",
+                            "properties": {
+                                "snaga": {"type": "string"},
+                                "obrtniMomenat": {"type": "string"},
+                                "proizvodjacMotora": {"type": "string"},
+                                "datumServisiranja": {"type": "string"}
+                            },
+                            "enum": [
+                                "benzin",
+                                "dizel",
+                                "hibridni",
+                                "elektricni"
+                            ]
+                        },
+                        "tockovi": {
+                            "description": "Objekat opisuje tockove vozila",
+                            "type": "object",
+                            "properties": {
+                                "dijametar": {"type": "string"},
+                                "proizvodjacTockova": {"type": "string"}
+                            },
+                            "enum": [
+                                "zimeske",
+                                "letnje"
+                            ]
+                        },
+                        "vlasnikAuta": {"type": "string"}
+                    },
+                    "required": ["vozila"]
+                },
+                "adresa": {
+                    "description": "Objekat koji opisuje vlasnika",
+                    "type": "object",
+                    "properties": {
+                        "broj": {"type": "string"},
+                        "ulica": {"type": "string"},
+                        "grad": {"type": "string"}
+                    }
+                }
+            }
+        }
+    },
+    "required": ["tockovi"]
+}

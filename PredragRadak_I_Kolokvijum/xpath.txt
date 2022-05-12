@@ -1,0 +1,4 @@
+/fakulteti/fakultet/adresa[Beograd]
+
+
+/fakulteti/fakultet/radovi/objavljeniRa/katedra[<1960]/profesori

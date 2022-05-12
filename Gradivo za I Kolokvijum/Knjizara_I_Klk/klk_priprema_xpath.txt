@@ -1,0 +1,19 @@
+==================================================================================
+=============================== X P A T H ========================================
+==================================================================================
+----------imena svih autora ciji je omiljeni zanr horor
+//knjige/knjiga/autor[@zanr="horor"]
+
+##########umetnickih imena svih preminulih autora
+//knjige/knjiga/autor[datumSmrti]/pseudonim
+
+##########naslove svih knjiga izdatih pre 1995. godine
+//knjige/knjiga[godinaIzdavanja < 1995]/naslov
+
+##########naslove svih misterija ?ciji je izdava?c zatvoren i koje imaju autora kome misterija nije omiljeni zanr
+//knjige/knjiga[@zanr='misterija']/autor[@zanr!='misterija']/..//izdavac[godinaZatvaranja]/..//naslov
+
+##########pseudonime autora koji imaju knjige izdate posle 1950. godine u kojih ima 10 ili vi?se primeraka u
+biblioteci.
+//knjiga[(@brojDostupnihPrimeraka >= 10) and (godinaIzdavanja > 1959)]/autor/pseudonim
+

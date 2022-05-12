@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vino = "http://www.singidunum.ac.rs/vino#">
+    
+    <!-- Kreiranje klasa -->   
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/vino#osoblje"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/vino#somelijer">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/vino#osoblje"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/vino#prodavac">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/vino#osoblje"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/vino#tehnickaPodrska">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/vino#osoblje"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/vino#proizvod"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/vino#vina">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/vino#proizvod"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/vino#sir">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/vino#proizvod"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/vino#cena"/>
+        
+        
+     <!-- Kreiranje svojstva -->
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/vino#imaCenu">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/vino#proizvod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/vino#imaGodinuBerbe">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/vino#vina"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/vino#sastojiSeOd">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/vino#vina"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/vino#Grozdje"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/vino#naziv">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/vino#sir"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/vino#tipSira">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/vino#sir"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/vino#TipSira"/>
+    </rdf:Property>
+    
+    <!-- Kreiranje instance za klase i svojstva -->
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vino#aleksandar">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/vino#Somelijer"/>
+        <vino:plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</vino:plata>
+        <vino:ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aleksandar</vino:ime>
+        <vino:prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Markovic</vino:prezime>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vino#maja">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/vino#Prodavac"/>
+        <vino:plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</vino:plata>
+        <vino:ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maja</vino:ime>
+        <vino:prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pavlovic</vino:prezime>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vino#ivan">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/vino#TehnickaPodrska"/>
+        <vino:plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">750</vino:plata>
+        <vino:ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivan</vino:ime>
+        <vino:prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivanovic</vino:prezime>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vino#whiteBurgundy">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/vino#Vino"/>
+        <vino:imaCenu>50</vino:imaCenu> 
+        <vino:imaGodinuBerbe>1950</vino:imaGodinuBerbe>
+        <vino:sastojiSeOd rdf:resource="http://www.singidunum.ac.rs/vino#chardonay"/>
+        <vino:sastojiSeOd rdf:resource="http://www.singidunum.ac.rs/vino#pinotBlanc"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vino#pinotNoir">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/vino#Vino"/>
+        <vino:imaGodinuBerbe>1997</vino:imaGodinuBerbe>
+        <vino:imaCenu>75</vino:imaCenu> 
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vino#rieslingBlend">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/vino#Vino"/>
+        <vino:imaCenu>50</vino:imaCenu> 
+        <vino:sastojiSeOd rdf:resource="http://www.singidunum.ac.rs/vino#riesling"/>
+        <vino:sastojiSeOd rdf:resource="http://www.singidunum.ac.rs/vino#chardonay"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vino#brie">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/vino#Sir"/>
+        <vino:naziv>Brie</vino:naziv>
+        <vino:imaCenu>40</vino:imaCenu> 
+        <vino:tipSira rdf:resource="http://www.singidunum.ac.rs/vino#mekiSIr"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vino#cheddar">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/vino#Sir"/>
+        <vino:naziv>Cheddar</vino:naziv>
+        <vino:imaCenu>45</vino:imaCenu> 
+        <vino:tipSira rdf:resource="http://www.singidunum.ac.rs/vino#tvrdiSir"/>
+    </rdf:Description>
+    
+    
+</rdf:RDF>

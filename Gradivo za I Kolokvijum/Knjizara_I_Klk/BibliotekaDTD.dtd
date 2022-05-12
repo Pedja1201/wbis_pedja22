@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT biblioteka ((naziv | adresa | zaposleni | knjige) | (adresa | zaposleni | knjige | naziv) | (knjige | zaposleni |adresa | naziv)) >
+
+<!ELEMENT naziv (#PCDATA) >
+
+<!ELEMENT zaposleni (zaposlen+) >
+<!ELEMENT zaposlen (ime+, prezime+, jmbg, plata) >
+<!ELEMENT ime (#PCDATA) >
+<!ELEMENT prezime (#PCDATA) >
+<!ELEMENT jmbg (#PCDATA) >
+<!ELEMENT plata (#PCDATA) >
+
+<!ELEMENT adresa (ulica, broj?, grad, drzava)+ >
+<!ELEMENT ulica (#PCDATA) >
+<!ELEMENT broj (#PCDATA) >
+<!ELEMENT grad (#PCDATA) >
+<!ELEMENT drzava (#PCDATA) >
+
+<!ELEMENT knjige (knjiga+) >
+<!ELEMENT knjiga (naslov, ISBN, autor, izdavac, godinaIzdavanja) >
+<!ATTLIST knjiga
+zanr (horor | komedija | misterija | drama) #REQUIRED>
+<!ELEMENT naslov (#PCDATA) >
+<!ELEMENT ISBN (#PCDATA) >
+<!ELEMENT autor (ime, prezime, datumRodjenja, datumSmrti, umetnickoIme) >
+<!ELEMENT datumRodjenja (#PCDATA) >
+<!ELEMENT datumSmrti (#PCDATA) >
+<!ELEMENT umetnickoIme (pseudonim*) >
+<!ELEMENT pseudonim (#PCDATA) >
+
+<!ELEMENT izdavac (naziv, adresa, godinaOsnivanja, godinaZatvaranja?, maticniBroj) >
+<!ELEMENT godinaOsnivanja (#PCDATA) >
+<!ELEMENT godinaZatvaranja (#PCDATA) >
+<!ELEMENT maticniBroj (#PCDATA) >
+
+<!ELEMENT godinaIzdavanja (#PCDATA) >
+
+

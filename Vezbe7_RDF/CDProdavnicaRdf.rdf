@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:prodavnica="http://www.singidunum.ac.rs/prodavnica#"
+    xmlns:podaci="http://www.singidunum.ac.rs/podaci#"
+    xmlns:muzika="http://www.singidunum.ac.rs/muzika#"
+    xmlns:film="http://www.singidunum.ac.rs/film#"
+    xmlns:igra="http://www.singidunum.ac.rs/igra#">
+    
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/CdProdavnica">
+        <prodavnica:adresa rdf:nodeID="adresa1"/>
+        <prodavnica:vlasnik rdf:resource="http://www.singidunum.ac.rs/vlasnik"/>
+        <prodavnica:inventar rdf:resource="http://www.singidunum.ac.rs/inventar"/>
+    </rdf:Description>
+    
+        <rdf:Description rdf:nodeID="adresa1">
+            <podaci:broj>87</podaci:broj>
+            <podaci:ulica>Prvomajska</podaci:ulica>
+            <podaci:grad>Pavlis</podaci:grad>
+        </rdf:Description>
+        <rdf:Description rdf:about="http://www.singidunum.ac.rs/vlasnik">
+            <prodavnica:fizickoLice rdf:resource="http://www.singidunum.ac.rs/fizickoLice"/>
+            <prodavnica:pravnoLice rdf:resource="http://www.singidunum.ac.rs/pravnoLice"/>
+        </rdf:Description>
+             <rdf:Description rdf:about="http://www.singidunum.ac.rs/fizickoLice">
+                 <podaci:ime>Nikola</podaci:ime>
+                 <podaci:prezime>Nikolic</podaci:prezime>
+                 <podaci:jmbg>21239929392</podaci:jmbg>
+             </rdf:Description>
+             <rdf:Description rdf:about="http://www.singidunum.ac.rs/pravnoLice">
+                 <podaci:naziv>Firma</podaci:naziv>
+                 <podaci:maticniBroj>2123333</podaci:maticniBroj>
+                 <podaci:datumOsnivanja>20.01.2009</podaci:datumOsnivanja>
+             </rdf:Description>
+    
+        <rdf:Description rdf:about="http://www.singidunum.ac.rs/inventar">
+            <prodavnica:cena>2000</prodavnica:cena>
+            <prodavnica:muzika rdf:resource="http://www.singidunum.ac.rs/muzika"/>
+            <prodavnica:film rdf:resource="http://www.singidunum.ac.rs/film"/>
+            <prodavnica:igra rdf:resource="http://www.singidunum.ac.rs/igra"/>
+        </rdf:Description>
+    
+            <rdf:Description rdf:about="http://www.singidunum.ac.rs/muzika">
+                <muzika:naslov>Pop - rok</muzika:naslov>
+                <muzika:izvodjac>Riblja corba</muzika:izvodjac>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.singidunum.ac.rs/film">
+                <film:naslov>Pirati sa Kariba</film:naslov>
+                <film:zanrFilm rdf:nodeID="zanrFilma1"/> 
+                <film:glumac rdf:nodeID="glumac1"/>
+            </rdf:Description>
+                    <rdf:Description rdf:nodeID="glumac1">
+                        <film:ime>Dzoni</film:ime>
+                        <film:prezime>Dep</film:prezime>
+                    </rdf:Description>
+                     <rdf:Description rdf:nodeID="zanrFilma1">
+                         <film:zanr>drama</film:zanr>
+                         <film:zanr>misterija</film:zanr>
+                         <film:zanr>horor</film:zanr>
+                         <film:zanr>komedija</film:zanr>
+                         <film:zanr>akcija</film:zanr>
+                         <film:zanr>triler</film:zanr>
+                     </rdf:Description>
+            <rdf:Description rdf:about="http://www.singidunum.ac.rs/igra">
+                <igra:naslov>Need for speed</igra:naslov>
+                <igra:zanrIgre rdf:nodeID="zanrIgre1"/>
+                <igra:izdavac rdf:resource="http://www.singidunum.ac.rs/izdavac"/>
+                <igra:platforma rdf:nodeID="platforma1"/>
+            </rdf:Description>
+                    <rdf:Description rdf:nodeID="zanrIgre1">
+                        <igra:naziv>fps</igra:naziv>
+                        <igra:naziv>rts</igra:naziv>
+                        <igra:naziv>tps</igra:naziv>
+                        <igra:naziv>rpg</igra:naziv>
+                    </rdf:Description>
+                    <rdf:Description rdf:about="http://www.singidunum.ac.rs/izdavac">
+                        <igra:naziv>City Records</igra:naziv>
+                        <igra:godinaOtvaranja>20.10.2021</igra:godinaOtvaranja>
+                        <igra:sediste>Beograd</igra:sediste>
+                    </rdf:Description>
+                    <rdf:Description rdf:nodeID="platforma1">
+                        <igra:naziv>PC</igra:naziv>
+                        <igra:naziv>XBOX</igra:naziv>
+                        <igra:naziv>PS</igra:naziv>
+                    </rdf:Description>
+        
+    
+    
+    
+    
+</rdf:RDF>

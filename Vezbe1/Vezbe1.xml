@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komentar -->
+<elemnet>
+    <tekstualnielement>Neki sadrzaj</tekstualnielement>
+    <podelemente atribut="vrednost">
+        Poslednja rec ce biti <bold>istaknuta</bold>
+    </podelemente>
+    <prazan atrbut="vrednost" />
+
+</elemnet>

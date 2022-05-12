@@ -1,0 +1,61 @@
+==================================================================================
+=============================== X Q U E R Y ======================================
+==================================================================================
+
+##########Uredene liste imena i prezimena svih autora, pri ?cemu se za svakog autora takode ispisuju naslovi
+##########knjiga koje je napisao sortirano prema prezimenu autora.
+
+<ul>
+{
+for $k in doc('instance1.xml')//biblioteka/knjige/knjiga
+order by $k/autor/prezime/text() ascending
+return 
+<li>
+{
+concat($k/autor/ime/text(), ', ', $k/autor/prezime/text(), ', ', $k/naslov/text())
+}
+</li>
+}
+</ul>
+
+
+
+##########Tabele svih knjiga, pri cemu su kolone naslov knjige, ime i prezime autora (kao jedna kolona), naziv
+##########izdavaca i godina izdavanja, sortirano prema zanru knjige.
+
+<table>
+<tr>
+<th>naslov</th>
+<th>ime i prezime</th>
+<th>izdavac</th>
+<th>godina izdavanja</th>
+</tr>
+{
+for $k in doc('instance1.xml')//biblioteka/knjige/knjiga
+order by $k/@zanr ascending
+return
+<tr>
+<td>{$k/naslov/text()}</td>
+<td>{concat($k/autor/ime/text(), ' ', $k/autor/prezime/text())}</td>
+<td>{$k/izdavac/naziv/text()}</td>
+<td>{$k/godinaIzdavanja/text()}</td>
+</tr>
+}
+
+</table>
+
+
+##########Liste izdavaca, zajedno sa autorima koji su napisali knjige koje su ti izdavaci izdali, u formatu:
+##########Naziv izdavaca, autor, autor...
+
+<ul>
+{
+for $k in doc('instance1.xml')//biblioteka/knjige/knjiga
+return
+<li>
+{concat($k/izdavac/naziv/text(), ', ', $k/autor/ime/text(), ' ', $k/autor/prezime/text())}
+</li>
+}
+</ul>
+
+

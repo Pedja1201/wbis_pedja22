@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE restoran SYSTEM "RestoranDomaci.dtd">
+<restoran>
+    <adresa>
+        <broj></broj>
+        <ulica></ulica>
+        <grad></grad>
+        <drzava></drzava>
+    </adresa>
+    <vlasnik>
+        <ime></ime>
+        <prezime></prezime>
+        <jmbg></jmbg>
+        <datumRodjenja></datumRodjenja>
+    </vlasnik>
+    <osoblje>
+        <konobar>
+            <ime></ime>
+            <prezime></prezime>
+            <jmbg></jmbg>
+            <plata></plata>
+        </konobar>
+        <kuvar>
+            <ime></ime>
+            <prezime></prezime>
+            <jmbg></jmbg>
+            <plata></plata>
+            <specijalizacija tip="riba" datum=""></specijalizacija>
+        </kuvar>
+        <sanker>
+            <ime></ime>
+            <prezime></prezime>
+            <jmbg></jmbg>
+            <plata></plata>
+        </sanker>
+    </osoblje>
+    <meni>
+        <hrana posna="da" tipHrane="veganska">
+            <cena></cena>
+            <naziv></naziv>
+        </hrana>
+        <pice alkoholno="ne" gazirano="da">
+            <cena></cena>
+            <naziv></naziv>
+        </pice>
+    </meni>
+</restoran>

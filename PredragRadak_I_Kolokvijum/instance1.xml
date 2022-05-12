@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fakulteti xmlns="http://www.singidunum.ac.rs"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.singidunum.ac.rs file:/D:/Singidunum%20III/Letnji%20semestar%202021_22/Veb%20bazirani%20info%20sistemi/PredragRadak_I_Kolokvijum/FakultetXSD.xsd">
+    <fakultet datumOsnivanja="2006-05-04">
+        <naziv>naziv0</naziv>
+        <adresa>adresa0</adresa>
+        <nastavnici>
+            <nastavnik xmlns:fax="http://www.singidunum.ac.rs" xsi:type="fax:TProfesor" datumDoktoriranja="2006-05-04" katedra="informatika">
+                <ime>ime0</ime>
+                <prezime>prezime0</prezime>
+                <plata>-49.5</plata>
+                <radovi>
+                    <objavljeniRad>
+                        <naslov>naslov0</naslov>
+                        <datumObjavljivanja>2006-05-04</datumObjavljivanja>
+                    </objavljeniRad>
+                    <objavljeniRad>
+                        <naslov>naslov1</naslov>
+                        <datumObjavljivanja>2006-05-04</datumObjavljivanja>
+                    </objavljeniRad>
+                </radovi>
+            </nastavnik>
+            <nastavnik xmlns:fax="http://www.singidunum.ac.rs" xsi:type="fax:TProfesor" datumDoktoriranja="2006-05-04" katedra="informatika">
+                <ime>ime1</ime>
+                <prezime>prezime1</prezime>
+                <plata>-49.5</plata>
+                <radovi>
+                    <objavljeniRad>
+                        <naslov>naslov2</naslov>
+                        <datumObjavljivanja>2006-05-04</datumObjavljivanja>
+                    </objavljeniRad>
+                    <objavljeniRad>
+                        <naslov>naslov3</naslov>
+                        <datumObjavljivanja>2006-05-04</datumObjavljivanja>
+                    </objavljeniRad>
+                </radovi>
+            </nastavnik>
+        </nastavnici>
+        <predmeti>
+            <predmet sifraPredmeta="sifraPredmeta1">
+                <naziv>naziv1</naziv>
+                <brojCasova>0</brojCasova>
+                <angazovaniNastavnici>
+                    <nastavnici>
+                    </nastavnici>
+                    <nastavnici>
+                    </nastavnici>
+                </angazovaniNastavnici>
+            </predmet>
+            <predmet sifraPredmeta="sifraPredmeta3">
+                <naziv>naziv2</naziv>
+                <brojCasova>0</brojCasova>
+                <angazovaniNastavnici>
+                    <nastavnici>
+                    </nastavnici>
+                    <nastavnici>
+                    </nastavnici>
+                </angazovaniNastavnici>
+            </predmet>
+        </predmeti>
+    </fakultet>
+    <fakultet datumOsnivanja="2006-05-04">
+        <naziv>naziv3</naziv>
+        <adresa>adresa1</adresa>
+        <nastavnici>
+            <nastavnik xmlns:fax="http://www.singidunum.ac.rs" xsi:type="fax:TProfesor" datumDoktoriranja="2006-05-04" katedra="informatika">
+                <ime>ime2</ime>
+                <prezime>prezime2</prezime>
+                <plata>-49.5</plata>
+                <radovi>
+                    <objavljeniRad>
+                        <naslov>naslov4</naslov>
+                        <datumObjavljivanja>2006-05-04</datumObjavljivanja>
+                    </objavljeniRad>
+                    <objavljeniRad>
+                        <naslov>naslov5</naslov>
+                        <datumObjavljivanja>2006-05-04</datumObjavljivanja>
+                    </objavljeniRad>
+                </radovi>
+            </nastavnik>
+            <nastavnik xmlns:fax="http://www.singidunum.ac.rs" xsi:type="fax:TProfesor" datumDoktoriranja="2006-05-04" katedra="informatika">
+                <ime>ime3</ime>
+                <prezime>prezime3</prezime>
+                <plata>-49.5</plata>
+                <radovi>
+                    <objavljeniRad>
+                        <naslov>naslov6</naslov>
+                        <datumObjavljivanja>2006-05-04</datumObjavljivanja>
+                    </objavljeniRad>
+                    <objavljeniRad>
+                        <naslov>naslov7</naslov>
+                        <datumObjavljivanja>2006-05-04</datumObjavljivanja>
+                    </objavljeniRad>
+                </radovi>
+            </nastavnik>
+        </nastavnici>
+        <predmeti>
+            <predmet sifraPredmeta="sifraPredmeta5">
+                <naziv>naziv4</naziv>
+                <brojCasova>0</brojCasova>
+                <angazovaniNastavnici>
+                    <nastavnici>
+                    </nastavnici>
+                    <nastavnici>
+                    </nastavnici>
+                </angazovaniNastavnici>
+            </predmet>
+            <predmet sifraPredmeta="sifraPredmeta7">
+                <naziv>naziv5</naziv>
+                <brojCasova>0</brojCasova>
+                <angazovaniNastavnici>
+                    <nastavnici>
+                    </nastavnici>
+                    <nastavnici>
+                    </nastavnici>
+                </angazovaniNastavnici>
+            </predmet>
+        </predmeti>
+    </fakultet>
+</fakulteti>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:servis="http://www.singidunum.ac.rs/servis#"
+    xmlns:xsd ="http://www.w3.org/2001/XMLSchema#">
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/servis#Osoba"/>
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/servis#Projekat"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/servis#Osoblje">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/servis#Osoba"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/servis#Menadzer">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/servis#Osoblje"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/servis#Tehnicar">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/servis#Osoblje"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/servis#MedjunarodniProjekat">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/servis#Projekat"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/servis#DomaciProjekat">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/servis#Projekat"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/servis#Osoblje">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/servis#Osoba"/>
+    </rdfs:Class>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/servis#angazovanNa">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/servis#Osoba"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/servis#Projekat"/>
+    </rdf:Property>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/servis#marko">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/servis#Tehnicar"/>
+        <servis:ime>Marko</servis:ime>
+        <servis:prezime>Markovic</servis:prezime>
+        <servis:plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</servis:plata>
+        <servis:angazovanNa rdf:resource="http://www.singidunum.ac.rs/servis#projekat1"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/servis#petar">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/servis#Menadzer"/>
+        <servis:ime>Petar</servis:ime>
+        <servis:prezime>Petrovic</servis:prezime>
+        <servis:plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</servis:plata>
+        <servis:angazovanNa rdf:resource="http://www.singidunum.ac.rs/servis#projekat1"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/servis#stevan">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/servis#Tehnicar"/>
+        <servis:ime>Stevan</servis:ime>
+        <servis:prezime>Stevanovic</servis:prezime>
+        <servis:plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</servis:plata>
+        <servis:angazovanNa rdf:resource="http://www.singidunum.ac.rs/servis#projekat3"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/servis#darko">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/servis#Tehnicar"/>
+        <servis:ime>Darko</servis:ime>
+        <servis:prezime>Pavlovic</servis:prezime>
+        <servis:plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">750</servis:plata>
+        <servis:angazovanNa rdf:resource="http://www.singidunum.ac.rs/servis#projekat3"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/servis#milan">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/servis#Tehnicar"/>
+        <servis:ime>Milan</servis:ime>
+        <servis:prezime>Milovanovic</servis:prezime>
+        <servis:plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</servis:plata>
+        <servis:angazovanNa rdf:resource="http://www.singidunum.ac.rs/servis#projekat2"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/servis#aleksandar">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/servis#Tehnicar"/>
+        <servis:ime>Aleksandar</servis:ime>
+        <servis:plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</servis:plata>
+        <servis:angazovanNa rdf:resource="http://www.singidunum.ac.rs/servis#projekat2"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/servis#projekat1">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/servis#Projekat"/>
+        <servis:naziv>Projekat 1</servis:naziv>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/servis#projekat2">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/servis#MedjunarodniProjekat"/>
+        <servis:naziv>Projekat 2</servis:naziv>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/servis#projekat3">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/servis#DomaciProjekat"/>
+        <servis:naziv>Projekat 3</servis:naziv>
+    </rdf:Description>
+    
+    
+</rdf:RDF>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT prodavnica (adresa, vlasnik, inventar) >
+
+<!ELEMENT adresa (broj?, ulica, grad)>
+<!ELEMENT broj (#PCDATA)>
+<!ELEMENT ulica (#PCDATA)>
+<!ELEMENT grad (#PCDATA)>
+
+<!ELEMENT vlasnik (fizickoLice | pravnoLice)>
+<!ELEMENT fizickoLice (ime+, prezime+, jmbg, adresa) >
+<!ELEMENT ime (#PCDATA)>
+<!ELEMENT prezime (#PCDATA)>
+<!ELEMENT jmbg (#PCDATA)>
+
+<!ELEMENT pravnoLice (naziv, maticniBroj, datumOsnivanja, vlasnik+) >
+<!ELEMENT naziv (#PCDATA)>
+<!ELEMENT maticniBroj (#PCDATA)>
+<!ELEMENT datumOsnivanja (#PCDATA)>
+
+
+<!ELEMENT inventar (stavka) >
+<!ELEMENT stavka (cena,(muzika | film | igra)) >
+<!ATTLIST stavka
+kolicina CDATA #REQUIRED>
+<!ELEMENT cena (#PCDATA) >
+<!ELEMENT muzika (naslov, izvodjac) >
+<!ATTLIST muzika
+tip (single | album | kompilacija) #REQUIRED >
+<!ELEMENT naslov (#PCDATA) >
+<!ELEMENT izvodjac (#PCDATA) >
+
+<!ELEMENT film (naslov, zanrFilma+, glumac+) >
+<!ELEMENT zanrFilma (drama | misterija | horor | komedija | akcija | triler) >
+<!ELEMENT glumac (ime, prezime) >
+<!ATTLIST glumac
+tipUloge (glavna | pomocna) #REQUIRED >
+
+<!ELEMENT igra (naslov, zanrIgre+, izdavac, platforma*) >
+<!ELEMENT zanrIgre (fps | rts | tps | rpg) >
+<!ELEMENT izdavac (naziv, godinaOtvaranja, sediste) >
+<!ELEMENT godinaOtvaranja (#PCDATA) >
+<!ELEMENT sediste (#PCDATA) >
+<!ELEMENT platforma (PC | XBOX | PS) >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

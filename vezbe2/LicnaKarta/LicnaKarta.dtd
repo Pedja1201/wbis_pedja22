@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT licnaKarta (podaci_o_osobi, podaci_o_karti) >
+<!ELEMENT podaci_o_osobi (licniPodaci+) > <!-- Kao primer koji nam sluzi za dodavanje atributa 
+(podacima O Osobi smo uveli ponavljanje putem '+' i tu istu koristimo dalje u dobavljanju podataka) -->
+<!ELEMENT licniPodaci (ime, prezime,datumRodjenja, pol, slika, potpis) >
+<!ATTLIST licniPodaci 
+JMBG CDATA #REQUIRED >
+
+<!ELEMENT ime (#PCDATA) >
+<!ELEMENT prezime (#PCDATA) >
+<!ELEMENT datumRodjenja (#PCDATA) >
+<!ELEMENT pol (#PCDATA) >
+<!ELEMENT slika (#PCDATA) >
+<!ELEMENT potpis (#PCDATA) >
+
+<!ELEMENT podaci_o_karti (brojLicneKarte, datumIzdavanja, datumIsteka, dokumentIzdaje) >
+<!ELEMENT brojLicneKarte (#PCDATA) >
+<!ELEMENT datumIzdavanja (#PCDATA) >
+<!ELEMENT datumIsteka (#PCDATA) >
+<!ELEMENT dokumentIzdaje (#PCDATA) >

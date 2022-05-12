@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:racunar="http://www.singidunum.ac.rs/racunar#"
+    xmlns:slika="http://www.singidunum.ac.rs/slika#"
+    xmlns:component="http://www.singidunum.ac.rs/component#"
+    xmlns:mis="http://www.singidunum.ac.rs/mis#">
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/racunar">
+        <racunar:monitor rdf:resource="http://www.singidunum.ac.rs/monitor"/>
+        <racunar:kuciste rdf:resource="http://www.singidunum.ac.rs/kuciste"/>
+        <racunar:periferije rdf:resource="http://www.singidunum.ac.rs/periferije"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/monitor">
+        <racunar:model>Lenovo Idepad5</racunar:model>
+        <racunar:frekvencijaOsvezivanja>4,2Ghz</racunar:frekvencijaOsvezivanja>
+        <racunar:proizvodjac>Lenovo</racunar:proizvodjac>
+        <racunar:rezolucija rdf:nodeID="rezolucija"/>
+    </rdf:Description>
+            <rdf:Description rdf:nodeID="rezolucija">
+                <slika:visina>1980px</slika:visina>
+                <slika:sirina>920px</slika:sirina>
+            </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/kuciste">
+        <racunar:model>Intel</racunar:model>
+        <racunar:proizvodjac>Dell</racunar:proizvodjac>
+        <racunar:komponenta rdf:nodeID="komponente"/>
+    </rdf:Description>
+            <rdf:Description rdf:nodeID="komponente">
+                <component:maticnaPloca>AMD</component:maticnaPloca>
+                <component:procesor>ryzen 7 5600g</component:procesor>
+                <component:memorija>512Gb</component:memorija>
+                <component:grafickaKartica>Integrisana</component:grafickaKartica>
+            </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/periferije">
+        <racunar:mis rdf:resource="http://www.singidunum.ac.rs/mis"/>
+        <racunar:tastatura rdf:resource="http://www.singidunum.ac.rs/tastatura"/>
+    </rdf:Description>
+            <rdf:Description rdf:about="http://www.singidunum.ac.rs/mis">
+                <mis:model>Gaming</mis:model>
+                <mis:dpi>Kabl</mis:dpi>
+                <mis:proizvodjac>Samsung</mis:proizvodjac>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.singidunum.ac.rs/tastatura">
+                <mis:model>Gaming</mis:model>
+                <mis:proizvodjac>Shark</mis:proizvodjac>
+                <mis:tipTastature rdf:nodeID="tipTastature"/>
+            </rdf:Description>  
+                    <rdf:Description rdf:nodeID="tipTastature">
+                        <mis:taster>Membranski</mis:taster>
+                        <mis:taster>Mehanicki</mis:taster>
+                    </rdf:Description>
+    
+</rdf:RDF>

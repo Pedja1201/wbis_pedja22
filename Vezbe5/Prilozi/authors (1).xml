@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<authors>
+    <author verified="true">
+        <name>Sandy Mitchell</name>
+        <yearOfBirth>1958</yearOfBirth>
+        <genres>
+            <genre>Comedy</genre>
+            <genre setting="Warhammer">Science fiction</genre>
+            <genre>Drama</genre>
+        </genres>
+        <country>UK</country>
+    </author>
+    <author verified="true">
+        <name>Dan Abnett</name>
+        <yearOfBirth>1965</yearOfBirth>
+        <genres>
+            <genre>Drama</genre>
+            <genre setting="Warhammer">Science fiction</genre>
+            <genre>Thriller</genre>
+        </genres>
+        <country>UK</country>
+    </author>
+    <author>
+        <name>Howard Phillip Lovecraft</name>
+        <yearOfBirth>1890</yearOfBirth>
+        <genres>
+            <genre subgenre="Cosmic Horror">Horror</genre>
+            <genre>Fiction</genre>
+        </genres>
+        <country>USA</country>
+    </author>
+    <author verified="false">
+        <name>Andrzej Sapkowski</name>
+        <yearOfBirth>1948</yearOfBirth>
+        <genres>
+            <genre setting="Witcher">Fantasy</genre>
+            <genre>Drama</genre>
+        </genres>
+        <country>Poland</country>
+    </author>
+    <author>
+        <name>Dmitry Glukhovsky</name>
+        <yearOfBirth>1979</yearOfBirth>
+        <genres>
+            <genre>Drama</genre>
+            <genre>Thriller</genre>
+            <genre setting="Metro">Science fiction</genre>
+        </genres>
+    </author>
+    
+</authors>

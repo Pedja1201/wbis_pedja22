@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE knjizara SYSTEM "knjizara.dtd">
+<knjizara>
+    <vlasnik>
+        <ime>Marko</ime>
+        <prezime>Markovic</prezime>
+    </vlasnik>
+    <knjige>
+        <knjiga language="en">
+            <naslov>Na drini Cuprija</naslov>
+            <ISBN>OO99</ISBN>
+            <autor>  <!-- Pravi stablo za sto autor u DTD ima ime i prezime ILI pen_name -->
+                <ime>Ivo</ime>
+                <prezime>Andric</prezime>
+            </autor>
+        </knjiga>
+    </knjige>
+</knjizara>

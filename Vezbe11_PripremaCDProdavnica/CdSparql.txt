@@ -1,0 +1,46 @@
+		1.) Dobavljanje ukupnog broja svih proizvoda
+PREFIX shop: <http://www.singidunum.ac.rs/cdshop#>
+
+SELECT (COUNT(?proizvod) as ?count_proizvodi)
+{
+		?proizvodPodtipovi rdfs:subClassOf shop:Proizvod .
+		?proizvod rdf:type ?proizvodPodtipovi .
+}
+
+		2.) Dobavljanje proseˇcne cene proizvoda po tipu (igra, film)
+SELECT (AVG(?cena) as ?prosek) ?tip
+	WHERE { ?s shop:imaCenu ?cena;
+		rdf:type ?tip}
+	GROUP BY ?tip
+
+
+
+		3.) Dobavljanje prosecne cene proizvoda po tipu (igra, flm)
+SELECT (AVG(?cena) as ?prosek) ?tip
+	WHERE { ?s shop:imaCenu ?cena;
+		rdf:type ?tip}
+	GROUP BY ?tip
+
+		4.) Dobavljanje 3 zaposlena sa najmanjom platom
+SELECT DISTINCT ?zaposleni ?plata
+	WHERE
+{		    
+	?zaposleni rdf:type ?osoblje;
+	shop:plata ?plata .
+	?osoblje rdfs:subClassOf shop:Osoblje . 
+}
+ORDER BY ASC (?plata)
+LIMIT 3
+
+
+
+		6.)Dobavljanje sume plata, grupisane po tipu osoblja
+SELECT ?tipOsoblja(sum(?plata) as ?ukupna_plata)  
+	WHERE {
+	?zaposleni a ?osoblje;
+	shop:ime ?ime;
+	shop:prezime ?prezime;
+	shop:imaPlatu ?plata.
+	?osoblje rdfs:subClassOf shop:Osoblje
+	}
+	GROUP BY ?tipOsoblja

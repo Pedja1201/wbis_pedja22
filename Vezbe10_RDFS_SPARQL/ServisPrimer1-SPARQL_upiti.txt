@@ -1,0 +1,143 @@
+				-SPARQL UPITI-
+
+		-------Dobavljanje Tehnicara(1 objekat)---------
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX servis: <http://www.singidunum.ac.rs/servis#>  //Treba nam prefix za pristup URI
+
+SELECT ?tehnicar   
+	WHERE {?tehnicar rdf:type servis:Tehnicar}
+
+		-------Dobavljanje Tehnicara na projektu-----
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX servis: <http://www.singidunum.ac.rs/servis#>
+
+SELECT ?tehnicar?projekat   
+	WHERE {?tehnicar rdf:type servis:Tehnicar. //Dobavljanje svih tehnicara
+	?tehnicar servis:angazovanNa ?projekat   //tahnicari koji su angazovani na projektu
+	}
+
+		------Dobavljanje Medjunarodnog projekta-----
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX servis: <http://www.singidunum.ac.rs/servis#>
+
+SELECT ?tehnicar?projekat   
+	WHERE {
+	?tehnicar rdf:type servis:Tehnicar. 
+	?tehnicar servis:angazovanNa ?projekat.
+	?projekat a servis:MedjunarodniProjekat.  // 'a' je skracenica za rdf:type
+	}
+
+		------Dobavljanje Imena i prezimena Tehnicara-----
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX servis: <http://www.singidunum.ac.rs/servis#>
+
+SELECT ?tehnicar ?projekat ?ime ?prezime   
+	WHERE {
+	?tehnicar rdf:type servis:Tehnicar;  // ';' predstavlja sintaksnu precicu za sledeci upit 
+	servis:ime ?ime; 		    //se izbacuje promenljivaukoliko se koristi ista
+	servis:prezime ?prezime;
+	servis:angazovanNa ?projekat.
+	?projekat a servis:MedjunarodniProjekat. 
+	
+	}
+
+			------Vracanje plate Tehnicara-----
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX servis: <http://www.singidunum.ac.rs/servis#>
+
+SELECT *
+	WHERE {
+	?tehnicar rdf:type servis:Tehnicar;
+	servis:plata ?plata.
+	}
+
+			------Suma svih plata-----
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX servis: <http://www.singidunum.ac.rs/servis#>
+
+SELECT (sum(?plata) as ?ukupna_plata)  ///funkcija SUM
+	WHERE {
+	?zaposleni a ?osoblje;
+	servis:ime ?ime;
+	servis:prezime ?prezime;
+	servis:plata ?plata.
+	?osoblje rdfs:subClassOf servis:Osoblje
+	}
+
+			------Prosecna plata-----
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX servis: <http://www.singidunum.ac.rs/servis#>
+
+SELECT (avg(?plata) as ?prosecna_plata)
+	{
+	SELECT ?plata
+	{
+	?thenicar a servis:Tehnicar.
+	?tehnicar servis:plata ?plata	
+	}
+}
+
+		------Filtriranje plate (Veca od 800)-----
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX servis: <http://www.singidunum.ac.rs/servis#>
+
+SELECT *
+	WHERE {
+	?zaposleni a ?osoblje;
+	servis:ime ?ime;
+	servis:prezime ?prezime;
+	servis:plata ?plata.
+	?osoblje rdfs:subClassOf servis:Osoblje
+	FILTER(?plata > 800)
+	}
+
+		------GROUP BY (Grupisanje zaposlenih na projektu)-----
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX servis: <http://www.singidunum.ac.rs/servis#>
+
+SELECT ?projekat (COUNT(?zaposleni) as ?broj_zaposlenih)
+	 {
+	?zaposleni a ?osoblje;
+	servis:ime ?ime;
+	servis:prezime ?prezime;
+	servis:plata ?plata.
+	?osoblje rdfs:subClassOf servis:Osoblje.
+	?zaposleni servis:angazovanNa ?projekat
+	}
+	GROUP BY ?projekat

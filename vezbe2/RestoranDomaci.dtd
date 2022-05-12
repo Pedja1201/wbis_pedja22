@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT restoran (adresa, vlasnik, osoblje, meni) >
+<!ELEMENT adresa (broj, ulica, grad, drzava) >
+<!ELEMENT broj (#PCDATA) >
+<!ELEMENT ulica (#PCDATA) >
+<!ELEMENT grad (#PCDATA) >
+<!ELEMENT drzava (#PCDATA) >
+
+<!ELEMENT vlasnik (ime+, prezime+, jmbg+, datumRodjenja) >
+<!ELEMENT ime (#PCDATA) >
+<!ELEMENT prezime (#PCDATA) >
+<!ELEMENT jmbg (#PCDATA) >
+<!ELEMENT datumRodjenja (#PCDATA) >
+
+<!ELEMENT osoblje (konobar, kuvar, sanker) >
+<!ELEMENT konobar (ime, prezime, jmbg, plata+) >
+<!ELEMENT plata (#PCDATA) >
+<!ELEMENT kuvar (ime, prezime, jmbg, plata+, specijalizacija) >
+<!ELEMENT specijalizacija (#PCDATA) >
+<!ATTLIST specijalizacija
+tip (predjela|riba|rostilj|dezert) #REQUIRED
+datum CDATA #REQUIRED>
+<!ELEMENT sanker (ime, prezime, jmbg, plata+, kurs_sluzenja_pica?) >
+<!ELEMENT kurs_sluzenja_pica (datum, mesto, trajanje) >
+<!ELEMENT datum (#PCDATA) >
+<!ELEMENT mesto (#PCDATA) >
+<!ELEMENT trajanje (#PCDATA) >
+
+<!ELEMENT meni (hrana, pice) >
+<!ELEMENT hrana (cena+, naziv+) >
+<!ELEMENT cena (#PCDATA) >
+<!ELEMENT naziv (#PCDATA) >
+<!ELEMENT pice (cena+, naziv+) >
+<!ATTLIST hrana
+posna (da|ne) #REQUIRED
+tipHrane (veganska|vegetarijanska|peskatarska|obicna) #REQUIRED>
+<!ATTLIST pice
+alkoholno (da|ne) #REQUIRED
+gazirano (da|ne) #REQUIRED>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE skladista SYSTEM "skladisteVezbaKlkl.dtd">
+<skladista>
+    <adresa>
+        <ulica>Prvomajska 4</ulica>
+        <grad>Pavlis</grad>
+    </adresa>
+    <vozila sifraSasije="121212222R" godinaProizvodnje="2008">
+        <proizvodjac>Skoda DOO Sabac</proizvodjac>
+        <motor tipGoriva="dizel">
+            <snaga>1400 kubika</snaga>
+            <obrtniMomenat>1,3</obrtniMomenat>
+            <proizvodjacMotora>Fiat</proizvodjacMotora>
+            <datumServisiranja>2021</datumServisiranja>
+        </motor>
+        <tockovi gume="letnje">
+            <dijametar>12</dijametar>
+            <proizvodjacTockova>Mishelin</proizvodjacTockova>
+        </tockovi>
+        <vlasnikAuta>Marko Peric</vlasnikAuta>
+    </vozila>
+    <vlasnik>
+        <ime>Nikola</ime>
+        <prezime>Nikolic</prezime>
+        <jmbg>1293322211</jmbg>
+    </vlasnik>
+</skladista>

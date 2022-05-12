@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:skladiste = "http://www.singidunum.ac.rs/skladiste#">
+                    <!-- Primer radjen po slobodnom izboru -->
+    
+    <!-- Kreiranje klasa -->
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/skladiste#Vozilo"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/skladiste#Automobil">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/skladiste#Vozilo"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/skladiste#Motor">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/skladiste#Vozilo"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/skladiste#Tockovi">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/skladiste#Vozilo"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/skladiste#PrikljucnoVozilo">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/skladiste#Automobil"/>
+    </rdfs:Class>
+    
+    <!-- Kreiranje svojstva -->
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/skladiste#imaCenu">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/skladiste#Vozilo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/skladiste#imaKubikazu">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/skladiste#Vozilo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/skladiste#tipGoriva">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/skladiste#Automobil"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+    
+    
+    <!-- Kreiranje instance svojstva i klasa -->
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/skladiste#kupovinaVozila">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/skladiste#Automobil"/>
+        <skladiste:imaCenu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</skladiste:imaCenu>
+        <skladiste:imaKubikazu rdf:datatype="http://www.w3.org/2001/XMLSchema#string">120cm3</skladiste:imaKubikazu>
+        <skladiste:tipGoriva rdf:resource="http://www.singidunum.ac.rs/wine#dizel"/>
+   </rdf:Description>
+    
+    
+    
+    
+    
+</rdf:RDF>

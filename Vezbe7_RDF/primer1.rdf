@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:kontakt="http://www.singidunum.ac.rs/kontakt#"
+    xmlns:nastava="http://www.singidunum.ac.rs/nastava#"
+    xmlns:predmet="http://www.singidunum.ac.rs/predmet#">
+    
+<rdf:Description rdf:about="http://www.singidunum.ac.rs/osoblje/profesori/marko">
+    <kontakt:ime>Marko</kontakt:ime>
+    <kontakt:prezime>MArkovic</kontakt:prezime>
+    <kontakt:datumRodjenja>15.04.1993</kontakt:datumRodjenja>
+    <kontakt:adresa rdf:nodeID="adresa1"/>          <!-- Adresa1 koju smo dole kreirali -->
+    
+    <nastava:saradnik rdf:resource="http://www.singidunum.ac.rs/osoblje/asistenti/petar"/>
+    <nastava:predaje rdf:resource="http://www.singidunum.ac.rs/predmeti/wbis"/>
+</rdf:Description>
+    
+<rdf:Description rdf:about="http://www.singidunum.ac.rs/osoblje/asistenti/petar">
+    <kontakt:ime>Petar</kontakt:ime>
+    <kontakt:prezime>Petrovic</kontakt:prezime>
+</rdf:Description>
+    
+<rdf:Description rdf:about="http://www.singidunum.ac.rs/predmeti/wbis">
+    <predmet:naziv>Veb bazirani informacioni sistemi</predmet:naziv>
+    <predmet:skracenica>VBIS</predmet:skracenica>
+    <nastava:profesor rdf:resource="http://www.singidunum.ac.rs/osoblje/profesori/marko"/>
+    <nastava:asistent rdf:resource="http://www.singidunum.ac.rs/osoblje/asistenti/petar"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="adresa1">
+    <kontakt:ulica>Neka ulica</kontakt:ulica>
+    <kontakt:broj>55</kontakt:broj>
+    <kontakt:grad>Beograd</kontakt:grad>
+</rdf:Description>
+    
+
+    
+    
+    
+    
+</rdf:RDF>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:porodicnoStablo = "http://www.singidunum.ac.rs/porodicnoStablo#">
+    
+    <!-- Kreiranje klasa -->
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/porodicnoStablo#Person"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/porodicnoStablo#Parent"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/porodicnoStablo#Child"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/porodicnoStablo#Ancestor">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/porodicnoStablo#Parent"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/porodicnoStablo#Descendant">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/porodicnoStablo#Child"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/porodicnoStablo#Sibling"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/porodicnoStablo#Spouse"/>
+    
+    <!-- Kreiranje svojstva -->
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/porodicnoStablo#imaBrata">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/porodicnoStablo#Sibling"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/porodicnoStablo#imaRoditelje">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/porodicnoStablo#Parent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+    
+    <!-- Kreiranje instance -->
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/porodicnoStablo#marko">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/porodicnoStablo#Descedant"/>
+        <porodicnoStablo:imaBrata>Milorad</porodicnoStablo:imaBrata>
+        <porodicnoStablo:imaRoditelje>Milan</porodicnoStablo:imaRoditelje>
+        <porodicnoStablo:imaRoditelje>Ivana</porodicnoStablo:imaRoditelje>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/porodicnoStablo#milan">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/porodicnoStablo#Person"/>
+        <porodicnoStablo:imaRoditelje>Stevan</porodicnoStablo:imaRoditelje>
+        <porodicnoStablo:imaRoditelje>Radmila</porodicnoStablo:imaRoditelje>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/porodicnoStablo#ivana">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/porodicnoStablo#Person"/>
+        <porodicnoStablo:imaRoditelje>Darko</porodicnoStablo:imaRoditelje>
+        <porodicnoStablo:imaRoditelje>Jelena</porodicnoStablo:imaRoditelje>
+    </rdf:Description>
+    
+    
+</rdf:RDF>

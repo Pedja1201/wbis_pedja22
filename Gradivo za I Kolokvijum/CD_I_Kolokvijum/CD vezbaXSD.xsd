@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://signidunum.ac.rs" xmlns:cdp="http://signidunum.ac.rs">
+
+    <xs:element name="prodavnice">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" ref="cdp:prodavnica"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="prodavnica">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="cdp:adresa"/>
+                <xs:element ref="cdp:vlasnik"/>
+                <xs:element ref="cdp:inventar"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="vlasnik" type="cdp:TLice"/>
+    <xs:element name="adresa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice>
+                    <xs:element name="broj" type="xs:string"/>
+                </xs:choice>
+                <xs:element name="ulica" type="xs:string"/>
+                <xs:element name="grad" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="inventar">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="stavka">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name="mzuika">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="naslov" type="xs:string"/>
+                                        <xs:element name="izvodjac" type="xs:string"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="tip" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="single"/>
+                                                <xs:enumeration value="album"/>
+                                                <xs:enumeration value="kompilacija"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="film">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="naslov" type="xs:string"/>
+                                        <xs:element maxOccurs="unbounded" name="zanrFilma">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="drama"/>
+                                                  <xs:enumeration value="misterija"/>
+                                                  <xs:enumeration value="horor"/>
+                                                  <xs:enumeration value="komedija"/>
+                                                  <xs:enumeration value="akcija"/>
+                                                  <xs:enumeration value="triler"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element maxOccurs="unbounded" ref="cdp:glumac"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="igra">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="naslov" type="xs:string"/>
+                                        <xs:element maxOccurs="unbounded" name="zanrIgre">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="fps"/>
+                                                  <xs:enumeration value="rts"/>
+                                                  <xs:enumeration value="tps"/>
+                                                  <xs:enumeration value="tbs"/>
+                                                  <xs:enumeration value="rpg"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="izdavac">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="naziv" type="xs:string"/>
+                                                  <xs:element name="godinaOtvaranja" type="xs:gYear"/>
+                                                  <xs:element name="sediste" type="xs:string"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element maxOccurs="unbounded" name="platforma">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="PC"/>
+                                                  <xs:enumeration value="Xbox"/>
+                                                  <xs:enumeration value="PS"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="glumac">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ime" type="xs:string"/>
+                <xs:element name="prezime" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="tipUloge">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:whiteSpace value="preserve"/>
+                        <xs:enumeration value="glavna"/>
+                        <xs:enumeration value="pomocna"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType abstract="true" name="TLice"/>
+    <xs:complexType name="TFizickoLice">
+        <xs:complexContent>
+            <xs:extension base="cdp:TLice">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="ime" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" name="prezime" type="xs:string"/>
+                    <xs:element name="jmbg" type="xs:string"/>
+                    <xs:element ref="cdp:adresa"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="TPravnoLice">
+        <xs:complexContent>
+            <xs:extension base="cdp:TLice">
+                <xs:sequence>
+                    <xs:element name="naziv" type="xs:string"/>
+                    <xs:element name="maticniBroj" type="xs:string"/>
+                    <xs:element name="datumOsnivanja" type="xs:date"/>
+                    <xs:element maxOccurs="unbounded" ref="cdp:vlasnik"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

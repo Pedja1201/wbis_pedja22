@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Knjizara",
+    "description": "Description of the schema",
+    "type": "object",
+    "properties": {
+        "knjizara": {
+            "description": "Korenski element koji opisuje knjizaru",
+            "type": "object",
+            "properties": {
+                "naziv": {"type": "string"},
+                "adresa": {
+                    "description": "Adresa opisuje sediste knjizare",
+                    "type": "object",
+                    "properties": {
+                        "ulica": {"type": "string"},
+                        "broj": {"type": "integer"},
+                        "grad": {"type": "string"},
+                        "drzava": {"type": "string"}
+                    },
+                    "required": [
+                        "ulica",
+                        "broj"
+                    ],
+                    "additionalProperties": false
+                },
+                "vlasnik": {
+                    "description": "Objekat koji opisuje vlasnika",
+                    "type": "object",
+                    "properties": {
+                        "ime": {"type": "string"},
+                        "prezime": {"type": "string"},
+                        "adresa": {"type": "string"}
+                    }
+                },
+                "kolekcijaKnjiga": {
+                    "description": "Objekat koji predstavlja kolekciju knjiga i njenih elemenata",
+                    "type": "object",
+                    "properties": {
+                        "naslov": {
+                            "type": "string",
+                            "maxLength": 100
+                        },
+                        "autor": {
+                            "description": "Dodatan opis autora",
+                            "type": "object",
+                            "properties": {
+                                "ime": {"type": "string"},
+                                "prezime": {"type": "string"}
+                            }
+                        },
+                        "brojStranica": {
+                            "type": "integer",
+                            "minimum": 1
+                        },
+                        "godinaIzdavanja": {"type": "integer"},
+                        "zanr": {
+                            "type": "string",
+                            "enum": [
+                                "Komedija",
+                                "Akcija",
+                                "Drama",
+                                "Roman"
+                            ]
+                        },
+                        "isbn": {
+                            "type": "string",
+                            "pattern": "\\d{3}-\\d{1}-\\d{2}-\\d{6}-\\d{1}"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

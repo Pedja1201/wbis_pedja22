@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE prodavnica SYSTEM "CDProdavnica.dtd">
+<prodavnica>
+    <adresa>
+        <broj></broj>
+        <ulica></ulica>
+        <grad></grad>
+    </adresa>
+    <!-- Odabir fizickog ili pravnog lica -->
+    <vlasnik>   
+        <fizickoLice>
+            <ime></ime>
+            <prezime></prezime>
+            <jmbg></jmbg>
+            <adresa>
+                <ulica></ulica>
+                <grad></grad>
+            </adresa>
+        </fizickoLice>
+    </vlasnik>
+    <inventar>
+        <stavka kolicina="">
+            <cena></cena>
+            <!-- Odabir invenatara -->
+            <muzika tip="album">
+                <naslov></naslov>
+                <izvodjac></izvodjac>
+            </muzika>
+        </stavka>
+    </inventar>
+</prodavnica>

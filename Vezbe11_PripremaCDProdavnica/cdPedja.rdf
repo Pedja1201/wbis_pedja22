@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:shop = "http://www.singidunum.ac.rs/shop#">
+    
+    <!-- Klase -->
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/shop#Osoblje"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/shop#Menadzer">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/shop#Osoblje"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/shop#Prodavac">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/shop#Osoblje"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/shop#TehnickaPodrska">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/shop#Osoblje"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/shop#Elektricar">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/shop#TehnickaPodrska"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/shop#Mehanicar">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/shop#TehnickaPodrska"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/shop#Proizvod"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/shop#Igra">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/shop#Proizvod"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/shop#Film">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/shop#Proizvod"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/shop#Cena"/>
+    
+    
+    <!-- Svojstvo -->
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/shop#imaCenu">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/shop#Proizvod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/shop#imaPlatu">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/shop#Osoblje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/shop#imaGlumca">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/shop#Film"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/shop#glumac"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/shop#imaGlumcaUGlavnojUlozi">
+        <rdfs:subProperyOf rdf:resource="http://www.singidunum.ac.rs/shop#imaGlumca"/>
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/shop#Film"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/shop#glumac"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/shop#imaZanr">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/shop#Proizvod"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/shop#zanr"/>
+    </rdf:Property>
+    
+    
+    <!-- Instance -->
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/shop#darko">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/shop#Menadzer"/>
+        <shop:imaPlatu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">750</shop:imaPlatu>
+        <shop:ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Darko</shop:ime>
+        <shop:prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Markovic</shop:prezime>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/shop#stevan">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/shop#Prodavac"/>
+        <shop:imaPlatu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</shop:imaPlatu>
+        <shop:ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stevan</shop:ime>
+        <shop:prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PAvlovic</shop:prezime>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/shop#ivan">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/shop#Prodavac"/>
+        <shop:imaPlatu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">750</shop:imaPlatu>
+        <shop:ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivan</shop:ime>
+        <shop:prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stevanovic</shop:prezime>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/shop#ivan">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/shop#Prodavac"/>
+        <shop:imaPlatu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">750</shop:imaPlatu>
+        <shop:ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivan</shop:ime>
+        <shop:prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stevanovic</shop:prezime>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/shop#svetlana">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/shop#Elektricar"/>
+        <shop:imaPlatu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</shop:imaPlatu>
+        <shop:ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Svetlana</shop:ime>
+        <shop:prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matic</shop:prezime>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/shop#milan">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/shop#Mehanicar"/>
+        <shop:imaPlatu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">520</shop:imaPlatu>
+        <shop:ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milan</shop:ime>
+        <shop:prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivanovic</shop:prezime>
+    </rdf:Description>
+    
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/shop#theBigLebowski">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/shop#Film"/>
+        <shop:imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Big Lebowski</shop:imaNaslov>
+        <shop:imaCenu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</shop:imaCenu>
+        <shop:imaGlumca rdf:resource="http://www.singidunum.ac.rs/shop#johnGoodman"/>
+        <shop:imaGlumcaUGlavnojUlozi rdf:resource="http://www.singidunum.ac.rs/shop#jeffBridges"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/shop#evilDead">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/shop#Film"/>
+        <shop:imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evil Dead</shop:imaNaslov>
+        <shop:imaGlumcaUGlavnojUlozi rdf:resource="http://www.singidunum.ac.rs/shop#bruceCampbell"/>
+        <shop:imaCenu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</shop:imaCenu>
+        <shop:imaZanr rdf:resource="http://www.singidunum.ac.rs/shop#horor"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/shop#discoElysium">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/shop#Igra"/>
+        <shop:imaCenu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</shop:imaCenu>
+        <shop:imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disco Elysium</shop:imaNaslov>
+        <shop:imaZanr rdf:resource="http://www.singidunum.ac.rs/shop#RPG"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/shop#persona4Golden">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/shop#Igra"/>
+        <shop:imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persona 4 Golden</shop:imaNaslov>
+        <shop:imaCenu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</shop:imaCenu>
+        <shop:imaZanr rdf:resource="http://www.singidunum.ac.rs/shop#JRPG"/>
+    </rdf:Description>
+    
+    
+    
+    
+</rdf:RDF>

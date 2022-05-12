@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="LicnaKarta" xmlns="LicnaKarta">
+    <xs:element name="osoba">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ime" type="xs:string"/>
+                <xs:element name="prezime" type="xs:string"/>
+                <xs:element name="brojLicneKarte" type="xs:int"/>
+                <xs:element name="datumIzdavanja" type="xs:gYearMonth"/>
+                <xs:element name="datumIsteka" type="xs:gYearMonth"/>
+                <xs:element name="dokumentIzdaje" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID"/>
+            <xs:attribute name="datumRodjenja" type="xs:gYearMonth"/>
+            <xs:attribute name="Pol" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

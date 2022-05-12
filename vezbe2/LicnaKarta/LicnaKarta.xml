@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE licnaKarta SYSTEM "LicnaKarta.dtd">
+<!-- XML dokument koji je izgenerisan iz LicnaKarta.dtd (napravljen xml dokument na osnovu dtd dokumenta) -->
+<licnaKarta>
+    <podaci_o_osobi>
+        <licniPodaci JMBG="12000987">
+            <ime>Milica</ime>
+            <prezime>Maric</prezime>
+            <datumRodjenja>02.02.2000</datumRodjenja>
+            <pol>Zenski</pol>
+            <slika></slika>
+            <potpis></potpis>
+        </licniPodaci>
+    </podaci_o_osobi>
+    <podaci_o_karti>
+        <brojLicneKarte>999222</brojLicneKarte>
+        <datumIzdavanja>12.09.2022</datumIzdavanja>
+        <datumIsteka>12.09.2023</datumIsteka>
+        <dokumentIzdaje>PU Beograd</dokumentIzdaje>
+    </podaci_o_karti>
+</licnaKarta>

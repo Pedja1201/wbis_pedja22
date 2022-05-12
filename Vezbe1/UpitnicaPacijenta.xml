@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<internaUputnicaKlinike>
+    <zaglavljeUputnice>
+        <logoSlika lokacija="putanja"/>
+        <zemljaKlinike>Republika Srpska, BiH</zemljaKlinike>
+        <nazivKlinike>Klinicki centar Banja Luka</nazivKlinike>
+        <adresaKlinike>Dvanaest beba br. 1</adresaKlinike>
+        <psotBroj>78000 Banja Luka</psotBroj>
+        <telefonKlinike>+38751343-233</telefonKlinike>
+        <ePostaKlinike>PR@kc-bl.com</ePostaKlinike>
+    </zaglavljeUputnice>
+    <naslovUputnice>
+        <naziv>INTERNA UPUTNICA KLINICKOG CENTRA BANJA LUKA</naziv>
+    </naslovUputnice>
+    <podaciPacijenta>
+        <licniPodaciPAcijenta>
+            <ime>Marina</ime>
+            <prezime>Maricic</prezime>
+            <JMBG>09229200002222</JMBG>
+            <datumRodjenja>10.10.2000</datumRodjenja>
+            <pol>Zenski</pol>
+            <brojTelefona>069578392</brojTelefona>
+        </licniPodaciPAcijenta>
+        
+        <podaci_o_osnovnoj_uputnici>
+            <sifraDoktoraIzdateUputnice>ER001</sifraDoktoraIzdateUputnice>
+            <brojProtokolaUputnice>1201</brojProtokolaUputnice>
+            <odeljenjeKlinika>Neuropsihijatrija</odeljenjeKlinika>
+        </podaci_o_osnovnoj_uputnici>
+        
+        <uputnaDijagnoza>
+            <sifraBolesti>O99SD</sifraBolesti>
+            <textSadrzaj/>
+        </uputnaDijagnoza>
+        
+        <uputPacijenta>
+            <konsultativniPregled>
+                <kodDoktora>Milan Maric</kodDoktora>
+                <specijalnost>Psihijatar</specijalnost>
+            </konsultativniPregled>
+            <dijagnostika>
+                <UZV/>
+                <PTG/>
+                <laboratorija/>
+                <patologija/>
+                <humanaGenetika/>
+                <mikrobiologija/>
+                <extSadrzaj>Trazi se: </extSadrzaj>
+            </dijagnostika>
+            <bolnickoLecenje>
+                <klinika/>
+                <sluzba/>
+                <odeljenje/>
+                <dnevnaBolnica/>
+            </bolnickoLecenje>
+        </uputPacijenta>
+        
+        <oslobodjenPlacanja>
+            <da/>
+            <ne/>
+            <textSadrzaj>Navesti sifru osnova oslobodjenja: </textSadrzaj>
+        </oslobodjenPlacanja>
+        
+        <datumUputa>
+            <vremeUpucivanja>20.07.2021 15:00h</vremeUpucivanja>
+        </datumUputa>
+    </podaciPacijenta>
+    
+    <potprisDoktroa/>
+    
+</internaUputnicaKlinike>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

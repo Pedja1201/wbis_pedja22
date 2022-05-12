@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE uplata SYSTEM "Uplata.dtd">
+<uplata>
+    <tekstualniTip>
+        <uplatilac>
+            <ime>Predrag</ime>
+            <prezime>Radak</prezime>
+            <adresa>
+                <adrese postanski_broj="26300">
+                    <grad>Vrsac</grad>
+                    <ulica>Radakova 5</ulica>
+                </adrese>
+            </adresa>
+            <potpis></potpis>
+        </uplatilac>
+        <svrhaUplate>Druga rata clanarine</svrhaUplate>
+        <primalac>Marko marinkovic, Beograd</primalac>
+    </tekstualniTip>
+    
+    <numerickiTip>
+        <sifraPlacanja>987</sifraPlacanja>
+        <valuta>RSD</valuta>
+        <iznos>15000</iznos>
+        <racunPrimaoca>2092882-282892</racunPrimaoca>
+        <pozivNaBroj>12092</pozivNaBroj>
+    </numerickiTip>
+    
+    <dodatni_podaci_o_uplati>
+        <mestoUplate>Vrsac</mestoUplate>
+        <datumUplate>29.08.2022</datumUplate>
+    </dodatni_podaci_o_uplati>
+    
+</uplata>

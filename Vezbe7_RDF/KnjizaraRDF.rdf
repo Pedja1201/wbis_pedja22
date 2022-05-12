@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:biblioteka="http://www.singidunum.ac.rs/biblioteka#"
+    xmlns:podaci="http://www.singidunum.ac.rs/podaci#"
+    xmlns:kontakt="http://www.singidunum.ac.rs/kontakt#"
+    xmlns:knjiga="http://www.singidunum.ac.rs/knjiga#">
+    
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/knjizara">
+        <biblioteka:naziv>Gradska Biblioteka</biblioteka:naziv>
+        <biblioteka:adresa rdf:nodeID="adresa1"/>
+        <biblioteka:zaposlen rdf:resource="http://www.singidunum.ac.rs/zaposleni"/>
+        <biblioteka:knjiga rdf:resource="http://www.singidunum.ac.rs/knjige"/>
+    </rdf:Description>
+        <rdf:Description rdf:nodeID="adresa1">
+            <podaci:ulica>Prvomajska</podaci:ulica>
+            <podaci:broj>23A</podaci:broj>
+            <podaci:grad>Vrsac</podaci:grad>
+            <podaci:drzava>Srbija</podaci:drzava>
+        </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/zaposleni">
+        <kontakt:ime>Predrag</kontakt:ime>
+        <kontakt:prezime>Radak</kontakt:prezime>
+        <kontakt:jmbg>1299096542</kontakt:jmbg>
+        <kontakt:plata>70000</kontakt:plata>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/knjige">
+        <knjiga:tipZanra rdf:nodeID="zanr"/>
+        <knjiga:naslov>Romeo i Julija</knjiga:naslov>
+        <knjiga:isbn>450</knjiga:isbn>
+        <knjiga:autor rdf:resource="http://www.singidunum.ac.rs/autor"/>
+        <knjiga:izdavac rdf:resource="http://www.singidunum.ac.rs/izdavac"/>
+        <knjiga:godinaIzdavanja>20.10.2020</knjiga:godinaIzdavanja>
+    </rdf:Description>
+        <rdf:Description rdf:nodeID="zanr">
+            <knjiga:tip>Horor</knjiga:tip>
+            <knjiga:tip>Komedija</knjiga:tip>
+            <knjiga:tip>Misterija</knjiga:tip>
+            <knjiga:tip>Drama</knjiga:tip>
+        </rdf:Description>
+        <rdf:Description rdf:about="http://www.singidunum.ac.rs/autor">
+            <kontakt:ime>Vilijam</kontakt:ime>
+            <kontakt:prezime>Sekspir</kontakt:prezime>
+            <kontakt:datumRodjenja>20.09.1925</kontakt:datumRodjenja>
+            <kontakt:datumSmrti>10.01.1996</kontakt:datumSmrti>
+            <kontakt:umetnickoIme>Viksi</kontakt:umetnickoIme>
+        </rdf:Description>
+        <rdf:Description rdf:about="http://www.singidunum.ac.rs/izdavac">
+            <podaci:naziv>Zavod za literaturu</podaci:naziv>
+            <podaci:adresa rdf:nodeID="adresa2"/>
+            <podaci:godinaOsnivanja>19.09.1999</podaci:godinaOsnivanja>
+            <podaci:godinaZatvaranja>20.10.2010</podaci:godinaZatvaranja>
+            <podaci:maticniBroj>1299800</podaci:maticniBroj>
+        </rdf:Description>
+            <rdf:Description rdf:nodeID="adresa2">
+                <podaci:ulica>Zarka Zrenjanina</podaci:ulica>
+                <podaci:broj>44</podaci:broj>
+                <podaci:grad>Beograd</podaci:grad>
+                <podaci:drzava>Srbija</podaci:drzava>
+            </rdf:Description>
+    
+</rdf:RDF>

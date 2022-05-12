@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:osoba="http://www.singidunum.ac.rs/osoba#">
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/osobaUMrezi/pedja">
+        <osoba:ime>Predrag</osoba:ime>
+        <osoba:prezime>Radak</osoba:prezime>
+        <osoba:email>pedja@gmail.com</osoba:email>
+        <osoba:slika rdf:resource="http://www.singidunum.ac.rs/slike/slika"/>
+        <osoba:vebStranica rdf:resource="http://www.singidunum.ac.rs/urlaAdresa/vebServis"/>
+        <osoba:prijateljIme rdf:resource="http://www.singidunum.ac.rs/prijatelji/nemanja"/>
+        <osoba:interesovanje rdf:resource="http://www.singidunum.ac.rs/interesovanja/bastovanstvo"/>
+        <osoba:grupa rdf:resource="http://www.singidunum.ac.rs/grupe/clanovi"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/osobaUMrezi/nikola">
+        <osoba:ime>Nikola</osoba:ime>
+        <osoba:prezime>Nikolic</osoba:prezime>
+        <osoba:email>nikola@gmail.com</osoba:email>
+        <osoba:slika rdf:resource="http://www.singidunum.ac.rs/slike/slika"/>
+        <osoba:vebStranica rdf:resource="http://www.singidunum.ac.rs/vebServis"/>
+        <osoba:interesovanje rdf:nodeID="sport"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/osobaUMrezi/marko">
+        <osoba:ime>Marko</osoba:ime>
+        <osoba:prezime>Markovic</osoba:prezime>
+        <osoba:email>marko@gmail.com</osoba:email>
+        <osoba:slika rdf:resource="http://www.singidunum.ac.rs/slike/slika"/>
+        <osoba:vebStranica rdf:resource="http://www.singidunum.ac.rs/vebServis"/>
+        <osoba:interesovanje rdf:nodeID="novinarstvo"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/grupe/clanovi">
+        <osoba:naziv>Tim grupa</osoba:naziv>
+        <osoba:clan1 rdf:resource="http://www.singidunum.ac.rs/osobaUMrezi/pedja"/>
+        <osoba:clan2 rdf:resource="http://www.singidunum.ac.rs/osobaUMrezi/nikola"/>
+        <osoba:clan3 rdf:resource="http://www.singidunum.ac.rs/osobaUMrezi/marko"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="sport">
+        <osoba:naziv>Fudbal</osoba:naziv>
+        <osoba:nazivKluba>Manchester United</osoba:nazivKluba>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="novinarstvo">
+        <osoba:naziv>Kurir</osoba:naziv>
+        <osoba:zanr>Politika</osoba:zanr>
+    </rdf:Description>
+    
+    
+</rdf:RDF>

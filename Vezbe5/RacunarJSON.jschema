@@ -1,0 +1,76 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Racunar",
+    "description": "Description of the schema",
+    "type": "object",
+    "properties": {
+        "racunar": {
+            "description": "Korenski objekat racunara",
+            "type": "object",
+            "properties": {
+                "monitor": {
+                    "description": "Objekat koji opisuje monitor",
+                    "type": "object",
+                    "properties": {
+                        "model": {"type": "string"},
+                        "frekvencijaOsvezivanja": {"type": "string"},
+                        "proizvodjac": {"type": "string"},
+                        "rezolucija": {"type": "string"}
+                    },
+                    "required": ["rezolucija"],
+                    "additionalProperties": false
+                },
+                "kuciste": {
+                    "description": "Objekat koji opisuje kuciste",
+                    "type": "object",
+                    "properties": {
+                        "model": {"type": "string"},
+                        "proizvodjac": {"type": "string"},
+                        "komponente": {
+                            "type": "string",
+                            "enum": [
+                                "maticnaPloca",
+                                "memorija",
+                                "procesor",
+                                "grafickaKartica"
+                            ]
+                        }
+                    },
+                    "required": ["komponente"],
+                    "additionalProperties": false
+                },
+                "periferije": {
+                    "description": "Objekat koji opisuje periferije",
+                    "type": "object",
+                    "properties": {
+                        "mis": {
+                            "description": "Objekat koji opisuje mis u periferiji",
+                            "type": "object",
+                            "properties": {
+                                "model": {"type": "string"},
+                                "DPI": {"type": "string"},
+                                "proizvodjac": {"type": "string"}
+                            }
+                        },
+                        "tastatura": {
+                            "description": "Objekat koji opisuje tastaturu u periferiji",
+                            "type": "object",
+                            "properties": {
+                                "model": {"type": "string"},
+                                "proizvodjac": {
+                                    "type": "string",
+                                    "enum": [
+                                        "membranski",
+                                        "mehanicki"
+                                    ]
+                                }
+                            },
+                            "required": ["tastatura"],
+                            "additionalProperties": false
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

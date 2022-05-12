@@ -1,0 +1,130 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Restoran",
+    "description": "Description of the schema",
+    "type": "object",
+    "properties": {
+        "restoran": {
+            "description": "Korenski objekat koji opisuje restoran",
+            "type": "object",
+            "properties": {
+                "adresa": {
+                    "description": "Korenski objekat koji opisuje restoran",
+                    "type": "object",
+                    "properties": {
+                        "broj": {"type": "integer"},
+                        "ulica": {"type": "string"},
+                        "grad": {"type": "string"},
+                        "drzava": {"type": "string"}
+                    },
+                    "required": [
+                        "broj",
+                        "ulica"
+                    ],
+                    "additionalProperties": false
+                },
+                "vlasnik": {
+                    "description": "Objekat koji opisuje vlasnika",
+                    "type": "object",
+                    "properties": {
+                        "ime": {"type": "string"},
+                        "prezime": {"type": "string"},
+                        "jmbg": {"type": "string"},
+                        "datumRodjenja": {"type": "string"}
+                    },
+                    "required": [
+                        "ime",
+                        "prezime"
+                    ],
+                    "additionalProperties": false
+                },
+                "osoblje": {
+                    "description": "Objekat koji opisuje osoblje",
+                    "type": "object",
+                    "properties": {
+                        "konobar": {
+                            "description": "Objekat koji opisuje konobara",
+                            "type": "object",
+                            "properties": {
+                                "ime": {"type": "string"},
+                                "prezime": {"type": "string"},
+                                "jmbg": {"type": "string"},
+                                "plata": {"type": "integer"}
+                            }
+                        },
+                        "kuvar": {
+                            "description": "Objekat koji opisuje kuvara",
+                            "type": "object",
+                            "properties": {
+                                "ime": {"type": "string"},
+                                "prezime": {"type": "string"},
+                                "jmbg": {"type": "string"},
+                                "plata": {"type": "integer"},
+                                "specijalizacija": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Predjela",
+                                        "riba",
+                                        "rostilj",
+                                        "dezert"
+                                    ]
+                                }
+                            },
+                            "required": ["specijalizacija"],
+                            "additionalProperties": false
+                        },
+                        "sanker": {
+                            "description": "Objekat koji opisuje sankera",
+                            "type": "object",
+                            "properties": {
+                                "ime": {"type": "string"},
+                                "prezime": {"type": "string"},
+                                "jmbg": {"type": "string"},
+                                "plata": {"type": "integer"},
+                                "kursSluzenjaPica": {
+                                    "description": "Opis kursa",
+                                    "type": "object",
+                                    "properties": {
+                                        "datum": {"type": "integer"},
+                                        "mesto": {"type": "string"},
+                                        "trajanje": {"type": "string"}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "meni": {
+                    "description": "Objekat koji opisuje meni restorana",
+                    "type": "object",
+                    "properties": {
+                        "hrana": {
+                            "description": "Opis hrane u meniju",
+                            "type": "object",
+                            "properties": {
+                                "cena": {"type": "integer"},
+                                "naziv": {"type": "string"}
+                            },
+                            "enum": [
+                                "posna",
+                                "mrsna"
+                            ]
+                        },
+                        "pice": {
+                            "description": "Opis pica u meniju",
+                            "type": "object",
+                            "properties": {
+                                "cena": {"type": "integer"},
+                                "naziv": {"type": "string"}
+                            },
+                            "enum": [
+                                "alkoholno",
+                                "bezalkoholno"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

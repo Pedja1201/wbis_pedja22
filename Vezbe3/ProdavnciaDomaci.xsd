@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://singidunu.ac.rs/prodavnicaIgara"
+    xmlns:pri="http://singidunu.ac.rs/prodavnicaIgara">
+
+    <xs:element name="prodavnice">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="pri:prodavnica"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="prodavnica">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vlasnik" type="pri:TLice"/>
+                <xs:element ref="pri:adresa"/>
+                <xs:element name="proizvodi">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="pri:opremaRacunara"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="zaposleni">
+                    <xs:complexType>
+                        <xs:complexContent>
+                            <xs:extension base="pri:TLice">
+                                <xs:sequence>
+                                    <xs:element name="plata" type="xs:double"/>
+                                </xs:sequence>
+                            </xs:extension>
+                        </xs:complexContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="adresa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="grad" type="xs:string"/>
+                <xs:element name="ulica" type="xs:string"/>
+                <xs:element name="broj" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="TLice" abstract="true">
+        <xs:sequence>
+            <xs:element ref="pri:licniPodaci"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="licniPodaci">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ime" type="xs:string"/>
+                <xs:element name="prezime" type="xs:string"/>
+                <xs:element ref="pri:adresa"/>
+                <xs:element name="jmbg">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="\d{13}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="opremaRacunara">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mis">
+                    <xs:complexType>
+                        <xs:attribute name="tipSenzora">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="opticki"/>
+                                    <xs:enumeration value="mehanicki"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="tastatura">
+                    <xs:complexType>
+                        <xs:attribute name="tipKonstrukcije"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="slusalice">
+                    <xs:complexType>
+                        <xs:attribute name="frekvencija">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="min"/>
+                                    <xs:enumeration value="max"/>
+                                    <xs:pattern value="7.1 suropund"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="pri:igre"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="igre">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="pri:PCIgre"/>
+                <xs:element ref="pri:KonzolneIgre"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="PCIgre">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="pri:igra"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="KonzolneIgre">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="compatibility"/>
+                <xs:element ref="pri:igra"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="igra">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="naziv" type="xs:string"/>
+                <xs:element name="cena" type="xs:double"/>
+                <xs:element name="proizvodjac" type="xs:string"/>
+                <xs:element name="tipMedijuma" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

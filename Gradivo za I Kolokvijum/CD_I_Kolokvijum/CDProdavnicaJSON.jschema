@@ -1,0 +1,147 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CD Prodavnica",
+    "description": "Sema koja opisuje prodavnicu",
+    "type": "object",
+    "properties": {
+        "prodavnica": {
+            "description": "korenski element koji sadrzi sve podelemente",
+            "type": "object",
+            "properties": {
+                "adresa": {
+                    "description": "Objekat opisuje adresu i njene podelemente",
+                    "type": "object",
+                    "properties": {
+                        "ulica": {"type": "string"},
+                        "broj": {"type": "integer"},
+                        "grad": {"type": "string"}
+                    }
+                },
+                "vlasnik": {
+                    "description": "objekat koji opisuje izborni element",
+                    "oneOf": [
+                        {
+                            "type": "object",
+                            "properties": {
+                                "fizickoLice": {
+                                    "type": "object",
+                                    "properties": {
+                                        "ime": {"type": "string"},
+                                        "prezime": {"type": "integer"},
+                                        "jmbg": {"type": "string"},
+                                        "adresa": {"type": "string"}
+                                    }
+                                },
+                                "pravnoLice": {
+                                    "type": "object",
+                                    "properties": {
+                                        "naziv": {"type": "integer"},
+                                        "maticniBroj": {"type": "string"},
+                                        "datumOsnivanja": {"type": "string"}
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                "inventar": {
+                    "description": "Objekat koji opisuje elemente inventara",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "stavka": {
+                                "type": "object",
+                                "properties": {
+                                    "cena": {"type": "integer"}
+                                },
+                                "oneOf": [
+                                    {
+                                        "type": "object",
+                                        "properties": {
+                                            "muzika": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "naslov": {"type": "string"},
+                                                    "izvodjac": {"type": "string"}
+                                                },
+                                                "enum": [
+                                                    "single",
+                                                    "album",
+                                                    "kompilacija"
+                                                ],
+                                                "required": ["muzika"],
+                                                "additionalProperties": false
+                                            },
+                                            "film": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "naslov": {"type": "string"},
+                                                    "zanrFilma": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "drama",
+                                                            "misterija",
+                                                            "horor",
+                                                            "komedija",
+                                                            "akcija",
+                                                            "triler"
+                                                        ]
+                                                    },
+                                                    "glumac": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "ime": {"type": "string"},
+                                                            "prezime": {"type": "string"}
+                                                        },
+                                                        "enum": [
+                                                            "glavna",
+                                                            "pomocna"
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "igra": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "naslov": {"type": "string"},
+                                                    "zanrIgre": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "fps",
+                                                            "rts",
+                                                            "tps",
+                                                            "rpg"
+                                                        ]
+                                                    },
+                                                    "izdavac": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "naziv": {"type": "string"},
+                                                            "godinaOtvaranja": {"type": "string"},
+                                                            "sediste": {"type": "string"},
+                                                            "platforma": {
+                                                                "type": "string",
+                                                                "enum": [
+                                                                    "PC",
+                                                                    "XBOX",
+                                                                    "PS"
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "required": ["stavka"],
+                                "additionalProperties": false
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

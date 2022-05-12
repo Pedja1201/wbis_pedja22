@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE skladista SYSTEM "skladisteAutomobilaKlk.dtd">
+<skladista>
+    <skladiste>
+        <adresa>
+            <ulica></ulica>
+            <grad></grad>
+        </adresa>
+        <automobil sifraSasije="" godinaProizvodnje="2000">
+            <proizvodjac>
+                <fizickoLice>
+                    <ime></ime>
+                    <prezime></prezime>
+                    <jmbg></jmbg>
+                </fizickoLice>
+            </proizvodjac>
+            <motor tipGoriva="benzin">
+                <snaga></snaga>
+                <obrtniMomenat></obrtniMomenat>
+                <proizvodjac>
+                    <pravnoLice>
+                        <naziv></naziv>
+                        <maticniBroj></maticniBroj>
+                    </pravnoLice>
+                </proizvodjac>
+            </motor>
+            <vlasnik>
+                <ime></ime>
+                <prezime></prezime>
+                <jmbg></jmbg>
+            </vlasnik>
+        </automobil>
+        <vlasnik>
+            <ime></ime>
+            <prezime></prezime>
+            <jmbg></jmbg>
+        </vlasnik>
+    </skladiste>
+</skladista>

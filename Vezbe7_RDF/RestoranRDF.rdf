@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:restoran="http://www.singidunum.ac.rs/restoran#">
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/restoran">
+        <restoran:adresa rdf:nodeID="adresa"/>
+        <restoran:vlasnik rdf:resource="http://www.singidunum.ac.rs/vlasnik"/>
+        <restoran:osoblje rdf:resource="http://www.singidunum.ac.rs/osoblje"/>
+        <restoran:meni rdf:resource="http://www.singidunum.ac.rs/meni"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:nodeID="adresa">
+        <restoran:broj>90</restoran:broj>
+        <restoran:ulica>Prvomajska</restoran:ulica>
+        <restoran:grad>Vrsac</restoran:grad>
+        <restoran:drzava>Srbija</restoran:drzava>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/vlasnik">
+        <restoran:ime>Predrag</restoran:ime>
+        <restoran:prezime>Radak</restoran:prezime>
+        <restoran:jmbg>1229092990</restoran:jmbg>
+        <restoran:datumRodjenja>12.01.2000</restoran:datumRodjenja>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/osoblje">
+        <restoran:konobar rdf:resource="http://www.singidunum.ac.rs/konobar"/>
+        <restoran:kuvar rdf:resource="http://www.singidunum.ac.rs/kuvar"/>
+        <restoran:sanker rdf:resource="http://www.singidunum.ac.rs/sanker"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/meni">
+        <restoran:hrana rdf:resource="http://www.singidunum.ac.rs/hrana"/>
+        <restoran:pice rdf:resource="http://www.singidunum.ac.rs/pice"/>
+    </rdf:Description>
+        <rdf:Description rdf:about="http://www.singidunum.ac.rs/hrana">
+            <restoran:cena>1200</restoran:cena>
+            <restoran:naziv>Becka snicla</restoran:naziv>
+        </rdf:Description>
+        <rdf:Description rdf:about="http://www.singidunum.ac.rs/pice">
+            <restoran:cena>200</restoran:cena>
+            <restoran:naziv>Toceno pivo</restoran:naziv>
+        </rdf:Description>
+    
+
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/konobar">
+        <restoran:ime>Darko</restoran:ime>
+        <restoran:prezime>Daric</restoran:prezime>
+        <restoran:jmbg>33939393922</restoran:jmbg>
+        <restoran:plata>30000</restoran:plata>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/kuvar">
+        <restoran:ime>Nikola</restoran:ime>
+        <restoran:prezime>Nikolic</restoran:prezime>
+        <restoran:jmbg>32434243232</restoran:jmbg>
+        <restoran:specijalizovanje rdf:nodeID="specijalizacija"/> 
+    </rdf:Description>
+          <rdf:Description rdf:nodeID="specijalizacija">
+              <restoran:predjela>Hladna predjela</restoran:predjela>
+              <restoran:riba>Losos majstor</restoran:riba>
+              <restoran:dezert>Cokoladne torte</restoran:dezert>
+              <restoran:rostilj>Rostilj majstor</restoran:rostilj>
+          </rdf:Description>
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/sanker">
+        <restoran:ime>Pera</restoran:ime>
+        <restoran:prezime>Peric</restoran:prezime>
+        <restoran:jmbg>23332332333</restoran:jmbg>
+        <restoran:plata>30000</restoran:plata>
+        <restoran:kursPica rdf:nodeID="kursSluzenjaPica"/>
+    </rdf:Description>
+        <rdf:Description rdf:nodeID="kursSluzenjaPica">
+            <restoran:datum>20.09.2021</restoran:datum>
+            <restoran:mesto>Beograd</restoran:mesto>
+            <restoran:trajanje>3 meseca</restoran:trajanje>
+        </rdf:Description>
+    
+    
+    
+</rdf:RDF>

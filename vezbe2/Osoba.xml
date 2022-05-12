@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE osoba SYSTEM "Untitled.dtd">
+<osoba>
+    <ime>Marko</ime>
+    <prezime>Markovic</prezime>
+</osoba>

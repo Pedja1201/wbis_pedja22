@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://rs.singidunum.ac/racunar" xmlns:rac="http://rs.singidunum.ac/racunar">
+    <xs:element name="Racunar">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="rac:monitor"/>
+                <xs:element ref="rac:kuciste"/>
+                <xs:element name="periferije">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="rac:oprema"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="monitor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="model" type="xs:string"/>
+                <xs:element name="frekvencijaOsvezivanja" type="xs:string"/>
+                <xs:element name="proizvodjac" type="xs:string"/>
+                <xs:element name="rezolucija" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="kuciste">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="model" type="xs:string"/>
+                <xs:element name="proizvodjac" type="xs:string"/>
+                <xs:element name="komponente" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="oprema">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mis">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="model" type="xs:string"/>
+                            <xs:element name="DPI" type="xs:string"/>
+                            <xs:element name="proizvodjac" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="tastatura">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="model" type="xs:string"/>
+                            <xs:element name="proizvodjac" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="tip">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="membranski"/>
+                                    <xs:enumeration value="mehanicki"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

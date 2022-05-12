@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:zivotinja="http://www.singidunum.ac.rs/zivotinja#"
+    xmlns:sisar="http://www.singidunum.ac.rs/sisar#"
+    xmlns:ptica="http://www.singidunum.ac.rs/ptica#">
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/zoo">
+        <zivotinja:kretanje rdf:resource="http://www.singidunum.ac.rs/kreceSe"/>
+        <zivotinja:ishrana rdf:nodeID="ishrana"/>
+        <zivotinja:zivotVoda rdf:resource="http://www.singidunum.ac.rs/ziviUVodi"/>
+        <zivotinja:zivotKopno rdf:resource="http://www.singidunum.ac.rs/ziviNaKopnu"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/kreceSe">
+        <zivotinja:leti rdf:resource="http://www.singidunum.ac.rs/leti"/>
+        <zivotinja:hoda rdf:resource="http://www.singidunum.ac.rs/hoda"/>
+        <zivotinja:pliva rdf:resource="http://www.singidunum.ac.rs/pliva"/>
+        <zivotinja:gmize rdf:resource="http://www.singidunum.ac.rs/gmize"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/leti">
+        <ptica:maxDuzinaLeta>200km</ptica:maxDuzinaLeta>
+        <sisar:maxDuzinaLeta>10km</sisar:maxDuzinaLeta>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/hoda">
+        <zivotinja:maxBrzina>120km/h</zivotinja:maxBrzina>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/pliva"> 
+        <sisar:maxDubinaRonjenja>27m</sisar:maxDubinaRonjenja>
+        <zivotinja:maxDubinaRonjenja>27m</zivotinja:maxDubinaRonjenja>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/gmize">
+        <zivotinja:maxBrzina>10km/h</zivotinja:maxBrzina>
+    </rdf:Description>
+    
+    <rdf:Description rdf:nodeID="ishrana">
+        <zivotinja:tipIshrane>Mesojed</zivotinja:tipIshrane>
+        <zivotinja:tipIshrane>Biljojed</zivotinja:tipIshrane>
+        <zivotinja:tipIshrane>Svastojedi</zivotinja:tipIshrane>
+    </rdf:Description>
+    
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/ziviUVodi">
+        <sisar:stanovanje rdf:resource="http://www.singidunum.ac.rs/ziviUVodi/more"/>
+        <zivotinja:stanovanje rdf:resource="http://www.singidunum.ac.rs/ziviUVodi/reka"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/ziviNaKopnu">
+        <zivotinja:stanovanje rdf:resource="http://www.singidunum.ac.rs/ziviNaKopnu/dzungla"/>
+        <ptica:stanovanje rdf:resource="http://www.singidunum.ac.rs/ziviNaKopnu/suma"/>
+        <sisar:stanovanje rdf:resource="http://www.singidunum.ac.rs/ziviNaKopnu/pecina"/>
+    </rdf:Description>
+    
+</rdf:RDF>

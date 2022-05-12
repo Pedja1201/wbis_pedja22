@@ -1,0 +1,83 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Schema title",
+    "description": "Sema koja opisuje biblioteku",
+    "type": "object",
+    "properties": {
+        "biblioteka": {
+            "description": "Korenski cvor",
+            "type": "array",
+            "items": {
+                "description": "Niz objekata u biblioteci",
+                "type": "object",
+                "properties": {
+                    "naziv": {"type": "string"},
+                    "zaposleni": {
+                        "type": "array",
+                        "properties": {
+                            "zaposlen": {
+                                "type": "object",
+                                "properties": {
+                                    "ime": {"type": "string"},
+                                    "prezime": {"type": "string"},
+                                    "jmbg": {"type": "string"},
+                                    "plata": {"type": "string"}
+                                }
+                            }
+                        }
+                    },
+                    "adresa": {
+                        "type": "object",
+                        "properties": {
+                            "ulica": {"type": "string"},
+                            "broj": {"type": "number"},
+                            "grad": {"type": "string"},
+                            "drzava": {"type": "string"}
+                        }
+                    },
+                    "knjige": {
+                        "type": "array",
+                        "properties": {
+                            "knjiga": {
+                                "type": "object",
+                                "properties": {
+                                    "naslov": {"type": "string"},
+                                    "isbn": {"type": "string"},
+                                    "autor": {
+                                        "type": "object",
+                                        "properties": {
+                                            "ime": {"type": "string"},
+                                            "prezime": {"type": "string"},
+                                            "datumRodjenja": {"type": "string"},
+                                            "datumSmrti": {"type": "string"},
+                                            "umetnickoIme": {"type": "string"}
+                                        }
+                                    },
+                                    "izdavac": {
+                                        "type": "object",
+                                        "properties": {
+                                            "naziv": {"type": "string"},
+                                            "adresa": {"type": "string"},
+                                            "godinaOtvaranja": {"type": "string"},
+                                            "godinaZatvaranja": {"type": "string"},
+                                            "maticniBroj": {"type": "string"}
+                                        }
+                                    },
+                                    "godinaIzdavanja": {"type": "string"}
+                                },
+                                "required": ["knjiga"],
+                                "additionalProperties": false,
+                                "enum": [
+                                    "horor",
+                                    "komedija",
+                                    "misterija",
+                                    "drama"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

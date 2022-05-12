@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://singidunum.ac/biblioteka" xmlns:bib="http://singidunum.ac/biblioteka">
+
+    <xs:element name="biblioteka">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="naziv" type="xs:string"/>
+                <xs:element ref="bib:adresa"/>
+                <xs:element ref="bib:zaposleni"/>
+                <xs:element ref="bib:knjige"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="TLice" abstract="true">
+        <xs:sequence>
+            <xs:element name="ime" type="xs:string"/>
+            <xs:element name="prezime" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="adresa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ulica" type="xs:string"/>
+                <xs:choice>
+                    <xs:element name="broj" type="xs:string"/>
+                </xs:choice>
+                <xs:element name="grad" type="xs:string"/>
+                <xs:element name="drzava" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="zaposleni">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="zaposlen">
+                    <xs:complexType>
+                        <xs:complexContent>
+                            <xs:extension base="bib:TLice">
+                                <xs:sequence>
+                                    <xs:element name="jmbg">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="d{13}"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                    <xs:element name="plata">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:decimal">
+                                                <xs:pattern value=",{2}"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:extension>
+                        </xs:complexContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="knjige">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="knjiga">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="naslov"/>
+                            <xs:element name="ISBN"/>
+                            <xs:element name="autor">
+                                <xs:complexType>
+                                    <xs:complexContent>
+                                        <xs:extension base="bib:TLice">
+                                            <xs:sequence>
+                                                <xs:element minOccurs="1" name="datumRodjenja"
+                                                  type="xs:date"/>
+                                                <xs:choice>
+                                                  <xs:element name="datumSmrti" type="xs:date"/>
+                                                </xs:choice>
+                                                <xs:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="umetnickoIme" type="xs:string"/>
+                                            </xs:sequence>
+                                            <xs:attribute name="omiljeniZanr">
+                                                <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="horor"/>
+                                                  </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:attribute>
+                                        </xs:extension>
+                                    </xs:complexContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element ref="bib:izdavac"/>
+                            <xs:element name="godinaIzdavanja" type="xs:gYear"/>
+                        </xs:sequence>
+                        <xs:attribute name="zanr">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="horor"/>
+                                    <xs:enumeration value="komedija"/>
+                                    <xs:enumeration value="misterija"/>
+                                    <xs:enumeration value="drama"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="brojDostupnihPrimeraka" type="xs:int"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="izdavac">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="naziv" type="xs:string"/>
+                <xs:element ref="bib:adresa"/>
+                <xs:element name="godinaIzdavanja" type="xs:date"/>
+                <xs:choice>
+                    <xs:element name="godinaZatvaranja" type="xs:date"/>
+                </xs:choice>
+            </xs:sequence>
+            <xs:attribute name="maticniBroj" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

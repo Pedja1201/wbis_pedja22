@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDprodavnice xmlns="http://singidunum.ac.rs/prodavnica"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://singidunum.ac.rs/prodavnica file:/D:/Singidunum%20III/Letnji%20semestar%202021_22/Veb%20bazirani%20info%20sistemi/PredragRadakCD_I_Kolokvijum/CDprodavnica.xsd">
+    <CDprodavnica>
+        <adresa>
+            <broj>broj0</broj>
+            <ulica>ulica0</ulica>
+            <grad>grad0</grad>
+        </adresa>
+        <vlasnik xmlns:pr="http://singidunum.ac.rs/prodavnica" xsi:type="pr:TFizickoLice">
+            <ime>ime0</ime>
+            <prezime>prezime0</prezime>
+            <jmbg>0000000000000</jmbg>
+            <adresa>
+                <broj>broj1</broj>
+                <ulica>ulica1</ulica>
+                <grad>grad1</grad>
+            </adresa>
+        </vlasnik>
+        <inventar>
+            <stavka kolicina="0">
+                <cena>0</cena>
+                <film>
+                    <naslov>naslov0</naslov>
+                    <zanrFilma>drama</zanrFilma>
+                    <zanrFilma>drama</zanrFilma>
+                    <glumac>
+                        <ime tip="">
+                            <ime>ime1</ime>
+                            <prezime>prezime1</prezime>
+                        </ime>
+                    </glumac>
+                </film>
+            </stavka>
+        </inventar>
+    </CDprodavnica>
+    <CDprodavnica>
+        <adresa>
+            <broj>broj2</broj>
+            <ulica>ulica2</ulica>
+            <grad>grad2</grad>
+        </adresa>
+        <vlasnik xmlns:pr="http://singidunum.ac.rs/prodavnica" xsi:type="pr:TFizickoLice">
+            <ime>ime2</ime>
+            <prezime>prezime2</prezime>
+            <jmbg>0000000000000</jmbg>
+            <adresa>
+                <broj>broj3</broj>
+                <ulica>ulica3</ulica>
+                <grad>grad3</grad>
+            </adresa>
+        </vlasnik>
+        <inventar>
+            <stavka kolicina="0">
+                <cena>0</cena>
+                <muzika tip="">
+                    <naslov>naslov1</naslov>
+                    <izvodjac>izvodjac0</izvodjac>
+                </muzika>
+            </stavka>
+        </inventar>
+    </CDprodavnica>
+</CDprodavnice>

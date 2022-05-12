@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automobil xmlns="http://www.singidunum.ac.rs/skladiste"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.singidunum.ac.rs/skladiste file:/D:/Singidunum%20III/Letnji%20semestar%202021_22/Veb%20bazirani%20info%20sistemi/PripremaKolokvijumAutomobili/SkladisteAutomobilaXSD.xsd" sifraSasije="ddddd-------" godinaProizvodnje="0">
+    <proizvodjac>
+        <naziv>naziv0</naziv>
+        <drzavaPorekla>drzavaPorekla0</drzavaPorekla>
+        <zastupnik xmlns:skl="http://www.singidunum.ac.rs/skladiste" xsi:type="skl:TFizickoLice">
+            <ime>ime0</ime>
+            <prezime>prezime0</prezime>
+            <jmbg>ddddddddddddd</jmbg>
+        </zastupnik>
+    </proizvodjac>
+    <vlasnik xmlns:skl="http://www.singidunum.ac.rs/skladiste" xsi:type="skl:TFizickoLice">
+        <ime>ime1</ime>
+        <prezime>prezime1</prezime>
+        <jmbg>ddddddddddddd</jmbg>
+    </vlasnik>
+    <tockove>
+        <dijametar>0</dijametar>
+        <gume>gume0</gume>
+        <proizvodjac>
+            <naziv>naziv1</naziv>
+            <drzavaPorekla>drzavaPorekla1</drzavaPorekla>
+            <zastupnik xmlns:skl="http://www.singidunum.ac.rs/skladiste" xsi:type="skl:TFizickoLice">
+                <ime>ime2</ime>
+                <prezime>prezime2</prezime>
+                <jmbg>ddddddddddddd</jmbg>
+            </zastupnik>
+        </proizvodjac>
+    </tockove>
+    <motor tipGoriva="benzin">
+        <snaga>0</snaga>
+        <obrtniMomenat>0</obrtniMomenat>
+        <proizvodjac>
+            <naziv>naziv2</naziv>
+            <drzavaPorekla>drzavaPorekla2</drzavaPorekla>
+            <zastupnik xmlns:skl="http://www.singidunum.ac.rs/skladiste" xsi:type="skl:TFizickoLice">
+                <ime>ime3</ime>
+                <prezime>prezime3</prezime>
+                <jmbg>ddddddddddddd</jmbg>
+            </zastupnik>
+        </proizvodjac>
+        <datumServisiranja>2006-05-04</datumServisiranja>
+    </motor>
+</automobil>

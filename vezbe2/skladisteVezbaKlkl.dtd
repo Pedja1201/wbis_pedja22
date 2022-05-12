@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT skladista ((vlasnik, vozila, adresa) | (adresa, vozila, vlasnik) | (vozila, vlasnik, adresa)) >
+
+<!ELEMENT adresa (broj?, ulica, grad) >
+<!ELEMENT broj (#PCDATA) >
+<!ELEMENT ulica (#PCDATA) >
+<!ELEMENT grad (#PCDATA) >
+
+<!ELEMENT vozila (proizvodjac, motor, tockovi, vlasnikAuta) >
+<!ATTLIST vozila
+sifraSasije CDATA #REQUIRED
+godinaProizvodnje CDATA #REQUIRED>
+<!ELEMENT proizvodjac (#PCDATA) >
+<!ELEMENT motor (snaga, obrtniMomenat, proizvodjacMotora, datumServisiranja) >
+<!ATTLIST motor
+tipGoriva (beznin | dizel | hibridni | elektricnaEnergija) #REQUIRED>
+<!ELEMENT snaga (#PCDATA) >
+<!ELEMENT obrtniMomenat (#PCDATA) >
+<!ELEMENT proizvodjacMotora (#PCDATA) >
+<!ELEMENT datumServisiranja (#PCDATA) >
+<!ELEMENT tockovi (dijametar, proizvodjacTockova) >
+<!ATTLIST tockovi
+gume (zimske | letnje ) #REQUIRED>
+<!ELEMENT dijametar (#PCDATA) >
+<!ELEMENT proizvodjacTockova (#PCDATA) >
+<!ELEMENT vlasnikAuta (#PCDATA) >
+
+<!ELEMENT vlasnik (ime, prezime, jmbg ) >
+<!ELEMENT ime (#PCDATA) >
+<!ELEMENT prezime (#PCDATA) >
+<!ELEMENT jmbg (#PCDATA) >
+
+

@@ -1,0 +1,7 @@
+{
+    "$schema": "Dokument.jschema",
+	"dokument": {
+	   "naslov": "Pedja",
+	   "tekst": "Moj prva json schema"
+	 }
+}
