@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:bolnica = "http://www.singidunum.ac.rs/bolnica#">
+    
+    <!-- Kreiranje klasa -->
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/bolnica#Osoba"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/bolnica#Doktor">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/bolnica#Osoba"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/bolnica#Pacijent">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/bolnica#Osoba"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/bolnica#Hirurg">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/bolnica#Doktor"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/bolnica#Dijagnoza"/>
+    
+    
+    <!-- Kreiranje svojstva -->
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/bolnica#imaImeIPrezime">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/bolnica#Osoba"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/bolnica#imaSpecijalizaciju">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/bolnica#Doktor"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/bolnica#specijalizacija"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/bolnica#imaDijagnozu">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/bolnica#Osoba"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/bolnica#dijagnoza"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/bolnica#imaPlatu">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/bolnica#Doktor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
+    
+    
+    <!-- Kreiranje instance -->
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/bolnica#pacijent134">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/bolnica#Osoba"/>
+        <bolnica:imaImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marko Markovic</bolnica:imaImeIPrezime>
+        <bolnica:imaDijagnozu rdf:resource="http://www.singidunum.ac.rs/bolnica#anosmija"/>
+        <bolnica:imaDijagnozu rdf:resource="http://www.singidunum.ac.rs/bolnica#frakturaNosa"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/bolnica#doktor15">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/bolnica#Doktor"/>
+        <bolnica:imaImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Petar Petrovic</bolnica:imaImeIPrezime>
+        <bolnica:imaSpecijalizaciju rdf:resource="http://www.singidunum.ac.rs/bolnica#pedijatar"/>
+        <bolnica:imaPlatu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</bolnica:imaPlatu>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/bolnica#doktor16">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/bolnica#Doktor"/>
+        <bolnica:imaImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marina Marinkovic</bolnica:imaImeIPrezime>
+        <bolnica:imaSpecijalizaciju rdf:resource="http://www.singidunum.ac.rs/bolnica#pedijatar"/>
+        <bolnica:imaPlatu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</bolnica:imaPlatu>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/bolnica#hirurg5">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/bolnica#Hirurg"/>
+        <bolnica:imaImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stevan Stevanovic</bolnica:imaImeIPrezime>
+        <bolnica:imaSpecijalizaciju rdf:resource="http://www.singidunum.ac.rs/bolnica#rekonstrukcija"/>
+        <bolnica:imaSpecijalizaciju rdf:resource="http://www.singidunum.ac.rs/bolnica#nurohirurgija"/>
+        <bolnica:imaPlatu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</bolnica:imaPlatu>
+    </rdf:Description>
+    
+    
+    
+    
+    
+    
+</rdf:RDF>

@@ -1,0 +1,41 @@
+	1. ) Dobavljanje imena i prezimena svih doktora (True)
+PREFIX bolnica: <http://www.singidunum.ac.rs/bolnica#>
+
+SELECT ?doktor ?imeIPrezime
+	WHERE {
+	?doktor rdf:type bolnica:Doktor; 
+	bolnica:imaImeIPrezime ?imeIPrezime; 		
+	}
+
+
+	2. ) Dobavljanje svih osoba koji boluju od anosmije
+SELECT ?osoba ?boluje 
+	WHERE {
+	?osoba rdf:type bolnica:Osoba;  
+	bolnica:imaDijagnozu ?boluje.
+
+	?boluje a bolnica:anosmija. //Bez ovog pokazuje sve dijagnoze za pacijenta
+	
+	}
+	
+
+	3. ) Dobavljanje svih pedijatara cija plata je manja od 500 (True)
+SELECT *
+	WHERE {
+	?pedijatar a ?osoba;
+	bolnica:imaImeIPrezime ?imeIPrezime;
+	bolnica:imaPlatu ?plata.
+	?osoba rdfs:subClassOf bolnica:Osoba
+	FILTER(?plata < 500)
+	}
+
+	4. ) Dobavljanje broja svih doktora, grupisano prema specijalizaciji  (True)
+SELECT ?specijalizacija (COUNT(?doktori) as ?broj_doktora)
+	 {
+	?doktori a ?doktor;
+	bolnica:imaImeIPrezime ?imeIPrezime;
+	bolnica:imaPlatu ?plata.
+	?doktor rdfs:subClassOf bolnica:Doktor.
+	?doktori bolnica:imaSpecijalizaciju ?specijalizacija
+	}
+	GROUP BY ?specijalizacija
