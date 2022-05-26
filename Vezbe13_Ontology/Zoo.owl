@@ -1,0 +1,360 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#"
+     xml:base="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-9="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#hasTipIshrane -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#hasTipIshrane">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#maxDubinaRonjenja"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isGmize -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isGmize">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isMoving"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Reptil"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#maxBrzinaKretanja"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isHoda -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isHoda">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isMoving"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Zivotinja"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#maxBrzinaKretanja"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isLeti -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isLeti">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isMoving"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Ptica"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Sisar"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#maxDuzinaLeta"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isMoving -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isMoving"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isPliva -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isPliva">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isMoving"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#MorskiSisar"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#maxDubinaRonjenja"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isZiviNaKopnu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isZiviNaKopnu">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Ptica"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Reptil"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Sisar"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#staniste"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isZiviUVodi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#isZiviUVodi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#MorskiSisar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Reptil"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#staniste"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#maxBrzinaKretanja -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#maxBrzinaKretanja"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#maxDubinaRonjenja -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#maxDubinaRonjenja"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#maxDuzinaLeta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#maxDuzinaLeta"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#staniste -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#staniste"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#MorskiSisar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#MorskiSisar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Sisar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#NeletecaPtica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#NeletecaPtica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Ptica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Ptica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Ptica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Zivotinja"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Reptil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Reptil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Zivotinja"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Sisar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Sisar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Zivotinja"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Zivotinja -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Zivotinja"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#BeliKit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#BeliKit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#MorskiSisar"/>
+        <hasTipIshrane rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#mesojed"/>
+        <isZiviUVodi rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#okean"/>
+        <maxDubinaRonjenja rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</maxDubinaRonjenja>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Covek -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Covek">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Sisar"/>
+        <hasTipIshrane rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#svastojed"/>
+        <isZiviNaKopnu rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#grad"/>
+        <maxBrzinaKretanja rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</maxBrzinaKretanja>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Delfin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Delfin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#MorskiSisar"/>
+        <hasTipIshrane rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#mesojed"/>
+        <isZiviUVodi rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#okean"/>
+        <maxDubinaRonjenja rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130</maxDubinaRonjenja>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Kokoska -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Kokoska">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#NeletecaPtica"/>
+        <hasTipIshrane rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#svastojed"/>
+        <isZiviNaKopnu rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#farma"/>
+        <maxBrzinaKretanja rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</maxBrzinaKretanja>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#KopnenaKornjaca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#KopnenaKornjaca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Reptil"/>
+        <hasTipIshrane rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#biljojed"/>
+        <isZiviNaKopnu rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#suma"/>
+        <maxBrzinaKretanja rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxBrzinaKretanja>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#SlepiMis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#SlepiMis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Sisar"/>
+        <hasTipIshrane rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#svastojed"/>
+        <isZiviNaKopnu rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#grad"/>
+        <maxBrzinaKretanja rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</maxBrzinaKretanja>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Zmija -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Zmija">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#Reptil"/>
+        <hasTipIshrane rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#mesojed"/>
+        <isZiviNaKopnu rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#suma"/>
+        <maxBrzinaKretanja rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</maxBrzinaKretanja>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#biljojed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#biljojed"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#farma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#farma"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#grad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#grad"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#mesojed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#mesojed"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#okean -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#okean"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#suma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#suma"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#svastojed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/untitled-ontology-9#svastojed"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

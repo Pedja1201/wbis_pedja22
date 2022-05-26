@@ -5,8 +5,271 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:phone="http://www.semanticweb.org/radak/ontologies/2022/4/phone#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#hasMemory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#hasMemory">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Tablet"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Telefon"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/shop#Laptop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#hasOperatingSystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#hasOperatingSystem">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#hasResolution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#hasResolution">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#isBuyerOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#isBuyerOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#isProcessorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#isProcessorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#Ekran -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Ekran">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Iphone"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Tablet"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Telefon"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/shop#Laptop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#Iphone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Iphone">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Telefon"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#MaliUredjaj"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#hasOperatingSystem"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/shop#IOS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#MaliUredjaj -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#MaliUredjaj"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#SrednjeVelicineUedjaj -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#SrednjeVelicineUedjaj"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#Tablet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Tablet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#MaliUredjaj"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#hasResolution"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Ekran"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#Tastatura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Tastatura">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Iphone"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Telefon"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/shop#Laptop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#Telefon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Telefon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#MaliUredjaj"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#VelikiUredjaj -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#VelikiUredjaj"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/shop#CPU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/shop#CPU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Iphone"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Tablet"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Telefon"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/shop#Desktop"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/shop#Laptop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/shop#Desktop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/shop#Desktop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#VelikiUredjaj"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/shop#GPU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/shop#GPU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/shop#Desktop"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/shop#Laptop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/shop#HDD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/shop#HDD">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/shop#Desktop"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/shop#Laptop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/shop#IOS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/shop#IOS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Iphone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/shop#Laptop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/shop#Laptop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#SrednjeVelicineUedjaj"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#hasResolution"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Ekran"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/shop#RAM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/shop#RAM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/shop#Desktop"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/shop#Laptop"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#HardDisk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#HardDisk">
+        <hasMemory rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#HardDisk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#Iphone_XS_Max -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Iphone_XS_Max">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Iphone"/>
+        <hasOperatingSystem rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Iphone_XS_Max"/>
+        <isBuyerOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Pedja"/>
+        <isProcessorOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Pedja"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#Monitor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Monitor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#Pedja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Pedja"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/phone#Racunar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Racunar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/shop#Laptop"/>
+        <hasResolution rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/phone#Monitor"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#"
+     xml:base="http://www.semanticweb.org/radak/ontologies/2022/4/hospital"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:hospital="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string">
+        <rdfs:comment></rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#hasDijagnoza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#hasDijagnoza">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Osoba"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#dijagnoza"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#hasImeIPrezime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#hasImeIPrezime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Osoba"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#hasPlata -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#hasPlata">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Doktor"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#plata"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#hasSpecijalizacija -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#hasSpecijalizacija">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Doktor"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#specijalizacija"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#dijagnoza -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#dijagnoza"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#plata -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#plata"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#specijalizacija -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#specijalizacija"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Dijagnoza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Dijagnoza"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Doktor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Doktor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Osoba"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Hirurg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Hirurg">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Doktor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Osoba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Osoba"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Pacijent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Pacijent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Osoba"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#MarinaMarinkovic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#MarinaMarinkovic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#MarkoMarkovic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#MarkoMarkovic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#PetarPetrovic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#PetarPetrovic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#StevanStevanovic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#StevanStevanovic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#anosmija -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#anosmija"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#doktor15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#doktor15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Doktor"/>
+        <hasImeIPrezime rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#PetarPetrovic"/>
+        <hasPlata rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#500"/>
+        <hasSpecijalizacija rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#pedijatar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#doktor16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#doktor16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Doktor"/>
+        <hasImeIPrezime rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#MarinaMarinkovic"/>
+        <hasPlata rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#400"/>
+        <hasSpecijalizacija rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#pedijatar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#frakturaNosa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#frakturaNosa"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#hirurg5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#hirurg5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Hirurg"/>
+        <hasImeIPrezime rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#StevanStevanovic"/>
+        <hasPlata rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#800"/>
+        <hasSpecijalizacija rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#neurohirurgija"/>
+        <hasSpecijalizacija rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#rekonstrukcija"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#neurohirurgija -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#neurohirurgija"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#pacijent134 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#pacijent134">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#Osoba"/>
+        <hasDijagnoza rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#anosmija"/>
+        <hasDijagnoza rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#frakturaNosa"/>
+        <hasImeIPrezime rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#MarkoMarkovic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#pedijatar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#pedijatar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#rekonstrukcija -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#rekonstrukcija"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#400 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#400"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#500 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#500"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/hospital#800 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/hospital#800"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
