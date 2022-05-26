@@ -1,0 +1,1 @@
+- Svojstva imaju pravac, od domena do opsega. U praksi, ljudi često smatraju korisnim definisati odnose u oba smera: osobe poseduju automobile, automobili su u vlasništvu osoba. Konstrukcija ovl:inverseOf se može koristiti za definisanje takve inverzne relacije između svojstava.

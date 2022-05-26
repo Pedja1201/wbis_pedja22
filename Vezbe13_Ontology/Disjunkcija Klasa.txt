@@ -1,0 +1,3 @@
+- Kada su dve klase disjunktne, nikada ne mogu da budu podklasa jedna
+drugoj, i nijedan individual ne moºe da bude istovremeno £lan obe
+klase.
