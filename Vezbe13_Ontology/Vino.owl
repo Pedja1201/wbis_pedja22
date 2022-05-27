@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/radak/ontologies/2022/4/wine#"
+     xml:base="http://www.semanticweb.org/radak/ontologies/2022/4/wine"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#hasCena -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#hasCena">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Proizvod"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#hasGodinaBerbe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#hasGodinaBerbe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Vino"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#hasTipSira -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#hasTipSira">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Sir"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#tipSira"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#isNaziv -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#isNaziv">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Sir"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#isSastojiSeOd -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#isSastojiSeOd">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Vino"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#grozdje"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#grozdje -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#grozdje"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#ime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#ime"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#plata -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#plata"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#prezime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#prezime"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#tipSira -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#tipSira"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#Cena -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Cena"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#Osoblje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Osoblje"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#Prodavac -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Prodavac">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#Proizvod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Proizvod"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#Sir -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Sir">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Proizvod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#Somelijer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Somelijer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#TehnickaPodrska -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#TehnickaPodrska">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#Vino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Vino">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Proizvod"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#Aleksandar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Aleksandar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Somelijer"/>
+        <ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aleksandar</ime>
+        <plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</plata>
+        <prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Markovic</prezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#Ivan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Ivan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#TehnickaPodrska"/>
+        <ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivan</ime>
+        <plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">750</plata>
+        <prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivanovic</prezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#Maja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Maja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Prodavac"/>
+        <ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maja</ime>
+        <plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</plata>
+        <prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pavlovic</prezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#brie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#brie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Sir"/>
+        <hasCena rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#40"/>
+        <hasTipSira rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#mekiSir"/>
+        <isNaziv rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#brie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#chardoney -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#chardoney"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#cheddar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#cheddar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Sir"/>
+        <hasCena rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#45"/>
+        <hasTipSira rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#tvrdiSir"/>
+        <isNaziv rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#cheddar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#mekiSir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#mekiSir"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#pinotBlanc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#pinotBlanc"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#pinotNoir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#pinotNoir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Vino"/>
+        <hasCena rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#75"/>
+        <hasGodinaBerbe rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#1997"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#riesling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#riesling"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#rieslingBlend -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#rieslingBlend">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Vino"/>
+        <hasCena rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#65"/>
+        <isSastojiSeOd rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#chardoney"/>
+        <isSastojiSeOd rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#riesling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#tvrdiSir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#tvrdiSir"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#whiteBurgundy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#whiteBurgundy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#Vino"/>
+        <hasCena rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#50"/>
+        <hasGodinaBerbe rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#1950"/>
+        <isSastojiSeOd rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#chardoney"/>
+        <isSastojiSeOd rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/wine#pinotBlanc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#1950 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#1950"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#1997 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#1997"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#40"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#45"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#50"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#65 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#65"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/wine#75 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/wine#75"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
