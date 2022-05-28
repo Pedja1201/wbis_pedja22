@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/radak/ontologies/2022/4/skladiste#"
+     xml:base="http://www.semanticweb.org/radak/ontologies/2022/4/skladiste"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:restoran="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#isCena -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#isCena">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Proizvod"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#isIme -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#isIme">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Osoblje"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#isPlata -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#isPlata">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Osoblje"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#isPosno -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#isPosno">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Hrana"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#isPrezime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#isPrezime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Osoblje"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#isSastojiSeOd -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#isSastojiSeOd">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Hrana"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#hrana"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#hrana -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#hrana"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Dezert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Dezert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Hrana"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#GlavnoJelo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#GlavnoJelo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Hrana"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Hrana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Hrana">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Proizvod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Konobar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Konobar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Kuvar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Kuvar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Osoblje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Osoblje"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Pice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Pice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Proizvod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Proizvod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Proizvod"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#DA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#DA"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Predrag -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Predrag"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Radak -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Radak"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#meso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#meso"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#porudzbina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#porudzbina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Proizvod"/>
+        <restoran:isCena rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#2700"/>
+        <restoran:isPosno rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#DA"/>
+        <restoran:isSastojiSeOd rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#meso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#radnik -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#radnik">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Osoblje"/>
+        <restoran:isIme rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Predrag"/>
+        <restoran:isPlata rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#30000"/>
+        <restoran:isPrezime rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#Radak"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#2700 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#2700"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/restoran#30000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/restoran#30000"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
