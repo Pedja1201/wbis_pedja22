@@ -1,0 +1,421 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#"
+     xml:base="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#hasCena -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#hasCena">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Proizvod"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#hasGlumac -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#hasGlumac">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Film"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#glumac"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#hasGlumcaUGlavnojUlozi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#hasGlumcaUGlavnojUlozi">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#hasGlumac"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Film"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#glumac"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#hasPlata -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#hasPlata">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Osoblje"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#hasZanr -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#hasZanr">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Proizvod"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#zanr"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#glumac -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#glumac"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#imaNaslov -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#imaNaslov"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#ime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#ime"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#prezime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#prezime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#zanr -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#zanr"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Cena -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Cena"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Elektricar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Elektricar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#TehnickaPodrska"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Film -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Film">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Proizvod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Igra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Igra">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Proizvod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Mehanicar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Mehanicar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#TehnickaPodrska"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Menadzer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Menadzer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Osoblje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Osoblje"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Prodavac -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Prodavac">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Proizvod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Proizvod"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#TehnickaPodrska -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#TehnickaPodrska">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#JRPG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#JRPG"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#RPG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#RPG"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#bruceCampbell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#bruceCampbell"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#darko -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#darko">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Menadzer"/>
+        <hasPlata rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#750"/>
+        <ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Darko</ime>
+        <prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Markovic</prezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#discoElysium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#discoElysium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Igra"/>
+        <hasCena rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#65"/>
+        <hasZanr rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#RPG"/>
+        <imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disco Elysium</imaNaslov>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#evilDead -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#evilDead">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Film"/>
+        <hasCena rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#75"/>
+        <hasGlumcaUGlavnojUlozi rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#bruceCampbell"/>
+        <hasZanr rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#horor"/>
+        <imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evil Dead</imaNaslov>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#horor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#horor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#ivan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#ivan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Prodavac"/>
+        <hasPlata rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#750"/>
+        <ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivan</ime>
+        <prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stevanovic</prezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#jeffBridges -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#jeffBridges"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#johnGoodman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#johnGoodman"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#milan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#milan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Mehanicar"/>
+        <hasPlata rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#520"/>
+        <ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milan</ime>
+        <prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivanovic</prezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#personaGolden -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#personaGolden">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Igra"/>
+        <hasCena rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#40"/>
+        <hasZanr rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#JRPG"/>
+        <imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persona 4 Golden</imaNaslov>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#stevan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#stevan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Prodavac"/>
+        <hasPlata rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#500"/>
+        <ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stevan</ime>
+        <prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pavlovic</prezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#svetlana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#svetlana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Elektricar"/>
+        <hasPlata rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#550"/>
+        <ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Svetlana</ime>
+        <prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matic</prezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#theBigLebowski -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#theBigLebowski">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#Film"/>
+        <hasCena rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#50"/>
+        <hasGlumac rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#johnGoodman"/>
+        <hasGlumcaUGlavnojUlozi rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#jeffBridges"/>
+        <imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Big Levowski</imaNaslov>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#40"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#50"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#500 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#500"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#520 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#520"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#550 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#550"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#65 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#65"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#75 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#75"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#750 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/cdShop#750"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
