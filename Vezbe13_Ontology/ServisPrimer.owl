@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/radak/ontologies/2022/4/servis#"
+     xml:base="http://www.semanticweb.org/radak/ontologies/2022/4/servis"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#isAngazovanAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#isAngazovanAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Osoba"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Projekat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#ime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#ime"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#naziv -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#naziv"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#plata -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#plata"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#prezime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#prezime"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#DomaciProjekat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#DomaciProjekat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Projekat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#MedjunarodniProjekat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#MedjunarodniProjekat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Projekat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#Menadzer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Menadzer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Osoba"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#Osoba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Osoba"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#Osoblje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Osoblje">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Osoba"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#Projekat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Projekat"/>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#Tehnicar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Tehnicar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Osoba"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#aleksandar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#aleksandar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Tehnicar"/>
+        <isAngazovanAt rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#projekat2"/>
+        <ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aleksandar</ime>
+        <plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</plata>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#darko -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#darko">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Tehnicar"/>
+        <isAngazovanAt rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#projekat3"/>
+        <ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Darko</ime>
+        <plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">750</plata>
+        <prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pavlovic</prezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#marko -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#marko">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Tehnicar"/>
+        <isAngazovanAt rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#projekat1"/>
+        <ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marko</ime>
+        <plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</plata>
+        <prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MArkovic</prezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#milan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#milan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Tehnicar"/>
+        <isAngazovanAt rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#projekat2"/>
+        <ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milan</ime>
+        <plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</plata>
+        <prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milovanovic</prezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#petar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#petar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Menadzer"/>
+        <isAngazovanAt rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#projekat1"/>
+        <ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Petar</ime>
+        <plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</plata>
+        <prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Petrovic</prezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#projekat1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#projekat1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Projekat"/>
+        <naziv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projekat 1</naziv>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#projekat2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#projekat2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#MedjunarodniProjekat"/>
+        <naziv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projekat 2</naziv>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#projekat3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#projekat3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#DomaciProjekat"/>
+        <naziv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projekat 3</naziv>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/radak/ontologies/2022/4/servis#stevan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/radak/ontologies/2022/4/servis#stevan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#Tehnicar"/>
+        <isAngazovanAt rdf:resource="http://www.semanticweb.org/radak/ontologies/2022/4/servis#projekat3"/>
+        <ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stevan</ime>
+        <plata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</plata>
+        <prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stevanovic</prezime>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
