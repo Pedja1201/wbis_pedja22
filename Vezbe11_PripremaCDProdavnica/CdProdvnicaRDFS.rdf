@@ -103,11 +103,11 @@
         <shop:prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivanovic</shop:prezime>
     </rdf:Description>
     
-    <rdf:Description rdf:about="http://www.singidunum.ac.rs/shop#mtheBigLebowskiilan">
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/shop#theBigLebowski">
         <rdf:type rdf:resource="http://www.singidunum.ac.rs/shop#Film"/>
         <shop:imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Big Lebowski</shop:imaNaslov>
         <shop:imaCenu>50</shop:imaCenu>
-        <shop:imaGlumca rdf:resource="http://www.singidunum.ac.rs/shop#jognGoodman"/>
+        <shop:imaGlumca rdf:resource="http://www.singidunum.ac.rs/shop#johnGoodman"/>
         <shop:imaGlumcaUGlavnojUlozi rdf:resource="http://www.singidunum.ac.rs/shop#jeffBridges"/>
     </rdf:Description>
     
@@ -126,7 +126,7 @@
         <shop:imaZanr rdf:resource="http://www.singidunum.ac.rs/shop#RPG"/>
     </rdf:Description>
     
-    <rdf:Description rdf:about="http://www.singidunum.ac.rs/shop#persona$Golden">
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/shop#personaGolden">
         <rdf:type rdf:resource="http://www.singidunum.ac.rs/shop#Igra"/>
         <shop:imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persona 4 Golden</shop:imaNaslov>
         <shop:imaCenu>40</shop:imaCenu>

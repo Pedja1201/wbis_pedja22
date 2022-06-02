@@ -1,0 +1,112 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Schema title",
+    "description": "Hospital Document of the schema",
+    "type": "object",
+    "properties": {
+        "bolnice": {
+            "description": "The propertyName description",
+            "type": "array",
+            "items": {
+                "description": "Opis niza bolnica",
+                "type": "object",
+                "properties": {
+                    "bolnica": {
+                        "type": "object",
+                        "properties": {
+                            "adresa": {
+                                "type": "object",
+                                "properties": {
+                                    "ulica": {"type": "string"},
+                                    "broj": {"type": "number"},
+                                    "grad": {"type": "string"},
+                                    "drzava": {"type": "string"}
+                                }
+                            },
+                            "zaposleni": {
+                                "type": "array",
+                                "items": {
+                                    "description": "Niz opisuje zaposlene",
+                                    "type": "object",
+                                    "properties": {
+                                        "zaposlen": {
+                                            "oneOf": [
+                                                {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "medicinskoOsoblje": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "ime": {"type": "string"},
+                                                                "prezime": {"type": "string"},
+                                                                "jmbg": {
+                                                                    "type": "string",
+                                                                    "maxLength": 13
+                                                                },
+                                                                "plata": {
+                                                                    "type": "number",
+                                                                    "format": "2"
+                                                                },
+                                                                "zvanje": {"type": "string"},
+                                                                "specijalizacija": {"type": "string"}
+                                                            }
+                                                        },
+                                                        "pomocnoOsoblje": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "ime": {"type": "string"},
+                                                                "prezime": {"type": "string"},
+                                                                "jmbg": {
+                                                                    "type": "string",
+                                                                    "maxLength": 13
+                                                                },
+                                                                "plata": {
+                                                                    "type": "number",
+                                                                    "format": "2"
+                                                                },
+                                                                "tip": {
+                                                                    "type": "string",
+                                                                    "enum": ["elektircar|mehanicar|higijenskoOsoblje"]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            "pacijenti": {
+                                "description": "Opsiivanje pacijenta",
+                                "type": "object",
+                                "properties": {
+                                    "ime": {"type": "string"},
+                                    "prezime": {"type": "string"},
+                                    "jmbg": {
+                                              "type": "string",
+                                              "maxLength": 13
+                                              },
+                                    "dijagnoze":{
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "dijagnoza":{
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "naziv":{"type":"string"}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

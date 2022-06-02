@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.zadatak.com/skola#"
+     xml:base="http://www.zadatak.com/skola"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skola="http://www.zadatak.com/skola#">
+    <owl:Ontology rdf:about="http://www.zadatak.com/skola"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.zadatak.com/skola#isPohadja -->
+
+    <owl:ObjectProperty rdf:about="http://www.zadatak.com/skola#isPohadja">
+        <rdfs:domain rdf:resource="http://www.zadatak.com/skola#Nastavnik"/>
+        <rdfs:range rdf:resource="http://www.zadatak.com/skola#Predmet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.zadatak.com/skola#isPredaje -->
+
+    <owl:ObjectProperty rdf:about="http://www.zadatak.com/skola#isPredaje">
+        <rdfs:domain rdf:resource="http://www.zadatak.com/skola#Nastavnik"/>
+        <rdfs:range rdf:resource="http://www.zadatak.com/skola#Predmet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.zadatak.com/skola#hasBrojUDnevniku -->
+
+    <owl:DatatypeProperty rdf:about="http://www.zadatak.com/skola#hasBrojUDnevniku">
+        <rdfs:domain rdf:resource="http://www.zadatak.com/skola#Ucenik"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.zadatak.com/skola#hasImeIPrezime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.zadatak.com/skola#hasImeIPrezime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.zadatak.com/skola#Osoba"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.zadatak.com/skola#hasPlata -->
+
+    <owl:DatatypeProperty rdf:about="http://www.zadatak.com/skola#hasPlata">
+        <rdfs:domain rdf:resource="http://www.zadatak.com/skola#Osoblje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.zadatak.com/skola#Nastavnik -->
+
+    <owl:Class rdf:about="http://www.zadatak.com/skola#Nastavnik">
+        <rdfs:subClassOf rdf:resource="http://www.zadatak.com/skola#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.zadatak.com/skola#Osoba -->
+
+    <owl:Class rdf:about="http://www.zadatak.com/skola#Osoba"/>
+    
+
+
+    <!-- http://www.zadatak.com/skola#Osoblje -->
+
+    <owl:Class rdf:about="http://www.zadatak.com/skola#Osoblje">
+        <rdfs:subClassOf rdf:resource="http://www.zadatak.com/skola#Osoba"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.zadatak.com/skola#PomocnoOsoblje -->
+
+    <owl:Class rdf:about="http://www.zadatak.com/skola#PomocnoOsoblje">
+        <rdfs:subClassOf rdf:resource="http://www.zadatak.com/skola#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.zadatak.com/skola#Predmet -->
+
+    <owl:Class rdf:about="http://www.zadatak.com/skola#Predmet"/>
+    
+
+
+    <!-- http://www.zadatak.com/skola#Ucenik -->
+
+    <owl:Class rdf:about="http://www.zadatak.com/skola#Ucenik">
+        <rdfs:subClassOf rdf:resource="http://www.zadatak.com/skola#Osoba"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.zadatak.com/skola#cistacica -->
+
+    <owl:NamedIndividual rdf:about="http://www.zadatak.com/skola#cistacica">
+        <rdf:type rdf:resource="http://www.zadatak.com/skola#PomocnoOsoblje"/>
+        <hasImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marija Mandic</hasImeIPrezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.zadatak.com/skola#informatika -->
+
+    <owl:NamedIndividual rdf:about="http://www.zadatak.com/skola#informatika">
+        <rdf:type rdf:resource="http://www.zadatak.com/skola#Predmet"/>
+        <isPredaje rdf:resource="http://www.zadatak.com/skola#marko"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.zadatak.com/skola#kuvarica -->
+
+    <owl:NamedIndividual rdf:about="http://www.zadatak.com/skola#kuvarica">
+        <rdf:type rdf:resource="http://www.zadatak.com/skola#PomocnoOsoblje"/>
+        <hasImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miljana Micic</hasImeIPrezime>
+        <hasPlata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23000</hasPlata>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.zadatak.com/skola#marko -->
+
+    <owl:NamedIndividual rdf:about="http://www.zadatak.com/skola#marko">
+        <rdf:type rdf:resource="http://www.zadatak.com/skola#Nastavnik"/>
+        <isPredaje rdf:resource="http://www.zadatak.com/skola#informatika"/>
+        <hasImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MArko Marinkovic</hasImeIPrezime>
+        <hasPlata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45000</hasPlata>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.zadatak.com/skola#matematika -->
+
+    <owl:NamedIndividual rdf:about="http://www.zadatak.com/skola#matematika">
+        <rdf:type rdf:resource="http://www.zadatak.com/skola#Predmet"/>
+        <isPredaje rdf:resource="http://www.zadatak.com/skola#marko"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.zadatak.com/skola#nemanja -->
+
+    <owl:NamedIndividual rdf:about="http://www.zadatak.com/skola#nemanja">
+        <rdf:type rdf:resource="http://www.zadatak.com/skola#Ucenik"/>
+        <isPohadja rdf:resource="http://www.zadatak.com/skola#matematika"/>
+        <hasBrojUDnevniku rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N201</hasBrojUDnevniku>
+        <hasImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nemanja Nikolic</hasImeIPrezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.zadatak.com/skola#nikola -->
+
+    <owl:NamedIndividual rdf:about="http://www.zadatak.com/skola#nikola">
+        <rdf:type rdf:resource="http://www.zadatak.com/skola#Ucenik"/>
+        <isPohadja rdf:resource="http://www.zadatak.com/skola#informatika"/>
+        <hasBrojUDnevniku rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N101</hasBrojUDnevniku>
+        <hasImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nikola Milovanovic</hasImeIPrezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.zadatak.com/skola#pedja -->
+
+    <owl:NamedIndividual rdf:about="http://www.zadatak.com/skola#pedja">
+        <rdf:type rdf:resource="http://www.zadatak.com/skola#Osoba"/>
+        <hasImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predrag Radak</hasImeIPrezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.zadatak.com/skola#psiholog -->
+
+    <owl:NamedIndividual rdf:about="http://www.zadatak.com/skola#psiholog">
+        <rdf:type rdf:resource="http://www.zadatak.com/skola#Osoblje"/>
+        <hasImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mirko Ivanic</hasImeIPrezime>
+        <hasPlata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</hasPlata>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.zadatak.com/skola#sekretarica -->
+
+    <owl:NamedIndividual rdf:about="http://www.zadatak.com/skola#sekretarica">
+        <rdf:type rdf:resource="http://www.zadatak.com/skola#Osoblje"/>
+        <hasImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mina Minic</hasImeIPrezime>
+        <hasPlata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000</hasPlata>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.zadatak.com/skola#stevan -->
+
+    <owl:NamedIndividual rdf:about="http://www.zadatak.com/skola#stevan">
+        <rdf:type rdf:resource="http://www.zadatak.com/skola#Nastavnik"/>
+        <isPredaje rdf:resource="http://www.zadatak.com/skola#matematika"/>
+        <hasImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stevan Stevanovic</hasImeIPrezime>
+        <hasPlata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45000</hasPlata>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

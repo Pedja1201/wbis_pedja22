@@ -1,0 +1,36 @@
+1.) Dobavljanje imena i prezimena svih ucenika
+SELECT ?ucenik  ?imeIPrezime
+	WHERE {
+	?ucenik rdf:type skola:Ucenik; 
+	skola:hasImeIPrezime ?imeIPrezime;	    
+	
+	}
+
+
+2.)  Dobavljanje svih nastavnika
+PREFIX skola:  <http://www.zadatak.com/skola#>
+
+SELECT ?nastavnik
+	WHERE { 
+		?nastavnik  rdf:type skola:Nastavnik. 
+	}
+
+3.) Dobavljanje svih ucenika po brojuDnevnika
+SELECT ?ucenik ?brojDnevnika 
+	WHERE {
+	?ucenik rdf:type skola:Ucenik;  
+	skola:hasBrojUDnevniku ?brojDnevnika.
+	FILTER(?brojDnevnika)
+	}
+
+
+
+3.) Dobaviti osoblje sa platom vecom od 500
+SELECT *
+	WHERE {
+	?zaposleni a ?osoblje;
+	skola:hasImeIPrezime ?imeIPrezime;
+	skola:hasPlata ?plata.
+	?osoblje rdfs:subClassOf skola:Osoblje
+	FILTER(?plata > 500)
+	}
