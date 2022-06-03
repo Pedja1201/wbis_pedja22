@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.bolnica.com/bolnica#"
+     xml:base="http://www.bolnica.com/bolnica"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:bolnica="http://www.bolnica.com/bolnica#">
+    <owl:Ontology rdf:about="http://www.bolnica.com/bolnica"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#hasZakazanTermin -->
+
+    <owl:ObjectProperty rdf:about="http://www.bolnica.com/bolnica#hasZakazanTermin">
+        <rdfs:domain rdf:resource="http://www.bolnica.com/bolnica#Pacijent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#isApoteka -->
+
+    <owl:ObjectProperty rdf:about="http://www.bolnica.com/bolnica#isApoteka">
+        <rdfs:domain rdf:resource="http://www.bolnica.com/bolnica#Prostorije"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#isLaboratorija -->
+
+    <owl:ObjectProperty rdf:about="http://www.bolnica.com/bolnica#isLaboratorija">
+        <rdfs:domain rdf:resource="http://www.bolnica.com/bolnica#Prostorije"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#isPregled -->
+
+    <owl:ObjectProperty rdf:about="http://www.bolnica.com/bolnica#isPregled">
+        <rdfs:domain rdf:resource="http://www.bolnica.com/bolnica#Prostorije"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#hasBroj -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bolnica.com/bolnica#hasBroj">
+        <rdfs:domain rdf:resource="http://www.bolnica.com/bolnica#Adresa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#hasGrad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bolnica.com/bolnica#hasGrad">
+        <rdfs:domain rdf:resource="http://www.bolnica.com/bolnica#Adresa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#hasIme -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bolnica.com/bolnica#hasIme">
+        <rdfs:domain rdf:resource="http://www.bolnica.com/bolnica#Pacijent"/>
+        <rdfs:domain rdf:resource="http://www.zadatak.com/skola#Osoblje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#hasJmbg -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bolnica.com/bolnica#hasJmbg">
+        <rdfs:domain rdf:resource="http://www.bolnica.com/bolnica#Pacijent"/>
+        <rdfs:domain rdf:resource="http://www.zadatak.com/skola#Osoblje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#hasPrezime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bolnica.com/bolnica#hasPrezime">
+        <rdfs:domain rdf:resource="http://www.bolnica.com/bolnica#Pacijent"/>
+        <rdfs:domain rdf:resource="http://www.zadatak.com/skola#Osoblje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#hasUlica -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bolnica.com/bolnica#hasUlica">
+        <rdfs:domain rdf:resource="http://www.bolnica.com/bolnica#Adresa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#Adresa -->
+
+    <owl:Class rdf:about="http://www.bolnica.com/bolnica#Adresa">
+        <rdfs:subClassOf rdf:resource="http://www.bolnica.com/bolnica#Bolnica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#Bolnica -->
+
+    <owl:Class rdf:about="http://www.bolnica.com/bolnica#Bolnica"/>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#Doktor -->
+
+    <owl:Class rdf:about="http://www.bolnica.com/bolnica#Doktor">
+        <rdfs:subClassOf rdf:resource="http://www.zadatak.com/skola#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#MedicinskiTehnicar -->
+
+    <owl:Class rdf:about="http://www.bolnica.com/bolnica#MedicinskiTehnicar">
+        <rdfs:subClassOf rdf:resource="http://www.zadatak.com/skola#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#Pacijent -->
+
+    <owl:Class rdf:about="http://www.bolnica.com/bolnica#Pacijent">
+        <rdfs:subClassOf rdf:resource="http://www.bolnica.com/bolnica#Bolnica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#Prostorije -->
+
+    <owl:Class rdf:about="http://www.bolnica.com/bolnica#Prostorije">
+        <rdfs:subClassOf rdf:resource="http://www.bolnica.com/bolnica#Bolnica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.zadatak.com/skola#Osoblje -->
+
+    <owl:Class rdf:about="http://www.zadatak.com/skola#Osoblje">
+        <rdfs:subClassOf rdf:resource="http://www.bolnica.com/bolnica#Bolnica"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#Apoteka1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bolnica.com/bolnica#Apoteka1"/>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#Bolnica_Misovic -->
+
+    <owl:NamedIndividual rdf:about="http://www.bolnica.com/bolnica#Bolnica_Misovic">
+        <rdf:type rdf:resource="http://www.bolnica.com/bolnica#Prostorije"/>
+        <isApoteka rdf:resource="http://www.bolnica.com/bolnica#Apoteka1"/>
+        <isLaboratorija rdf:resource="http://www.bolnica.com/bolnica#Laboratorija1"/>
+        <isPregled rdf:resource="http://www.bolnica.com/bolnica#Pregled1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#Laboratorija1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bolnica.com/bolnica#Laboratorija1"/>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#Pregled1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bolnica.com/bolnica#Pregled1"/>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#doktor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bolnica.com/bolnica#doktor1">
+        <rdf:type rdf:resource="http://www.bolnica.com/bolnica#Doktor"/>
+        <hasIme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nikola</hasIme>
+        <hasJmbg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2299292</hasJmbg>
+        <hasPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nikolic</hasPrezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bolnica.com/bolnica#pacijent1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bolnica.com/bolnica#pacijent1">
+        <rdf:type rdf:resource="http://www.bolnica.com/bolnica#Pacijent"/>
+        <hasZakazanTermin rdf:resource="http://www.bolnica.com/bolnica#Bolnica_Misovic"/>
+        <hasIme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marko</hasIme>
+        <hasJmbg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22939300</hasJmbg>
+        <hasPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MArkovic</hasPrezime>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
