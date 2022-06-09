@@ -1,0 +1,464 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.fakultet.com/fakultet#"
+     xml:base="http://www.fakultet.com/fakultet"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:fakultet="http://www.fakultet.com/fakultet#">
+    <owl:Ontology rdf:about="http://www.fakultet.com/fakultet"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#hasSmer -->
+
+    <owl:ObjectProperty rdf:about="http://www.fakultet.com/fakultet#hasSmer">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Smer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#isIzborniAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.fakultet.com/fakultet#isIzborniAt">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Predmet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#isObavezanAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.fakultet.com/fakultet#isObavezanAt">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Predmet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#isPredaje -->
+
+    <owl:ObjectProperty rdf:about="http://www.fakultet.com/fakultet#isPredaje"/>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#isStudira -->
+
+    <owl:ObjectProperty rdf:about="http://www.fakultet.com/fakultet#isStudira">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#isWorkAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.fakultet.com/fakultet#isWorkAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Osoblje"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#hasBrojCasovaPredavanja -->
+
+    <owl:DatatypeProperty rdf:about="http://www.fakultet.com/fakultet#hasBrojCasovaPredavanja">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Smer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#hasBrojCasovaVezbi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.fakultet.com/fakultet#hasBrojCasovaVezbi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#hasBrojIndeksa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.fakultet.com/fakultet#hasBrojIndeksa">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#hasDatumRodjenja -->
+
+    <owl:DatatypeProperty rdf:about="http://www.fakultet.com/fakultet#hasDatumRodjenja">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Osoblje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#hasIme -->
+
+    <owl:DatatypeProperty rdf:about="http://www.fakultet.com/fakultet#hasIme">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Osoblje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#hasJMBG -->
+
+    <owl:DatatypeProperty rdf:about="http://www.fakultet.com/fakultet#hasJMBG">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Osoblje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#hasNaziv -->
+
+    <owl:DatatypeProperty rdf:about="http://www.fakultet.com/fakultet#hasNaziv">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Smer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#hasPrezime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.fakultet.com/fakultet#hasPrezime">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Osoblje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#hasSifraPredmeta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.fakultet.com/fakultet#hasSifraPredmeta">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Predmet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#isBrojESPB -->
+
+    <owl:DatatypeProperty rdf:about="http://www.fakultet.com/fakultet#isBrojESPB">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Smer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#isBrojSemestra -->
+
+    <owl:DatatypeProperty rdf:about="http://www.fakultet.com/fakultet#isBrojSemestra">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Smer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#isMaxBrojStudenata -->
+
+    <owl:DatatypeProperty rdf:about="http://www.fakultet.com/fakultet#isMaxBrojStudenata">
+        <rdfs:domain rdf:resource="http://www.fakultet.com/fakultet#Smer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#Administrativno -->
+
+    <owl:Class rdf:about="http://www.fakultet.com/fakultet#Administrativno">
+        <rdfs:subClassOf rdf:resource="http://www.fakultet.com/fakultet#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#Asistent -->
+
+    <owl:Class rdf:about="http://www.fakultet.com/fakultet#Asistent">
+        <rdfs:subClassOf rdf:resource="http://www.fakultet.com/fakultet#Nastavno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#Cistac -->
+
+    <owl:Class rdf:about="http://www.fakultet.com/fakultet#Cistac">
+        <rdfs:subClassOf rdf:resource="http://www.fakultet.com/fakultet#PomocnoOsoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#Fakultet -->
+
+    <owl:Class rdf:about="http://www.fakultet.com/fakultet#Fakultet"/>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#Nastavno -->
+
+    <owl:Class rdf:about="http://www.fakultet.com/fakultet#Nastavno">
+        <rdfs:subClassOf rdf:resource="http://www.fakultet.com/fakultet#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#Obezbedjenje -->
+
+    <owl:Class rdf:about="http://www.fakultet.com/fakultet#Obezbedjenje">
+        <rdfs:subClassOf rdf:resource="http://www.fakultet.com/fakultet#PomocnoOsoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#Osoblje -->
+
+    <owl:Class rdf:about="http://www.fakultet.com/fakultet#Osoblje">
+        <rdfs:subClassOf rdf:resource="http://www.fakultet.com/fakultet#Fakultet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#PR -->
+
+    <owl:Class rdf:about="http://www.fakultet.com/fakultet#PR">
+        <rdfs:subClassOf rdf:resource="http://www.fakultet.com/fakultet#Administrativno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#PomocnoOsoblje -->
+
+    <owl:Class rdf:about="http://www.fakultet.com/fakultet#PomocnoOsoblje">
+        <rdfs:subClassOf rdf:resource="http://www.fakultet.com/fakultet#Osoblje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#Predmet -->
+
+    <owl:Class rdf:about="http://www.fakultet.com/fakultet#Predmet">
+        <rdfs:subClassOf rdf:resource="http://www.fakultet.com/fakultet#Fakultet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#Profesor -->
+
+    <owl:Class rdf:about="http://www.fakultet.com/fakultet#Profesor">
+        <rdfs:subClassOf rdf:resource="http://www.fakultet.com/fakultet#Nastavno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#Smer -->
+
+    <owl:Class rdf:about="http://www.fakultet.com/fakultet#Smer">
+        <rdfs:subClassOf rdf:resource="http://www.fakultet.com/fakultet#Fakultet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#Student -->
+
+    <owl:Class rdf:about="http://www.fakultet.com/fakultet#Student">
+        <rdfs:subClassOf rdf:resource="http://www.fakultet.com/fakultet#Fakultet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#StudentskaSluzba -->
+
+    <owl:Class rdf:about="http://www.fakultet.com/fakultet#StudentskaSluzba">
+        <rdfs:subClassOf rdf:resource="http://www.fakultet.com/fakultet#Administrativno"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#Asistent1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.fakultet.com/fakultet#Asistent1">
+        <rdf:type rdf:resource="http://www.fakultet.com/fakultet#Asistent"/>
+        <isPredaje rdf:resource="http://www.fakultet.com/fakultet#predmet2"/>
+        <isWorkAt rdf:resource="http://www.fakultet.com/fakultet#fakultet1"/>
+        <hasIme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filip</hasIme>
+        <hasJMBG rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4345232</hasJMBG>
+        <hasPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filipovic</hasPrezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#Profesor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.fakultet.com/fakultet#Profesor1">
+        <rdf:type rdf:resource="http://www.fakultet.com/fakultet#Profesor"/>
+        <isPredaje rdf:resource="http://www.fakultet.com/fakultet#predmet1"/>
+        <isWorkAt rdf:resource="http://www.fakultet.com/fakultet#fakultet1"/>
+        <hasIme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nemanja</hasIme>
+        <hasJMBG rdf:datatype="http://www.w3.org/2001/XMLSchema#string">124932492</hasJMBG>
+        <hasPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nemanjic</hasPrezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#fakultet1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.fakultet.com/fakultet#fakultet1">
+        <rdf:type rdf:resource="http://www.fakultet.com/fakultet#Fakultet"/>
+        <hasSmer rdf:resource="http://www.fakultet.com/fakultet#smer1"/>
+        <hasSmer rdf:resource="http://www.fakultet.com/fakultet#smer2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#milena -->
+
+    <owl:NamedIndividual rdf:about="http://www.fakultet.com/fakultet#milena">
+        <rdf:type rdf:resource="http://www.fakultet.com/fakultet#Administrativno"/>
+        <hasDatumRodjenja rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-01-01T00:00:00</hasDatumRodjenja>
+        <hasIme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milena</hasIme>
+        <hasJMBG rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1234567</hasJMBG>
+        <hasPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milanic</hasPrezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#nastavnik -->
+
+    <owl:NamedIndividual rdf:about="http://www.fakultet.com/fakultet#nastavnik">
+        <rdf:type rdf:resource="http://www.fakultet.com/fakultet#Nastavno"/>
+        <hasDatumRodjenja rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-01-01T00:00:00</hasDatumRodjenja>
+        <hasIme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nikola</hasIme>
+        <hasJMBG rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2343211</hasJMBG>
+        <hasPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nikolic</hasPrezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#predmet1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.fakultet.com/fakultet#predmet1">
+        <rdf:type rdf:resource="http://www.fakultet.com/fakultet#Predmet"/>
+        <isObavezanAt rdf:resource="http://www.fakultet.com/fakultet#smer1"/>
+        <hasBrojCasovaPredavanja rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasBrojCasovaPredavanja>
+        <hasBrojCasovaVezbi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasBrojCasovaVezbi>
+        <hasNaziv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programiranje1</hasNaziv>
+        <hasSifraPredmeta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A001</hasSifraPredmeta>
+        <isBrojESPB rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</isBrojESPB>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#predmet2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.fakultet.com/fakultet#predmet2">
+        <rdf:type rdf:resource="http://www.fakultet.com/fakultet#Predmet"/>
+        <isObavezanAt rdf:resource="http://www.fakultet.com/fakultet#smer2"/>
+        <hasBrojCasovaPredavanja rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasBrojCasovaPredavanja>
+        <hasBrojCasovaVezbi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasBrojCasovaVezbi>
+        <hasNaziv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Informatika</hasNaziv>
+        <hasSifraPredmeta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A002</hasSifraPredmeta>
+        <isBrojESPB rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</isBrojESPB>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#smer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.fakultet.com/fakultet#smer1">
+        <rdf:type rdf:resource="http://www.fakultet.com/fakultet#Smer"/>
+        <hasNaziv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infromacione tehnologije</hasNaziv>
+        <isBrojESPB rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</isBrojESPB>
+        <isBrojSemestra rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</isBrojSemestra>
+        <isMaxBrojStudenata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</isMaxBrojStudenata>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#smer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.fakultet.com/fakultet#smer2">
+        <rdf:type rdf:resource="http://www.fakultet.com/fakultet#Smer"/>
+        <hasNaziv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Softversko informacioni inzenjer</hasNaziv>
+        <isBrojESPB rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</isBrojESPB>
+        <isBrojSemestra rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</isBrojSemestra>
+        <isMaxBrojStudenata rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</isMaxBrojStudenata>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#student1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.fakultet.com/fakultet#student1">
+        <rdf:type rdf:resource="http://www.fakultet.com/fakultet#Student"/>
+        <isStudira rdf:resource="http://www.fakultet.com/fakultet#smer1"/>
+        <hasBrojIndeksa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019/982207</hasBrojIndeksa>
+        <hasDatumRodjenja rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-01-01T00:00:00</hasDatumRodjenja>
+        <hasIme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pedja</hasIme>
+        <hasJMBG rdf:datatype="http://www.w3.org/2001/XMLSchema#string">99999000</hasJMBG>
+        <hasPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radak</hasPrezime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.fakultet.com/fakultet#student2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.fakultet.com/fakultet#student2">
+        <rdf:type rdf:resource="http://www.fakultet.com/fakultet#Student"/>
+        <isStudira rdf:resource="http://www.fakultet.com/fakultet#smer2"/>
+        <hasBrojIndeksa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020/009122</hasBrojIndeksa>
+        <hasDatumRodjenja rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-01-01T00:00:00</hasDatumRodjenja>
+        <hasIme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marko</hasIme>
+        <hasJMBG rdf:datatype="http://www.w3.org/2001/XMLSchema#string">126788</hasJMBG>
+        <hasPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Markovic</hasPrezime>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/TDB-primer.iml" filepath="$PROJECT_DIR$/.idea/TDB-primer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tdb-primer-main/tdbprimer.iml" filepath="$PROJECT_DIR$/tdb-primer-main/tdbprimer.iml" />
+    </modules>
+  </component>
+</project>
