@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:factory = "http://www.singidunum.ac.rs/factory#">
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/factory#Masina"/>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/factory#Zaposleni"/>
+    
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/factory#Operater">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/factory#Zaposleni"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/factory#Serviser">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/factory#Zaposleni"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/factory#ManuelnaMasina">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/factory#Masina"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://www.singidunum.ac.rs/factory#AutomatskaMasina">
+        <rdfs:subClassOf rdf:resource="http://www.singidunum.ac.rs/factory#Masina"/>
+    </rdfs:Class>
+    
+    
+    
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/factory#imaImeIPrezime">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/factory#Zaposleni"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/factory#imaPlatu">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/factory#Zaposleni"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
+    
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/factory#imaSpecijalizaciju">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/factory#Operater"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/factory#specijalizacija"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/factory#imaServisera">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/factory#AutomatskaMasina"/>
+        <rdfs:range rdf:resource="http://www.singidunum.ac.rs/factory#Serviser"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.singidunum.ac.rs/factory#imaNaziv">
+        <rdfs:domain rdf:resource="http://www.singidunum.ac.rs/factory#Masina"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+    
+    
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/factory#operater5">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/factory#Operater"/>
+        <factory:imaImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milan Stefanovic</factory:imaImeIPrezime>
+        <factory:imaPlatu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3500</factory:imaPlatu>
+        <factory:imaSpecijalizaciju rdf:resource="http://www.singidunum.ac.rs/factory#sekac"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/factory#serviser2">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/factory#Serviser"/>
+        <factory:imaImeIPrezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomislav Markovic</factory:imaImeIPrezime>
+        <factory:imaPlatu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4500</factory:imaPlatu>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/factory#masina5">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/factory#AutomatskaMasina"/>
+        <factory:imaNaziv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KF1375</factory:imaNaziv>
+        <factory:imaServisera rdf:resource="http://www.singidunum.ac.rs/factory#serviser2"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.singidunum.ac.rs/factory#masina3">
+        <rdf:type rdf:resource="http://www.singidunum.ac.rs/factory#ManuelnaMasina"/>
+        <factory:imaOperatera rdf:resource="http://www.singidunum.ac.rs/factory#operater5"/>
+        <factory:imaNaziv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CT334</factory:imaNaziv>
+    </rdf:Description>
+    
+    
+
+    
+    
+</rdf:RDF>

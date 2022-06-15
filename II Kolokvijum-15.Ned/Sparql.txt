@@ -1,0 +1,11 @@
+
+1. Dobavljanje imena i prezimena svih zaposlenih
+
+
+PREFIX factory: <http://www.singidunum.ac.rs/factory#>
+
+SELECT ?zaposleni ?imeIPrezime
+	WHERE {
+	?zaposleni rdf:type factory:Zaposleni; 
+	factory:imaImeIPrezime ?imeIPrezime; 		
+	}
